@@ -200,6 +200,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DROGUERIADataSet24.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DROGUERIADataSet25.cs">
+      <DependentUpon>DROGUERIADataSet25.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DROGUERIADataSet25.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

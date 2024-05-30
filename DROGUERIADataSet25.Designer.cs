@@ -281,16 +281,6 @@ namespace Drogueria_proyecto {
             
             private global::System.Data.DataColumn columncodigo_factura;
             
-            private global::System.Data.DataColumn columnExpr2;
-            
-            private global::System.Data.DataColumn columnExpr3;
-            
-            private global::System.Data.DataColumn columnExpr5;
-            
-            private global::System.Data.DataColumn columndescripcion_categoria;
-            
-            private global::System.Data.DataColumn columnnombre_proveedor;
-            
             private global::System.Data.DataColumn columncantidad;
             
             private global::System.Data.DataColumn columnprecio_producto;
@@ -298,6 +288,12 @@ namespace Drogueria_proyecto {
             private global::System.Data.DataColumn columnsubtotal;
             
             private global::System.Data.DataColumn columnnombre_cliente;
+            
+            private global::System.Data.DataColumn columnnombre_producto;
+            
+            private global::System.Data.DataColumn columndescripcion_producto;
+            
+            private global::System.Data.DataColumn columntelefono_cliente;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -342,46 +338,6 @@ namespace Drogueria_proyecto {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Expr2Column {
-                get {
-                    return this.columnExpr2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Expr3Column {
-                get {
-                    return this.columnExpr3;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Expr5Column {
-                get {
-                    return this.columnExpr5;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn descripcion_categoriaColumn {
-                get {
-                    return this.columndescripcion_categoria;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn nombre_proveedorColumn {
-                get {
-                    return this.columnnombre_proveedor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn cantidadColumn {
                 get {
                     return this.columncantidad;
@@ -409,6 +365,30 @@ namespace Drogueria_proyecto {
             public global::System.Data.DataColumn nombre_clienteColumn {
                 get {
                     return this.columnnombre_cliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn nombre_productoColumn {
+                get {
+                    return this.columnnombre_producto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn descripcion_productoColumn {
+                get {
+                    return this.columndescripcion_producto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn telefono_clienteColumn {
+                get {
+                    return this.columntelefono_cliente;
                 }
             }
             
@@ -449,19 +429,17 @@ namespace Drogueria_proyecto {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FacturaEnReporteRow AddFacturaEnReporteRow(string Expr2, int Expr3, string Expr5, string descripcion_categoria, string nombre_proveedor, int cantidad, decimal precio_producto, decimal subtotal, string nombre_cliente) {
+            public FacturaEnReporteRow AddFacturaEnReporteRow(int cantidad, decimal precio_producto, decimal subtotal, string nombre_cliente, string nombre_producto, string descripcion_producto, int telefono_cliente) {
                 FacturaEnReporteRow rowFacturaEnReporteRow = ((FacturaEnReporteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Expr2,
-                        Expr3,
-                        Expr5,
-                        descripcion_categoria,
-                        nombre_proveedor,
                         cantidad,
                         precio_producto,
                         subtotal,
-                        nombre_cliente};
+                        nombre_cliente,
+                        nombre_producto,
+                        descripcion_producto,
+                        telefono_cliente};
                 rowFacturaEnReporteRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFacturaEnReporteRow);
                 return rowFacturaEnReporteRow;
@@ -492,15 +470,13 @@ namespace Drogueria_proyecto {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columncodigo_factura = base.Columns["codigo_factura"];
-                this.columnExpr2 = base.Columns["Expr2"];
-                this.columnExpr3 = base.Columns["Expr3"];
-                this.columnExpr5 = base.Columns["Expr5"];
-                this.columndescripcion_categoria = base.Columns["descripcion_categoria"];
-                this.columnnombre_proveedor = base.Columns["nombre_proveedor"];
                 this.columncantidad = base.Columns["cantidad"];
                 this.columnprecio_producto = base.Columns["precio_producto"];
                 this.columnsubtotal = base.Columns["subtotal"];
                 this.columnnombre_cliente = base.Columns["nombre_cliente"];
+                this.columnnombre_producto = base.Columns["nombre_producto"];
+                this.columndescripcion_producto = base.Columns["descripcion_producto"];
+                this.columntelefono_cliente = base.Columns["telefono_cliente"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -508,16 +484,6 @@ namespace Drogueria_proyecto {
             private void InitClass() {
                 this.columncodigo_factura = new global::System.Data.DataColumn("codigo_factura", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncodigo_factura);
-                this.columnExpr2 = new global::System.Data.DataColumn("Expr2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr2);
-                this.columnExpr3 = new global::System.Data.DataColumn("Expr3", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr3);
-                this.columnExpr5 = new global::System.Data.DataColumn("Expr5", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr5);
-                this.columndescripcion_categoria = new global::System.Data.DataColumn("descripcion_categoria", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndescripcion_categoria);
-                this.columnnombre_proveedor = new global::System.Data.DataColumn("nombre_proveedor", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre_proveedor);
                 this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncantidad);
                 this.columnprecio_producto = new global::System.Data.DataColumn("precio_producto", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -526,6 +492,12 @@ namespace Drogueria_proyecto {
                 base.Columns.Add(this.columnsubtotal);
                 this.columnnombre_cliente = new global::System.Data.DataColumn("nombre_cliente", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre_cliente);
+                this.columnnombre_producto = new global::System.Data.DataColumn("nombre_producto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre_producto);
+                this.columndescripcion_producto = new global::System.Data.DataColumn("descripcion_producto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescripcion_producto);
+                this.columntelefono_cliente = new global::System.Data.DataColumn("telefono_cliente", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntelefono_cliente);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncodigo_factura}, true));
                 this.columncodigo_factura.AutoIncrement = true;
@@ -534,11 +506,9 @@ namespace Drogueria_proyecto {
                 this.columncodigo_factura.AllowDBNull = false;
                 this.columncodigo_factura.ReadOnly = true;
                 this.columncodigo_factura.Unique = true;
-                this.columnExpr2.MaxLength = 50;
-                this.columnExpr5.MaxLength = 100;
-                this.columndescripcion_categoria.MaxLength = 60;
-                this.columnnombre_proveedor.MaxLength = 50;
                 this.columnnombre_cliente.MaxLength = 80;
+                this.columnnombre_producto.MaxLength = 50;
+                this.columndescripcion_producto.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -692,88 +662,6 @@ namespace Drogueria_proyecto {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Expr2 {
-                get {
-                    try {
-                        return ((string)(this[this.tableFacturaEnReporte.Expr2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Expr2\' de la tabla \'FacturaEnReporte\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableFacturaEnReporte.Expr2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Expr3 {
-                get {
-                    try {
-                        return ((int)(this[this.tableFacturaEnReporte.Expr3Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Expr3\' de la tabla \'FacturaEnReporte\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableFacturaEnReporte.Expr3Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Expr5 {
-                get {
-                    try {
-                        return ((string)(this[this.tableFacturaEnReporte.Expr5Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Expr5\' de la tabla \'FacturaEnReporte\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableFacturaEnReporte.Expr5Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string descripcion_categoria {
-                get {
-                    try {
-                        return ((string)(this[this.tableFacturaEnReporte.descripcion_categoriaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descripcion_categoria\' de la tabla \'FacturaEnReporte\' es " +
-                                "DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableFacturaEnReporte.descripcion_categoriaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string nombre_proveedor {
-                get {
-                    try {
-                        return ((string)(this[this.tableFacturaEnReporte.nombre_proveedorColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre_proveedor\' de la tabla \'FacturaEnReporte\' es DBNul" +
-                                "l.", e);
-                    }
-                }
-                set {
-                    this[this.tableFacturaEnReporte.nombre_proveedorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int cantidad {
                 get {
                     try {
@@ -840,62 +728,53 @@ namespace Drogueria_proyecto {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsExpr2Null() {
-                return this.IsNull(this.tableFacturaEnReporte.Expr2Column);
+            public string nombre_producto {
+                get {
+                    try {
+                        return ((string)(this[this.tableFacturaEnReporte.nombre_productoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre_producto\' de la tabla \'FacturaEnReporte\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableFacturaEnReporte.nombre_productoColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetExpr2Null() {
-                this[this.tableFacturaEnReporte.Expr2Column] = global::System.Convert.DBNull;
+            public string descripcion_producto {
+                get {
+                    try {
+                        return ((string)(this[this.tableFacturaEnReporte.descripcion_productoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descripcion_producto\' de la tabla \'FacturaEnReporte\' es D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFacturaEnReporte.descripcion_productoColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsExpr3Null() {
-                return this.IsNull(this.tableFacturaEnReporte.Expr3Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetExpr3Null() {
-                this[this.tableFacturaEnReporte.Expr3Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsExpr5Null() {
-                return this.IsNull(this.tableFacturaEnReporte.Expr5Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetExpr5Null() {
-                this[this.tableFacturaEnReporte.Expr5Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isdescripcion_categoriaNull() {
-                return this.IsNull(this.tableFacturaEnReporte.descripcion_categoriaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setdescripcion_categoriaNull() {
-                this[this.tableFacturaEnReporte.descripcion_categoriaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isnombre_proveedorNull() {
-                return this.IsNull(this.tableFacturaEnReporte.nombre_proveedorColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setnombre_proveedorNull() {
-                this[this.tableFacturaEnReporte.nombre_proveedorColumn] = global::System.Convert.DBNull;
+            public int telefono_cliente {
+                get {
+                    try {
+                        return ((int)(this[this.tableFacturaEnReporte.telefono_clienteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'telefono_cliente\' de la tabla \'FacturaEnReporte\' es DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableFacturaEnReporte.telefono_clienteColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -944,6 +823,42 @@ namespace Drogueria_proyecto {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setnombre_clienteNull() {
                 this[this.tableFacturaEnReporte.nombre_clienteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isnombre_productoNull() {
+                return this.IsNull(this.tableFacturaEnReporte.nombre_productoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setnombre_productoNull() {
+                this[this.tableFacturaEnReporte.nombre_productoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isdescripcion_productoNull() {
+                return this.IsNull(this.tableFacturaEnReporte.descripcion_productoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setdescripcion_productoNull() {
+                this[this.tableFacturaEnReporte.descripcion_productoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Istelefono_clienteNull() {
+                return this.IsNull(this.tableFacturaEnReporte.telefono_clienteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Settelefono_clienteNull() {
+                this[this.tableFacturaEnReporte.telefono_clienteColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1107,15 +1022,13 @@ namespace Drogueria_proyecto.DROGUERIADataSet25TableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "FacturaEnReporte";
             tableMapping.ColumnMappings.Add("codigo_factura", "codigo_factura");
-            tableMapping.ColumnMappings.Add("Expr2", "Expr2");
-            tableMapping.ColumnMappings.Add("Expr3", "Expr3");
-            tableMapping.ColumnMappings.Add("Expr5", "Expr5");
-            tableMapping.ColumnMappings.Add("descripcion_categoria", "descripcion_categoria");
-            tableMapping.ColumnMappings.Add("nombre_proveedor", "nombre_proveedor");
             tableMapping.ColumnMappings.Add("cantidad", "cantidad");
             tableMapping.ColumnMappings.Add("precio_producto", "precio_producto");
             tableMapping.ColumnMappings.Add("subtotal", "subtotal");
             tableMapping.ColumnMappings.Add("nombre_cliente", "nombre_cliente");
+            tableMapping.ColumnMappings.Add("nombre_producto", "nombre_producto");
+            tableMapping.ColumnMappings.Add("descripcion_producto", "descripcion_producto");
+            tableMapping.ColumnMappings.Add("telefono_cliente", "telefono_cliente");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1132,12 +1045,12 @@ namespace Drogueria_proyecto.DROGUERIADataSet25TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Factura.codigo_factura, view_producto.Expr2, view_producto.Expr3, view_producto.Expr5, view_producto.descripcion_categoria, view_producto.nombre_proveedor, Detalle_Factura.cantidad, Detalle_Factura.precio_producto, 
-                         Detalle_Factura.subtotal, Cliente.nombre_cliente
-FROM            Detalle_Factura INNER JOIN
-                         Factura ON Detalle_Factura.codigo_factura = Factura.codigo_factura INNER JOIN
-                         Cliente ON Factura.codigo_cliente = Cliente.codigo_cliente CROSS JOIN
-                         view_producto";
+            this._commandCollection[0].CommandText = @"SELECT        Factura.codigo_factura, Producto.nombre_producto, Producto.descripcion_producto, Producto.precio_producto, Cliente.nombre_cliente, Cliente.telefono_cliente, Detalle_Factura.cantidad, Detalle_Factura.subtotal
+FROM            Factura INNER JOIN
+                         Detalle_Factura ON Factura.codigo_factura = Detalle_Factura.codigo_factura INNER JOIN
+                         Empleado ON Factura.codigo_empleado = Empleado.codigo_empleado INNER JOIN
+                         Producto ON Detalle_Factura.codigo_producto = Producto.codigo_producto INNER JOIN
+                         Cliente ON Factura.codigo_cliente = Cliente.codigo_cliente";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
