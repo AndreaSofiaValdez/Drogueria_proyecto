@@ -140,6 +140,21 @@ namespace Drogueria_proyecto
             //}
 
         }
+
+        private void BtnSecurityPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Crear una instancia del nuevo formulario
+            SecurityForm SForm = new SecurityForm();
+            
+
+            // Mostrar el nuevo formulario
+            SForm.Show();
+
+            // Ocultar el formulario actual
+
+            // Opcional: puedes cerrar el formulario actual si ya no lo necesitas
+            // this.Close();
+        }
     }
 
 
