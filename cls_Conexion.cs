@@ -12,9 +12,9 @@ using System.Drawing;
 namespace Drogueria_proyecto
 {
     //Clase para realizar la conexion a sql server
-    class cls_Conexion
+    public class cls_Conexion
     {
-        string conexion = "Data Source=LAPTOP-1RIOJPPC\\SQLEXPRESS;Initial Catalog = DROGUERIA; Integrated Security = True"; 
+        public static string conexion = "Data Source=DESKTOP-4FPC8J0\\MSSQLSERVER01;Initial Catalog = DROGUERIA; Integrated Security = True"; 
         public SqlConnection sconexion = new SqlConnection();
 
         //Constructor de la clase conexión

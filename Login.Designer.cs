@@ -43,6 +43,7 @@ namespace Drogueria_proyecto
             this.errorP_usuario_login = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorP_pas_login = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnSecurityPass = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_usuario_login)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_pas_login)).BeginInit();
@@ -56,9 +57,9 @@ namespace Drogueria_proyecto
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 56);
+            this.panel1.Size = new System.Drawing.Size(1176, 86);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -69,10 +70,10 @@ namespace Drogueria_proyecto
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(32, 21);
-            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label3.Location = new System.Drawing.Point(48, 32);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 17);
+            this.label3.Size = new System.Drawing.Size(132, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "MedExpress";
             // 
@@ -81,10 +82,10 @@ namespace Drogueria_proyecto
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.panel2.Location = new System.Drawing.Point(0, 543);
-            this.panel2.Margin = new System.Windows.Forms.Padding(1);
+            this.panel2.Location = new System.Drawing.Point(0, 835);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(784, 18);
+            this.panel2.Size = new System.Drawing.Size(1176, 28);
             this.panel2.TabIndex = 1;
             // 
             // textUsuario
@@ -92,10 +93,10 @@ namespace Drogueria_proyecto
             this.textUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textUsuario.Location = new System.Drawing.Point(290, 267);
-            this.textUsuario.Margin = new System.Windows.Forms.Padding(1);
+            this.textUsuario.Location = new System.Drawing.Point(435, 411);
+            this.textUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.textUsuario.Name = "textUsuario";
-            this.textUsuario.Size = new System.Drawing.Size(209, 23);
+            this.textUsuario.Size = new System.Drawing.Size(312, 30);
             this.textUsuario.TabIndex = 2;
             this.textUsuario.TextChanged += new System.EventHandler(this.textUsuario_TextChanged);
             // 
@@ -106,10 +107,10 @@ namespace Drogueria_proyecto
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(291, 242);
-            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label1.Location = new System.Drawing.Point(436, 372);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 17);
+            this.label1.Size = new System.Drawing.Size(79, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Usuario";
             // 
@@ -120,10 +121,10 @@ namespace Drogueria_proyecto
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(291, 324);
-            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label2.Location = new System.Drawing.Point(436, 498);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 17);
+            this.label2.Size = new System.Drawing.Size(114, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "Contraseña";
             // 
@@ -132,11 +133,11 @@ namespace Drogueria_proyecto
             this.textContrasena.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textContrasena.Location = new System.Drawing.Point(290, 349);
-            this.textContrasena.Margin = new System.Windows.Forms.Padding(1);
+            this.textContrasena.Location = new System.Drawing.Point(435, 537);
+            this.textContrasena.Margin = new System.Windows.Forms.Padding(2);
             this.textContrasena.Name = "textContrasena";
             this.textContrasena.PasswordChar = '*';
-            this.textContrasena.Size = new System.Drawing.Size(209, 23);
+            this.textContrasena.Size = new System.Drawing.Size(312, 30);
             this.textContrasena.TabIndex = 4;
             this.textContrasena.TextChanged += new System.EventHandler(this.textContrasena_TextChanged);
             // 
@@ -147,10 +148,10 @@ namespace Drogueria_proyecto
             this.checkBox_contra.AutoSize = true;
             this.checkBox_contra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox_contra.ForeColor = System.Drawing.Color.Silver;
-            this.checkBox_contra.Location = new System.Drawing.Point(290, 409);
-            this.checkBox_contra.Margin = new System.Windows.Forms.Padding(1);
+            this.checkBox_contra.Location = new System.Drawing.Point(435, 629);
+            this.checkBox_contra.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_contra.Name = "checkBox_contra";
-            this.checkBox_contra.Size = new System.Drawing.Size(132, 19);
+            this.checkBox_contra.Size = new System.Drawing.Size(190, 26);
             this.checkBox_contra.TabIndex = 6;
             this.checkBox_contra.Text = "Mostrar contraseña";
             this.checkBox_contra.UseVisualStyleBackColor = true;
@@ -165,10 +166,10 @@ namespace Drogueria_proyecto
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(290, 441);
-            this.button1.Margin = new System.Windows.Forms.Padding(1);
+            this.button1.Location = new System.Drawing.Point(435, 678);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 44);
+            this.button1.Size = new System.Drawing.Size(309, 68);
             this.button1.TabIndex = 7;
             this.button1.Text = "Ingresar";
             this.button1.UseVisualStyleBackColor = false;
@@ -186,22 +187,40 @@ namespace Drogueria_proyecto
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = global::Drogueria_proyecto.Properties.Resources.pastillas;
-            this.pictureBox1.Location = new System.Drawing.Point(337, 73);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(108, 106);
-            this.pictureBox1.MinimumSize = new System.Drawing.Size(115, 109);
+            this.pictureBox1.Location = new System.Drawing.Point(506, 112);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(162, 163);
+            this.pictureBox1.MinimumSize = new System.Drawing.Size(172, 168);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(115, 109);
+            this.pictureBox1.Size = new System.Drawing.Size(172, 168);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // BtnSecurityPass
+            // 
+            this.BtnSecurityPass.AutoSize = true;
+            this.BtnSecurityPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSecurityPass.LinkColor = System.Drawing.Color.White;
+            this.BtnSecurityPass.LinkVisited = true;
+            this.BtnSecurityPass.Location = new System.Drawing.Point(501, 588);
+            this.BtnSecurityPass.Name = "BtnSecurityPass";
+            this.BtnSecurityPass.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.BtnSecurityPass.Size = new System.Drawing.Size(177, 20);
+            this.BtnSecurityPass.TabIndex = 8;
+            this.BtnSecurityPass.TabStop = true;
+            this.BtnSecurityPass.Text = "¿Olvide mi Contraseña?";
+            this.BtnSecurityPass.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnSecurityPass.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnSecurityPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.BtnSecurityPass_LinkClicked);
+            // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(1176, 863);
+            this.Controls.Add(this.BtnSecurityPass);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox_contra);
@@ -212,8 +231,8 @@ namespace Drogueria_proyecto
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(1);
-            this.MinimumSize = new System.Drawing.Size(800, 600);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(1189, 893);
             this.Name = "Login";
             this.Text = "Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -242,5 +261,6 @@ namespace Drogueria_proyecto
         private System.Windows.Forms.ErrorProvider errorP_usuario_login;
         private System.Windows.Forms.ErrorProvider errorP_pas_login;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel BtnSecurityPass;
     }
 }
