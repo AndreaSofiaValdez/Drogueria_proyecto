@@ -39,7 +39,7 @@ namespace Drogueria_proyecto
             // TODO: esta línea de código carga datos en la tabla 'dROGUERIADataSet15.cbx_Empleado' Puede moverla o quitarla según sea necesario.
             this.cbx_EmpleadoTableAdapter.Fill(this.dROGUERIADataSet15.cbx_Empleado);
             // TODO: esta línea de código carga datos en la tabla 'cbx_cliente.Cliente' Puede moverla o quitarla según sea necesario.
-           // this.cbx_ClienteTableAdapter.Fill(this.dROGUERIADataSet15.cbx_Cliente);
+            //this.cbx_ClienteTableAdapter.Fill(this.dROGUERIADataSet15.cbx_Cliente);
             // TODO: esta línea de código carga datos en la tabla 'cbx_cliente.Cliente' Puede moverla o quitarla según sea necesario.
             //this.cbx_ProductoTableAdapter.Fill(this.dROGUERIADataSet15.cbx_Producto);
 

@@ -953,7 +953,7 @@ SELECT codigo_cliente, nombre_cliente, direccion_cliente, correo_cliente, telefo
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        codigo_cliente, nombre_cliente, direccion_cliente, correo_cliente, " +
-                "telefono_cliente\r\nFROM            Cliente";
+                "telefono_cliente\nFROM            Cliente";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
