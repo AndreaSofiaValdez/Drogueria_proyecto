@@ -73,12 +73,13 @@ namespace Drogueria_proyecto
 
                     cls_Conexion BD = new cls_Conexion();
                     BD.abrir();
-                    SqlCommand agregar = new SqlCommand("insert into Empleado values ( @nombre_empleado ,@username,@password ,@codigo_tipo )", BD.sconexion);
+                    SqlCommand agregar = new SqlCommand("insert into Empleado values ( @nombre_empleado ,@username,@password ,@codigo_tipo,@correo )", BD.sconexion);
                     agregar.Parameters.AddWithValue("@password",txt_pas_ad.Text);
                     agregar.Parameters.AddWithValue("@nombre_empleado", txt_nomempl_gr.Text);
                     agregar.Parameters.AddWithValue("@username", txt_usuaempl_gr.Text);
-                    agregar.Parameters.AddWithValue("@codigo_tipo", txt_tipoempl_gr.Text);
-                   
+                    agregar.Parameters.AddWithValue("@codigo_tipo", txt_tipoempl_gr.Text); 
+                    agregar.Parameters.AddWithValue("@correo", txt_correoempl_gr.Text);
+
 
 
                     agregar.ExecuteNonQuery();
@@ -86,10 +87,12 @@ namespace Drogueria_proyecto
                     txt_tipoempl_gr.Clear();
                     txt_usuaempl_gr.Clear();
                     txt_idEmpleado_gr.Clear();
-                    txt_idEmpleado_gr.Clear();
+                    txt_nomempl_gr.Clear();
                     txt_pas_ad.Clear();
-                    
-                   
+                    txt_correoempl_gr.Clear();
+
+
+
 
                     this.txt_nomempl_gr.Focus();
                     cls_Conexion clsConexion1 = new cls_Conexion();
@@ -104,6 +107,7 @@ namespace Drogueria_proyecto
             errorP_pas_ad.Clear();
             errorP_tipempl_ad.Clear();
             errorP_usu_ad.Clear();
+            errorP_correoempl_ad.Clear();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -135,7 +139,9 @@ namespace Drogueria_proyecto
                     txt_tipoempl_gr.Clear();
                     txt_usuaempl_gr.Clear();
                     txt_pas_ad.Clear();
-                    
+                    errorP_correoempl_ad.Clear();
+
+
 
                     this.txt_nomempl_gr.Focus();
                     cls_Conexion clsConexion1 = new cls_Conexion();
@@ -173,7 +179,9 @@ namespace Drogueria_proyecto
                     txt_tipoempl_gr.Clear();
                     txt_usuaempl_gr.Clear();
                     txt_pas_ad.Clear();
-                   
+                    errorP_correoempl_ad.Clear();
+
+
 
                     this.txt_idEmpleado_gr.Focus();
                     cls_Conexion clsConexion1 = new cls_Conexion();
@@ -227,6 +235,22 @@ namespace Drogueria_proyecto
                 errorP_tipempl_ad.SetError(txt_tipoempl_gr, "El tipo de empleado solo debe contener numeros del 1-3");
                 txt_tipoempl_gr.Text = "";
             }
+        }
+
+        private void dtg_administrador_empleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txt_correoempl_gr_TextChanged(object sender, EventArgs e)
+        {
+            
+                if (validaciones.validarcorreo(txt_correoempl_gr.Text, "El correo solo permite @ _ . y letras"))
+                {
+                    errorP_correoempl_ad.SetError(txt_correoempl_gr, "El correo solo permite @ _ . y letras");
+                    txt_correoempl_gr.Text = "";
+                }
+            
         }
     }
 }
