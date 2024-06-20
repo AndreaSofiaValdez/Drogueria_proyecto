@@ -2,15 +2,16 @@
 <xs:schema id="DROGUERIADataSet1" targetNamespace="http://tempuri.org/DROGUERIADataSet1.xsd" xmlns:mstns="http://tempuri.org/DROGUERIADataSet1.xsd" xmlns="http://tempuri.org/DROGUERIADataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DROGUERIAConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DROGUERIAConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Drogueria_proyecto.Properties.Settings.GlobalReference.Default.DROGUERIAConnectionString" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DROGUERIAConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DROGUERIAConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Drogueria_proyecto.Properties.Settings.GlobalReference.Default.DROGUERIAConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DROGUERIAConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DROGUERIAConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Drogueria_proyecto.Properties.Settings.GlobalReference.Default.DROGUERIAConnectionString2" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ClienteTableAdapter" GeneratorDataComponentClassName="ClienteTableAdapter" Name="Cliente" UserDataComponentName="ClienteTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DROGUERIAConnectionString1 (Settings)" DbObjectName="DROGUERIA.dbo.Cliente" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DROGUERIAConnectionString2 (Settings)" DbObjectName="DROGUERIA.dbo.Cliente" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [Cliente] WHERE (([codigo_cliente] = @Original_codigo_cliente) AND ((@IsNull_nombre_cliente = 1 AND [nombre_cliente] IS NULL) OR ([nombre_cliente] = @Original_nombre_cliente)) AND ((@IsNull_direccion_cliente = 1 AND [direccion_cliente] IS NULL) OR ([direccion_cliente] = @Original_direccion_cliente)) AND ((@IsNull_correo_cliente = 1 AND [correo_cliente] IS NULL) OR ([correo_cliente] = @Original_correo_cliente)) AND ((@IsNull_telefono_cliente = 1 AND [telefono_cliente] IS NULL) OR ([telefono_cliente] = @Original_telefono_cliente)))</CommandText>
@@ -87,32 +88,32 @@ SELECT codigo_cliente, nombre_cliente, direccion_cliente, correo_cliente, telefo
   <xs:element name="DROGUERIADataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DROGUERIADataSet1" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DROGUERIADataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Cliente" msprop:Generator_RowEvHandlerName="ClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="ClienteRowDeleted" msprop:Generator_RowDeletingName="ClienteRowDeleting" msprop:Generator_RowEvArgName="ClienteRowChangeEvent" msprop:Generator_TablePropName="Cliente" msprop:Generator_RowChangedName="ClienteRowChanged" msprop:Generator_UserTableName="Cliente" msprop:Generator_RowChangingName="ClienteRowChanging" msprop:Generator_RowClassName="ClienteRow" msprop:Generator_TableClassName="ClienteDataTable" msprop:Generator_TableVarName="tableCliente">
+        <xs:element name="Cliente" msprop:Generator_RowEvHandlerName="ClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="ClienteRowDeleted" msprop:Generator_RowDeletingName="ClienteRowDeleting" msprop:Generator_RowEvArgName="ClienteRowChangeEvent" msprop:Generator_TablePropName="Cliente" msprop:Generator_RowChangedName="ClienteRowChanged" msprop:Generator_RowChangingName="ClienteRowChanging" msprop:Generator_TableClassName="ClienteDataTable" msprop:Generator_RowClassName="ClienteRow" msprop:Generator_TableVarName="tableCliente" msprop:Generator_UserTableName="Cliente">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="codigo_cliente" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="codigo_clienteColumn" msprop:Generator_ColumnPropNameInRow="codigo_cliente" msprop:Generator_UserColumnName="codigo_cliente" msprop:Generator_ColumnVarNameInTable="columncodigo_cliente" type="xs:int" />
-              <xs:element name="nombre_cliente" msprop:Generator_ColumnPropNameInTable="nombre_clienteColumn" msprop:Generator_ColumnPropNameInRow="nombre_cliente" msprop:Generator_UserColumnName="nombre_cliente" msprop:Generator_ColumnVarNameInTable="columnnombre_cliente" minOccurs="0">
+              <xs:element name="codigo_cliente" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="codigo_cliente" msprop:Generator_ColumnPropNameInTable="codigo_clienteColumn" msprop:Generator_ColumnVarNameInTable="columncodigo_cliente" msprop:Generator_UserColumnName="codigo_cliente" type="xs:int" />
+              <xs:element name="nombre_cliente" msprop:Generator_ColumnPropNameInRow="nombre_cliente" msprop:Generator_ColumnPropNameInTable="nombre_clienteColumn" msprop:Generator_ColumnVarNameInTable="columnnombre_cliente" msprop:Generator_UserColumnName="nombre_cliente" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="80" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="direccion_cliente" msprop:Generator_ColumnPropNameInTable="direccion_clienteColumn" msprop:Generator_ColumnPropNameInRow="direccion_cliente" msprop:Generator_UserColumnName="direccion_cliente" msprop:Generator_ColumnVarNameInTable="columndireccion_cliente" minOccurs="0">
+              <xs:element name="direccion_cliente" msprop:Generator_ColumnPropNameInRow="direccion_cliente" msprop:Generator_ColumnPropNameInTable="direccion_clienteColumn" msprop:Generator_ColumnVarNameInTable="columndireccion_cliente" msprop:Generator_UserColumnName="direccion_cliente" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="60" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="correo_cliente" msprop:Generator_ColumnPropNameInTable="correo_clienteColumn" msprop:Generator_ColumnPropNameInRow="correo_cliente" msprop:Generator_UserColumnName="correo_cliente" msprop:Generator_ColumnVarNameInTable="columncorreo_cliente" minOccurs="0">
+              <xs:element name="correo_cliente" msprop:Generator_ColumnPropNameInRow="correo_cliente" msprop:Generator_ColumnPropNameInTable="correo_clienteColumn" msprop:Generator_ColumnVarNameInTable="columncorreo_cliente" msprop:Generator_UserColumnName="correo_cliente" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="60" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="telefono_cliente" msprop:Generator_ColumnPropNameInTable="telefono_clienteColumn" msprop:Generator_ColumnPropNameInRow="telefono_cliente" msprop:Generator_UserColumnName="telefono_cliente" msprop:Generator_ColumnVarNameInTable="columntelefono_cliente" type="xs:int" minOccurs="0" />
+              <xs:element name="telefono_cliente" msprop:Generator_ColumnPropNameInRow="telefono_cliente" msprop:Generator_ColumnPropNameInTable="telefono_clienteColumn" msprop:Generator_ColumnVarNameInTable="columntelefono_cliente" msprop:Generator_UserColumnName="telefono_cliente" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -88,6 +88,27 @@
     </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="cls_Conexion.cs" />
+    <Compile Include="DROGUERIADataSet.cs">
+      <DependentUpon>DROGUERIADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DROGUERIADataSet10.cs">
+      <DependentUpon>DROGUERIADataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DROGUERIADataSet11.cs">
+      <DependentUpon>DROGUERIADataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DROGUERIADataSet13.cs">
+      <DependentUpon>DROGUERIADataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DROGUERIADataSet17.cs">
+      <DependentUpon>DROGUERIADataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DROGUERIADataSet19.cs">
+      <DependentUpon>DROGUERIADataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DROGUERIADataSet3.cs">
+      <DependentUpon>DROGUERIADataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SecurityPassword\CambiarPassword.cs">
       <SubType>Form</SubType>
     </Compile>

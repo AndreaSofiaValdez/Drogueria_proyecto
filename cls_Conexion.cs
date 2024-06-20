@@ -14,7 +14,7 @@ namespace Drogueria_proyecto
     //Clase para realizar la conexion a sql server
     public class cls_Conexion
     {
-        public static string conexion = "Data Source=LAPTOP-1RIOJPPC\\SQLEXPRESS;Initial Catalog=DROGUERIA;Integrated Security=True"; 
+        public static string conexion = "Data Source=localhost;Initial Catalog=DROGUERIA;Integrated Security=True"; 
         public SqlConnection sconexion = new SqlConnection();
 
         //Constructor de la clase conexión

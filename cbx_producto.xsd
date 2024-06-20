@@ -2,14 +2,15 @@
 <xs:schema id="cbx_producto" targetNamespace="http://tempuri.org/cbx_producto.xsd" xmlns:mstns="http://tempuri.org/cbx_producto.xsd" xmlns="http://tempuri.org/cbx_producto.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DROGUERIAConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DROGUERIAConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Drogueria_proyecto.Properties.Settings.GlobalReference.Default.DROGUERIAConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DROGUERIAConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DROGUERIAConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Drogueria_proyecto.Properties.Settings.GlobalReference.Default.DROGUERIAConnectionString2" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProductoTableAdapter" GeneratorDataComponentClassName="ProductoTableAdapter" Name="Producto" UserDataComponentName="ProductoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DROGUERIAConnectionString (Settings)" DbObjectName="DROGUERIA.dbo.Producto" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DROGUERIAConnectionString2 (Settings)" DbObjectName="DROGUERIA.dbo.Producto" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Producto] WHERE (([codigo_producto] = @Original_codigo_producto) AND ((@IsNull_nombre_producto = 1 AND [nombre_producto] IS NULL) OR ([nombre_producto] = @Original_nombre_producto)) AND ((@IsNull_descripcion_producto = 1 AND [descripcion_producto] IS NULL) OR ([descripcion_producto] = @Original_descripcion_producto)) AND ((@IsNull_categoria_producto = 1 AND [categoria_producto] IS NULL) OR ([categoria_producto] = @Original_categoria_producto)) AND ((@IsNull_proveedor_producto = 1 AND [proveedor_producto] IS NULL) OR ([proveedor_producto] = @Original_proveedor_producto)) AND ((@IsNull_existencia_producto = 1 AND [existencia_producto] IS NULL) OR ([existencia_producto] = @Original_existencia_producto)))</CommandText>
@@ -42,7 +43,7 @@ SELECT codigo_producto, nombre_producto, descripcion_producto, categoria_product
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT codigo_producto, nombre_producto, descripcion_producto, categoria_producto, proveedor_producto, existencia_producto FROM dbo.Producto</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -89,30 +90,30 @@ SELECT codigo_producto, nombre_producto, descripcion_producto, categoria_product
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="cbx_producto" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="cbx_producto" msprop:Generator_UserDSName="cbx_producto">
+  <xs:element name="cbx_producto" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="cbx_producto" msprop:Generator_DataSetName="cbx_producto">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Producto" msprop:Generator_TableClassName="ProductoDataTable" msprop:Generator_TableVarName="tableProducto" msprop:Generator_TablePropName="Producto" msprop:Generator_RowDeletingName="ProductoRowDeleting" msprop:Generator_RowChangingName="ProductoRowChanging" msprop:Generator_RowEvHandlerName="ProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductoRowDeleted" msprop:Generator_UserTableName="Producto" msprop:Generator_RowChangedName="ProductoRowChanged" msprop:Generator_RowEvArgName="ProductoRowChangeEvent" msprop:Generator_RowClassName="ProductoRow">
+        <xs:element name="Producto" msprop:Generator_RowEvHandlerName="ProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductoRowDeleted" msprop:Generator_RowDeletingName="ProductoRowDeleting" msprop:Generator_RowEvArgName="ProductoRowChangeEvent" msprop:Generator_TablePropName="Producto" msprop:Generator_RowChangedName="ProductoRowChanged" msprop:Generator_RowChangingName="ProductoRowChanging" msprop:Generator_TableClassName="ProductoDataTable" msprop:Generator_RowClassName="ProductoRow" msprop:Generator_TableVarName="tableProducto" msprop:Generator_UserTableName="Producto">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="codigo_producto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncodigo_producto" msprop:Generator_ColumnPropNameInRow="codigo_producto" msprop:Generator_ColumnPropNameInTable="codigo_productoColumn" msprop:Generator_UserColumnName="codigo_producto" type="xs:int" />
-              <xs:element name="nombre_producto" msprop:Generator_ColumnVarNameInTable="columnnombre_producto" msprop:Generator_ColumnPropNameInRow="nombre_producto" msprop:Generator_ColumnPropNameInTable="nombre_productoColumn" msprop:Generator_UserColumnName="nombre_producto" minOccurs="0">
+              <xs:element name="codigo_producto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="codigo_producto" msprop:Generator_ColumnPropNameInTable="codigo_productoColumn" msprop:Generator_ColumnVarNameInTable="columncodigo_producto" msprop:Generator_UserColumnName="codigo_producto" type="xs:int" />
+              <xs:element name="nombre_producto" msprop:Generator_ColumnPropNameInRow="nombre_producto" msprop:Generator_ColumnPropNameInTable="nombre_productoColumn" msprop:Generator_ColumnVarNameInTable="columnnombre_producto" msprop:Generator_UserColumnName="nombre_producto" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="descripcion_producto" msprop:Generator_ColumnVarNameInTable="columndescripcion_producto" msprop:Generator_ColumnPropNameInRow="descripcion_producto" msprop:Generator_ColumnPropNameInTable="descripcion_productoColumn" msprop:Generator_UserColumnName="descripcion_producto" minOccurs="0">
+              <xs:element name="descripcion_producto" msprop:Generator_ColumnPropNameInRow="descripcion_producto" msprop:Generator_ColumnPropNameInTable="descripcion_productoColumn" msprop:Generator_ColumnVarNameInTable="columndescripcion_producto" msprop:Generator_UserColumnName="descripcion_producto" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="categoria_producto" msprop:Generator_ColumnVarNameInTable="columncategoria_producto" msprop:Generator_ColumnPropNameInRow="categoria_producto" msprop:Generator_ColumnPropNameInTable="categoria_productoColumn" msprop:Generator_UserColumnName="categoria_producto" type="xs:int" minOccurs="0" />
-              <xs:element name="proveedor_producto" msprop:Generator_ColumnVarNameInTable="columnproveedor_producto" msprop:Generator_ColumnPropNameInRow="proveedor_producto" msprop:Generator_ColumnPropNameInTable="proveedor_productoColumn" msprop:Generator_UserColumnName="proveedor_producto" type="xs:int" minOccurs="0" />
-              <xs:element name="existencia_producto" msprop:Generator_ColumnVarNameInTable="columnexistencia_producto" msprop:Generator_ColumnPropNameInRow="existencia_producto" msprop:Generator_ColumnPropNameInTable="existencia_productoColumn" msprop:Generator_UserColumnName="existencia_producto" type="xs:int" minOccurs="0" />
+              <xs:element name="categoria_producto" msprop:Generator_ColumnPropNameInRow="categoria_producto" msprop:Generator_ColumnPropNameInTable="categoria_productoColumn" msprop:Generator_ColumnVarNameInTable="columncategoria_producto" msprop:Generator_UserColumnName="categoria_producto" type="xs:int" minOccurs="0" />
+              <xs:element name="proveedor_producto" msprop:Generator_ColumnPropNameInRow="proveedor_producto" msprop:Generator_ColumnPropNameInTable="proveedor_productoColumn" msprop:Generator_ColumnVarNameInTable="columnproveedor_producto" msprop:Generator_UserColumnName="proveedor_producto" type="xs:int" minOccurs="0" />
+              <xs:element name="existencia_producto" msprop:Generator_ColumnPropNameInRow="existencia_producto" msprop:Generator_ColumnPropNameInTable="existencia_productoColumn" msprop:Generator_ColumnVarNameInTable="columnexistencia_producto" msprop:Generator_UserColumnName="existencia_producto" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
