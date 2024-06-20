@@ -505,6 +505,7 @@ namespace Drogueria_proyecto
             this.dgvdetalle.RowTemplate.Height = 46;
             this.dgvdetalle.Size = new System.Drawing.Size(385, 334);
             this.dgvdetalle.TabIndex = 36;
+            this.dgvdetalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdetalle_CellContentClick);
             // 
             // idproducto
             // 
