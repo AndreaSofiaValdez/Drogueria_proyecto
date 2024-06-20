@@ -54,7 +54,7 @@ namespace Drogueria_proyecto.SecurityPassword
             // Aquí deberías realizar la consulta a la base de datos para verificar el usuario y la contraseña
             // Asumiendo que tienes una conexión establecida y un SqlCommand configurado
 
-            using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-4FPC8J0\\MSSQLSERVER01;Initial Catalog = DROGUERIA; Integrated Security = True"))
+            using (SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog = DROGUERIA; Integrated Security = True"))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Empleado WHERE username = @username AND password = @password", con);
@@ -75,7 +75,7 @@ namespace Drogueria_proyecto.SecurityPassword
         private void CambiarContrasena(string username, string newPassword)
         {
             // Aquí deberías actualizar la contraseña en la base de datos
-            using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-4FPC8J0\\MSSQLSERVER01;Initial Catalog = DROGUERIA; Integrated Security = True"))
+            using (SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog = DROGUERIA; Integrated Security = True"))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("UPDATE Empleado SET password = @newPassword WHERE username = @username", con);
