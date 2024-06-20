@@ -43,10 +43,10 @@ namespace Drogueria_proyecto
             this.button1.BackColor = System.Drawing.Color.SlateGray;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(317, 82);
+            this.button1.Location = new System.Drawing.Point(423, 101);
             this.button1.Margin = new System.Windows.Forms.Padding(1);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 70);
+            this.button1.Size = new System.Drawing.Size(200, 86);
             this.button1.TabIndex = 0;
             this.button1.Text = "Producto";
             this.button1.UseVisualStyleBackColor = false;
@@ -59,10 +59,10 @@ namespace Drogueria_proyecto
             this.button2.BackColor = System.Drawing.Color.SlateGray;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(317, 185);
+            this.button2.Location = new System.Drawing.Point(423, 228);
             this.button2.Margin = new System.Windows.Forms.Padding(1);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 70);
+            this.button2.Size = new System.Drawing.Size(200, 86);
             this.button2.TabIndex = 1;
             this.button2.Text = "Factura";
             this.button2.UseVisualStyleBackColor = false;
@@ -75,10 +75,10 @@ namespace Drogueria_proyecto
             this.button3.BackColor = System.Drawing.Color.SlateGray;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(317, 286);
+            this.button3.Location = new System.Drawing.Point(423, 352);
             this.button3.Margin = new System.Windows.Forms.Padding(1);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 70);
+            this.button3.Size = new System.Drawing.Size(200, 86);
             this.button3.TabIndex = 2;
             this.button3.Text = "Clientes";
             this.button3.UseVisualStyleBackColor = false;
@@ -91,10 +91,10 @@ namespace Drogueria_proyecto
             this.btn_regresar_mr.BackColor = System.Drawing.Color.LightSlateGray;
             this.btn_regresar_mr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_regresar_mr.ForeColor = System.Drawing.Color.White;
-            this.btn_regresar_mr.Location = new System.Drawing.Point(317, 469);
+            this.btn_regresar_mr.Location = new System.Drawing.Point(423, 577);
             this.btn_regresar_mr.Margin = new System.Windows.Forms.Padding(1);
             this.btn_regresar_mr.Name = "btn_regresar_mr";
-            this.btn_regresar_mr.Size = new System.Drawing.Size(150, 70);
+            this.btn_regresar_mr.Size = new System.Drawing.Size(200, 86);
             this.btn_regresar_mr.TabIndex = 3;
             this.btn_regresar_mr.Text = "Regresar";
             this.btn_regresar_mr.UseVisualStyleBackColor = false;
@@ -102,17 +102,18 @@ namespace Drogueria_proyecto
             // 
             // menuReporte
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.BackgroundImage = global::Drogueria_proyecto.Properties.Resources.Fondo2;
+            this.ClientSize = new System.Drawing.Size(1045, 690);
             this.Controls.Add(this.btn_regresar_mr);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(1);
-            this.MinimumSize = new System.Drawing.Size(800, 600);
+            this.MinimumSize = new System.Drawing.Size(1061, 728);
             this.Name = "menuReporte";
             this.Text = "Menú Reportes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
