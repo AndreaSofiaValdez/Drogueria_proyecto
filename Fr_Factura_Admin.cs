@@ -41,7 +41,7 @@ namespace Drogueria_proyecto
             // TODO: esta línea de código carga datos en la tabla 'cbx_cliente.Cliente' Puede moverla o quitarla según sea necesario.
             //this.cbx_ClienteTableAdapter.Fill(this.dROGUERIADataSet15.cbx_Cliente);
             // TODO: esta línea de código carga datos en la tabla 'cbx_cliente.Cliente' Puede moverla o quitarla según sea necesario.
-            //this.cbx_ProductoTableAdapter.Fill(this.dROGUERIADataSet15.cbx_Producto);
+            //this.cbx_ProductoTableAdapter.Fills(this.dROGUERIADataSet15.cbx_Producto);
 
 
             cbx_producto_fact.SelectedIndex = -1;
@@ -362,6 +362,11 @@ namespace Drogueria_proyecto
         }
 
         private void cbx_empleado_fact_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvdetalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
