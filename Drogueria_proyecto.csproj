@@ -831,6 +831,7 @@
     <None Include="Resources\pastillas.png" />
     <None Include="Resources\Fondo2.png" />
     <None Include="Resources\fondo1.png" />
+    <None Include="Resources\pildora1.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

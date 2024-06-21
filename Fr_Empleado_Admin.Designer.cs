@@ -96,7 +96,7 @@ namespace Drogueria_proyecto
             this.correo});
             this.dtg_administrador_empleado.DataSource = this.empleadoBindingSource;
             this.dtg_administrador_empleado.Location = new System.Drawing.Point(223, 309);
-            this.dtg_administrador_empleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtg_administrador_empleado.Margin = new System.Windows.Forms.Padding(4);
             this.dtg_administrador_empleado.Name = "dtg_administrador_empleado";
             this.dtg_administrador_empleado.RowHeadersVisible = false;
             this.dtg_administrador_empleado.RowHeadersWidth = 51;
@@ -168,7 +168,7 @@ namespace Drogueria_proyecto
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Silver;
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Location = new System.Drawing.Point(253, 59);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -179,7 +179,7 @@ namespace Drogueria_proyecto
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Silver;
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(249, 108);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -190,7 +190,7 @@ namespace Drogueria_proyecto
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label4.Location = new System.Drawing.Point(603, 171);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -201,7 +201,7 @@ namespace Drogueria_proyecto
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Silver;
+            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label5.Location = new System.Drawing.Point(603, 85);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
@@ -213,7 +213,7 @@ namespace Drogueria_proyecto
             // 
             this.txt_idEmpleado_gr.Enabled = false;
             this.txt_idEmpleado_gr.Location = new System.Drawing.Point(319, 55);
-            this.txt_idEmpleado_gr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_idEmpleado_gr.Margin = new System.Windows.Forms.Padding(4);
             this.txt_idEmpleado_gr.Name = "txt_idEmpleado_gr";
             this.txt_idEmpleado_gr.Size = new System.Drawing.Size(132, 22);
             this.txt_idEmpleado_gr.TabIndex = 6;
@@ -221,7 +221,7 @@ namespace Drogueria_proyecto
             // txt_usuaempl_gr
             // 
             this.txt_usuaempl_gr.Location = new System.Drawing.Point(319, 105);
-            this.txt_usuaempl_gr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_usuaempl_gr.Margin = new System.Windows.Forms.Padding(4);
             this.txt_usuaempl_gr.MaxLength = 60;
             this.txt_usuaempl_gr.Name = "txt_usuaempl_gr";
             this.txt_usuaempl_gr.Size = new System.Drawing.Size(132, 22);
@@ -231,7 +231,7 @@ namespace Drogueria_proyecto
             // txt_nomempl_gr
             // 
             this.txt_nomempl_gr.Location = new System.Drawing.Point(727, 81);
-            this.txt_nomempl_gr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nomempl_gr.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nomempl_gr.MaxLength = 60;
             this.txt_nomempl_gr.Name = "txt_nomempl_gr";
             this.txt_nomempl_gr.Size = new System.Drawing.Size(132, 22);
@@ -243,7 +243,7 @@ namespace Drogueria_proyecto
             this.btnAgregar.BackColor = System.Drawing.Color.SlateGray;
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Location = new System.Drawing.Point(328, 231);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(109, 37);
             this.btnAgregar.TabIndex = 3;
@@ -256,7 +256,7 @@ namespace Drogueria_proyecto
             this.btnModificar.BackColor = System.Drawing.Color.SlateGray;
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Location = new System.Drawing.Point(489, 231);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(109, 37);
             this.btnModificar.TabIndex = 10;
@@ -269,7 +269,7 @@ namespace Drogueria_proyecto
             this.btnEliminar.BackColor = System.Drawing.Color.SlateGray;
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Location = new System.Drawing.Point(656, 231);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(109, 37);
             this.btnEliminar.TabIndex = 11;
@@ -280,7 +280,7 @@ namespace Drogueria_proyecto
             // txt_tipoempl_gr
             // 
             this.txt_tipoempl_gr.Location = new System.Drawing.Point(727, 170);
-            this.txt_tipoempl_gr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_tipoempl_gr.Margin = new System.Windows.Forms.Padding(4);
             this.txt_tipoempl_gr.MaxLength = 1;
             this.txt_tipoempl_gr.Name = "txt_tipoempl_gr";
             this.txt_tipoempl_gr.Size = new System.Drawing.Size(132, 22);
@@ -290,7 +290,7 @@ namespace Drogueria_proyecto
             // txt_pas_ad
             // 
             this.txt_pas_ad.Location = new System.Drawing.Point(727, 123);
-            this.txt_pas_ad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_pas_ad.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pas_ad.MaxLength = 60;
             this.txt_pas_ad.Name = "txt_pas_ad";
             this.txt_pas_ad.Size = new System.Drawing.Size(132, 22);
@@ -300,7 +300,7 @@ namespace Drogueria_proyecto
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Silver;
+            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label6.Location = new System.Drawing.Point(603, 127);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
@@ -325,7 +325,7 @@ namespace Drogueria_proyecto
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Silver;
+            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label7.Location = new System.Drawing.Point(287, 10);
             this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label7.Name = "label7";
@@ -356,7 +356,7 @@ namespace Drogueria_proyecto
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Silver;
+            this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label8.Location = new System.Drawing.Point(249, 170);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
@@ -367,7 +367,7 @@ namespace Drogueria_proyecto
             // txt_correoempl_gr
             // 
             this.txt_correoempl_gr.Location = new System.Drawing.Point(319, 170);
-            this.txt_correoempl_gr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_correoempl_gr.Margin = new System.Windows.Forms.Padding(4);
             this.txt_correoempl_gr.Name = "txt_correoempl_gr";
             this.txt_correoempl_gr.Size = new System.Drawing.Size(235, 22);
             this.txt_correoempl_gr.TabIndex = 17;
@@ -394,7 +394,7 @@ namespace Drogueria_proyecto
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Drogueria_proyecto.Properties.Resources.WhatsApp_Image_2022_02_13_at_3_10_47_PM;
+            this.pictureBox1.Image = global::Drogueria_proyecto.Properties.Resources.pildora1;
             this.pictureBox1.Location = new System.Drawing.Point(45, 70);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox1.Name = "pictureBox1";
@@ -421,7 +421,7 @@ namespace Drogueria_proyecto
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Location = new System.Drawing.Point(25, 25);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
@@ -434,7 +434,6 @@ namespace Drogueria_proyecto
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.BackgroundImage = global::Drogueria_proyecto.Properties.Resources.fondo1;
             this.ClientSize = new System.Drawing.Size(1045, 690);
             this.Controls.Add(this.txt_correoempl_gr);
             this.Controls.Add(this.label8);
@@ -455,7 +454,7 @@ namespace Drogueria_proyecto
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtg_administrador_empleado);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1061, 728);
             this.Name = "Fr_Empleado_Admin";
             this.Text = "Empleados_Ad";

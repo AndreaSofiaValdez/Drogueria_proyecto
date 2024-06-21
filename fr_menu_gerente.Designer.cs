@@ -138,8 +138,8 @@ namespace Drogueria_proyecto
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox1.Image = global::Drogueria_proyecto.Properties.Resources.pastillas;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Drogueria_proyecto.Properties.Resources.pildora1;
             this.pictureBox1.Location = new System.Drawing.Point(67, 74);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox1.Name = "pictureBox1";
@@ -153,7 +153,7 @@ namespace Drogueria_proyecto
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Location = new System.Drawing.Point(45, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
@@ -164,9 +164,10 @@ namespace Drogueria_proyecto
             // labelhorag
             // 
             this.labelhorag.AutoSize = true;
+            this.labelhorag.BackColor = System.Drawing.Color.Transparent;
             this.labelhorag.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelhorag.ForeColor = System.Drawing.Color.White;
-            this.labelhorag.Location = new System.Drawing.Point(479, 256);
+            this.labelhorag.Location = new System.Drawing.Point(523, 255);
             this.labelhorag.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelhorag.Name = "labelhorag";
             this.labelhorag.Size = new System.Drawing.Size(249, 91);
@@ -177,9 +178,10 @@ namespace Drogueria_proyecto
             // labelfechag
             // 
             this.labelfechag.AutoSize = true;
+            this.labelfechag.BackColor = System.Drawing.Color.Transparent;
             this.labelfechag.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelfechag.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelfechag.Location = new System.Drawing.Point(363, 402);
+            this.labelfechag.Location = new System.Drawing.Point(498, 403);
             this.labelfechag.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelfechag.Name = "labelfechag";
             this.labelfechag.Size = new System.Drawing.Size(138, 52);
@@ -195,9 +197,9 @@ namespace Drogueria_proyecto
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Location = new System.Drawing.Point(268, 33);
             this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
@@ -210,7 +212,6 @@ namespace Drogueria_proyecto
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.BackgroundImage = global::Drogueria_proyecto.Properties.Resources.Fondo2;
             this.ClientSize = new System.Drawing.Size(1045, 690);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelfechag);
