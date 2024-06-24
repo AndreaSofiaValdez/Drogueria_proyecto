@@ -93,6 +93,16 @@ namespace Drogueria_proyecto.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pildora1 {
+            get {
+                object obj = ResourceManager.GetObject("pildora1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2022_02_13_at_3_10_47_PM {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2022-02-13 at 3.10.47 PM", resourceCulture);
