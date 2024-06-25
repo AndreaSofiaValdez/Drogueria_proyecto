@@ -209,7 +209,7 @@ namespace Drogueria_proyecto
             this.BtnSecurityPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSecurityPass.LinkColor = System.Drawing.Color.White;
             this.BtnSecurityPass.LinkVisited = true;
-            this.BtnSecurityPass.Location = new System.Drawing.Point(405, 473);
+            this.BtnSecurityPass.Location = new System.Drawing.Point(394, 473);
             this.BtnSecurityPass.Name = "BtnSecurityPass";
             this.BtnSecurityPass.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.BtnSecurityPass.Size = new System.Drawing.Size(268, 29);

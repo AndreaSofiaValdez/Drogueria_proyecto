@@ -80,10 +80,10 @@ namespace Drogueria_proyecto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(167, 0);
+            this.panel2.Location = new System.Drawing.Point(125, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(880, 41);
+            this.panel2.Size = new System.Drawing.Size(660, 33);
             this.panel2.TabIndex = 3;
             // 
             // label2
@@ -92,118 +92,118 @@ namespace Drogueria_proyecto
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(260, 9);
+            this.label2.Location = new System.Drawing.Point(195, 7);
             this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 25);
+            this.label2.Size = new System.Drawing.Size(109, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "Proveedores";
             // 
             // txt_gr_telprov
             // 
-            this.txt_gr_telprov.Location = new System.Drawing.Point(291, 154);
+            this.txt_gr_telprov.Location = new System.Drawing.Point(226, 136);
             this.txt_gr_telprov.Margin = new System.Windows.Forms.Padding(1);
             this.txt_gr_telprov.MaxLength = 8;
             this.txt_gr_telprov.Name = "txt_gr_telprov";
-            this.txt_gr_telprov.Size = new System.Drawing.Size(111, 22);
+            this.txt_gr_telprov.Size = new System.Drawing.Size(110, 20);
             this.txt_gr_telprov.TabIndex = 32;
             this.txt_gr_telprov.TextChanged += new System.EventHandler(this.txt_gr_telprov_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Location = new System.Drawing.Point(199, 154);
+            this.label8.Location = new System.Drawing.Point(149, 135);
             this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 17);
+            this.label8.Size = new System.Drawing.Size(70, 18);
             this.label8.TabIndex = 31;
             this.label8.Text = "Teléfono:";
             // 
             // txt_gr_corprov
             // 
-            this.txt_gr_corprov.Location = new System.Drawing.Point(639, 110);
+            this.txt_gr_corprov.Location = new System.Drawing.Point(479, 89);
             this.txt_gr_corprov.Margin = new System.Windows.Forms.Padding(1);
             this.txt_gr_corprov.MaxLength = 60;
             this.txt_gr_corprov.Name = "txt_gr_corprov";
-            this.txt_gr_corprov.Size = new System.Drawing.Size(111, 22);
+            this.txt_gr_corprov.Size = new System.Drawing.Size(162, 20);
             this.txt_gr_corprov.TabIndex = 30;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(555, 110);
+            this.label5.Location = new System.Drawing.Point(416, 89);
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 17);
+            this.label5.Size = new System.Drawing.Size(59, 18);
             this.label5.TabIndex = 29;
             this.label5.Text = "Correo:";
             // 
             // txt_gr_nomprov
             // 
-            this.txt_gr_nomprov.Location = new System.Drawing.Point(639, 69);
+            this.txt_gr_nomprov.Location = new System.Drawing.Point(479, 56);
             this.txt_gr_nomprov.Margin = new System.Windows.Forms.Padding(1);
             this.txt_gr_nomprov.MaxLength = 50;
             this.txt_gr_nomprov.Name = "txt_gr_nomprov";
-            this.txt_gr_nomprov.Size = new System.Drawing.Size(111, 22);
+            this.txt_gr_nomprov.Size = new System.Drawing.Size(162, 20);
             this.txt_gr_nomprov.TabIndex = 28;
             this.txt_gr_nomprov.TextChanged += new System.EventHandler(this.txt_gr_nomprov_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(555, 69);
+            this.label6.Location = new System.Drawing.Point(416, 56);
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 17);
+            this.label6.Size = new System.Drawing.Size(66, 18);
             this.label6.TabIndex = 27;
             this.label6.Text = "Nombre:";
             // 
             // txt_gr_desprov
             // 
-            this.txt_gr_desprov.Location = new System.Drawing.Point(291, 110);
+            this.txt_gr_desprov.Location = new System.Drawing.Point(226, 94);
             this.txt_gr_desprov.Margin = new System.Windows.Forms.Padding(1);
             this.txt_gr_desprov.MaxLength = 60;
             this.txt_gr_desprov.Name = "txt_gr_desprov";
-            this.txt_gr_desprov.Size = new System.Drawing.Size(111, 22);
+            this.txt_gr_desprov.Size = new System.Drawing.Size(137, 20);
             this.txt_gr_desprov.TabIndex = 26;
             this.txt_gr_desprov.TextChanged += new System.EventHandler(this.txt_gr_desprov_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(199, 114);
+            this.label4.Location = new System.Drawing.Point(149, 93);
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 17);
+            this.label4.Size = new System.Drawing.Size(75, 18);
             this.label4.TabIndex = 25;
             this.label4.Text = "Dirección:";
             // 
             // txt_codprov_gr
             // 
             this.txt_codprov_gr.Enabled = false;
-            this.txt_codprov_gr.Location = new System.Drawing.Point(291, 69);
+            this.txt_codprov_gr.Location = new System.Drawing.Point(226, 56);
             this.txt_codprov_gr.Margin = new System.Windows.Forms.Padding(1);
             this.txt_codprov_gr.Name = "txt_codprov_gr";
-            this.txt_codprov_gr.Size = new System.Drawing.Size(111, 22);
+            this.txt_codprov_gr.Size = new System.Drawing.Size(84, 20);
             this.txt_codprov_gr.TabIndex = 24;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(199, 69);
+            this.label3.Location = new System.Drawing.Point(159, 55);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 17);
+            this.label3.Size = new System.Drawing.Size(60, 18);
             this.label3.TabIndex = 23;
             this.label3.Text = "Código:";
             // 
@@ -211,10 +211,10 @@ namespace Drogueria_proyecto
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.Maroon;
-            this.label9.Location = new System.Drawing.Point(164, 249);
+            this.label9.Location = new System.Drawing.Point(123, 202);
             this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 16);
+            this.label9.Size = new System.Drawing.Size(0, 13);
             this.label9.TabIndex = 33;
             // 
             // btn_gr_modprov
@@ -222,10 +222,10 @@ namespace Drogueria_proyecto
             this.btn_gr_modprov.BackColor = System.Drawing.Color.SlateGray;
             this.btn_gr_modprov.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_gr_modprov.ForeColor = System.Drawing.Color.White;
-            this.btn_gr_modprov.Location = new System.Drawing.Point(460, 220);
+            this.btn_gr_modprov.Location = new System.Drawing.Point(491, 176);
             this.btn_gr_modprov.Margin = new System.Windows.Forms.Padding(1);
             this.btn_gr_modprov.Name = "btn_gr_modprov";
-            this.btn_gr_modprov.Size = new System.Drawing.Size(97, 32);
+            this.btn_gr_modprov.Size = new System.Drawing.Size(94, 52);
             this.btn_gr_modprov.TabIndex = 37;
             this.btn_gr_modprov.Text = "Modificar";
             this.btn_gr_modprov.UseVisualStyleBackColor = false;
@@ -236,10 +236,10 @@ namespace Drogueria_proyecto
             this.btn_gr_eliprov.BackColor = System.Drawing.Color.SlateGray;
             this.btn_gr_eliprov.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_gr_eliprov.ForeColor = System.Drawing.Color.White;
-            this.btn_gr_eliprov.Location = new System.Drawing.Point(585, 220);
+            this.btn_gr_eliprov.Location = new System.Drawing.Point(547, 119);
             this.btn_gr_eliprov.Margin = new System.Windows.Forms.Padding(1);
             this.btn_gr_eliprov.Name = "btn_gr_eliprov";
-            this.btn_gr_eliprov.Size = new System.Drawing.Size(97, 32);
+            this.btn_gr_eliprov.Size = new System.Drawing.Size(94, 50);
             this.btn_gr_eliprov.TabIndex = 36;
             this.btn_gr_eliprov.Text = "Eliminar";
             this.btn_gr_eliprov.UseVisualStyleBackColor = false;
@@ -250,10 +250,10 @@ namespace Drogueria_proyecto
             this.btn_gr_agreprov.BackColor = System.Drawing.Color.SlateGray;
             this.btn_gr_agreprov.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_gr_agreprov.ForeColor = System.Drawing.Color.White;
-            this.btn_gr_agreprov.Location = new System.Drawing.Point(328, 220);
+            this.btn_gr_agreprov.Location = new System.Drawing.Point(437, 121);
             this.btn_gr_agreprov.Margin = new System.Windows.Forms.Padding(1);
             this.btn_gr_agreprov.Name = "btn_gr_agreprov";
-            this.btn_gr_agreprov.Size = new System.Drawing.Size(97, 32);
+            this.btn_gr_agreprov.Size = new System.Drawing.Size(90, 48);
             this.btn_gr_agreprov.TabIndex = 34;
             this.btn_gr_agreprov.Text = "Agregar";
             this.btn_gr_agreprov.UseVisualStyleBackColor = false;
@@ -274,14 +274,14 @@ namespace Drogueria_proyecto
             this.correoproveedorDataGridViewTextBoxColumn,
             this.telefonoproveedorDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.proveedorBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(176, 283);
+            this.dataGridView1.Location = new System.Drawing.Point(132, 230);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(1);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 123;
             this.dataGridView1.RowTemplate.Height = 46;
-            this.dataGridView1.Size = new System.Drawing.Size(856, 395);
+            this.dataGridView1.Size = new System.Drawing.Size(642, 321);
             this.dataGridView1.TabIndex = 38;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ce);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -365,10 +365,10 @@ namespace Drogueria_proyecto
             this.panel1.Controls.Add(this.btn_grprov_regresar);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 1);
+            this.panel1.Location = new System.Drawing.Point(2, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(167, 688);
+            this.panel1.Size = new System.Drawing.Size(125, 559);
             this.panel1.TabIndex = 2;
             // 
             // btn_grprov_regresar
@@ -376,10 +376,10 @@ namespace Drogueria_proyecto
             this.btn_grprov_regresar.BackColor = System.Drawing.Color.SlateGray;
             this.btn_grprov_regresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_grprov_regresar.ForeColor = System.Drawing.Color.White;
-            this.btn_grprov_regresar.Location = new System.Drawing.Point(21, 460);
+            this.btn_grprov_regresar.Location = new System.Drawing.Point(8, 263);
             this.btn_grprov_regresar.Margin = new System.Windows.Forms.Padding(1);
             this.btn_grprov_regresar.Name = "btn_grprov_regresar";
-            this.btn_grprov_regresar.Size = new System.Drawing.Size(116, 44);
+            this.btn_grprov_regresar.Size = new System.Drawing.Size(111, 50);
             this.btn_grprov_regresar.TabIndex = 6;
             this.btn_grprov_regresar.Text = "Regresar";
             this.btn_grprov_regresar.UseVisualStyleBackColor = false;
@@ -389,10 +389,10 @@ namespace Drogueria_proyecto
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Drogueria_proyecto.Properties.Resources.pildora1;
-            this.pictureBox1.Location = new System.Drawing.Point(41, 75);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 61);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(77, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -403,19 +403,19 @@ namespace Drogueria_proyecto
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(17, 31);
+            this.label1.Location = new System.Drawing.Point(8, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
+            this.label1.Size = new System.Drawing.Size(107, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "MedExpress";
             // 
             // Fr_gerente_proveedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(1045, 690);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btn_gr_modprov);
@@ -435,7 +435,7 @@ namespace Drogueria_proyecto
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(1);
-            this.MinimumSize = new System.Drawing.Size(1061, 728);
+            this.MinimumSize = new System.Drawing.Size(800, 599);
             this.Name = "Fr_gerente_proveedores";
             this.Text = "Proveedores_G";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

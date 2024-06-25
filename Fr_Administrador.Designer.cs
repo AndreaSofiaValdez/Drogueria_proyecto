@@ -52,10 +52,9 @@ namespace Drogueria_proyecto
             this.btnSalir.BackColor = System.Drawing.Color.SlateGray;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(39, 596);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Location = new System.Drawing.Point(29, 452);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(140, 47);
+            this.btnSalir.Size = new System.Drawing.Size(111, 50);
             this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -65,10 +64,9 @@ namespace Drogueria_proyecto
             // 
             this.btnFacturas.BackColor = System.Drawing.Color.SlateGray;
             this.btnFacturas.ForeColor = System.Drawing.Color.White;
-            this.btnFacturas.Location = new System.Drawing.Point(39, 428);
-            this.btnFacturas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFacturas.Location = new System.Drawing.Point(29, 348);
             this.btnFacturas.Name = "btnFacturas";
-            this.btnFacturas.Size = new System.Drawing.Size(140, 47);
+            this.btnFacturas.Size = new System.Drawing.Size(111, 50);
             this.btnFacturas.TabIndex = 9;
             this.btnFacturas.Text = "Facturas";
             this.btnFacturas.UseVisualStyleBackColor = false;
@@ -78,10 +76,9 @@ namespace Drogueria_proyecto
             // 
             this.btnProductos.BackColor = System.Drawing.Color.SlateGray;
             this.btnProductos.ForeColor = System.Drawing.Color.White;
-            this.btnProductos.Location = new System.Drawing.Point(39, 350);
-            this.btnProductos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnProductos.Location = new System.Drawing.Point(29, 284);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(140, 47);
+            this.btnProductos.Size = new System.Drawing.Size(111, 50);
             this.btnProductos.TabIndex = 8;
             this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = false;
@@ -91,10 +88,9 @@ namespace Drogueria_proyecto
             // 
             this.btnClientes.BackColor = System.Drawing.Color.SlateGray;
             this.btnClientes.ForeColor = System.Drawing.Color.White;
-            this.btnClientes.Location = new System.Drawing.Point(39, 272);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClientes.Location = new System.Drawing.Point(29, 221);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(140, 47);
+            this.btnClientes.Size = new System.Drawing.Size(111, 50);
             this.btnClientes.TabIndex = 7;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = false;
@@ -104,10 +100,9 @@ namespace Drogueria_proyecto
             // 
             this.btnEmpleado.BackColor = System.Drawing.Color.SlateGray;
             this.btnEmpleado.ForeColor = System.Drawing.Color.White;
-            this.btnEmpleado.Location = new System.Drawing.Point(39, 194);
-            this.btnEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmpleado.Location = new System.Drawing.Point(29, 158);
             this.btnEmpleado.Name = "btnEmpleado";
-            this.btnEmpleado.Size = new System.Drawing.Size(140, 47);
+            this.btnEmpleado.Size = new System.Drawing.Size(111, 50);
             this.btnEmpleado.TabIndex = 0;
             this.btnEmpleado.Text = "Empleado";
             this.btnEmpleado.UseVisualStyleBackColor = false;
@@ -124,10 +119,10 @@ namespace Drogueria_proyecto
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(253, 32);
+            this.label2.Location = new System.Drawing.Point(190, 26);
             this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(365, 29);
+            this.label2.Size = new System.Drawing.Size(285, 24);
             this.label2.TabIndex = 4;
             this.label2.Text = "BIENVENIDO ADMINISTRADOR";
             // 
@@ -147,17 +142,17 @@ namespace Drogueria_proyecto
             this.panel1.Location = new System.Drawing.Point(1, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(221, 689);
+            this.panel1.Size = new System.Drawing.Size(166, 560);
             this.panel1.TabIndex = 11;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Drogueria_proyecto.Properties.Resources.pildora1;
-            this.pictureBox1.Location = new System.Drawing.Point(67, 74);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 61);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 74);
+            this.pictureBox1.Size = new System.Drawing.Size(94, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -168,10 +163,10 @@ namespace Drogueria_proyecto
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(45, 30);
+            this.label1.Location = new System.Drawing.Point(34, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
+            this.label1.Size = new System.Drawing.Size(107, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "MedExpress";
             // 
@@ -181,10 +176,10 @@ namespace Drogueria_proyecto
             this.lblFecha.BackColor = System.Drawing.Color.Transparent;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblFecha.Location = new System.Drawing.Point(490, 416);
+            this.lblFecha.Location = new System.Drawing.Point(368, 338);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(138, 52);
+            this.lblFecha.Size = new System.Drawing.Size(109, 39);
             this.lblFecha.TabIndex = 13;
             this.lblFecha.Text = "label2";
             // 
@@ -194,26 +189,25 @@ namespace Drogueria_proyecto
             this.lblHora.BackColor = System.Drawing.Color.Transparent;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.White;
-            this.lblHora.Location = new System.Drawing.Point(544, 274);
+            this.lblHora.Location = new System.Drawing.Point(408, 223);
             this.lblHora.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(249, 91);
+            this.lblHora.Size = new System.Drawing.Size(204, 73);
             this.lblHora.TabIndex = 12;
             this.lblHora.Text = "label2";
             // 
             // Fr_Administrador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(1045, 690);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1061, 728);
+            this.MinimumSize = new System.Drawing.Size(800, 599);
             this.Name = "Fr_Administrador";
             this.Text = "Menú Administrador";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

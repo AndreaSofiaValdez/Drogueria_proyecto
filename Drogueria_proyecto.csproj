@@ -109,6 +109,11 @@
     <Compile Include="DROGUERIADataSet3.cs">
       <DependentUpon>DROGUERIADataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SecurityPassword\CambiarPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -451,14 +456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="ReporteCliente.rdlc" />
     <EmbeddedResource Include="ReportFact2.rdlc" />
     <EmbeddedResource Include="ReportFactura.rdlc" />
@@ -832,6 +832,7 @@
     <None Include="Resources\Fondo2.png" />
     <None Include="Resources\fondo1.png" />
     <None Include="Resources\pildora1.png" />
+    <None Include="Resources\168689.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -38,12 +38,8 @@ namespace Drogueria_proyecto
             this.txt_Nom_ad = new System.Windows.Forms.TextBox();
             this.txt_catinv_ad = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.btnBuscarad = new System.Windows.Forms.Button();
             this.dgv_prod_ad = new System.Windows.Forms.DataGridView();
             this.codigoproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,20 +64,11 @@ namespace Drogueria_proyecto
             this.errorP_catpro_ad = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorP_existpro_ad = new System.Windows.Forms.ErrorProvider(this.components);
             this.productoTableAdapter1 = new Drogueria_proyecto.DROGUERIADataSet20TableAdapters.ProductoTableAdapter();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -115,57 +102,57 @@ namespace Drogueria_proyecto
             // txt_codinv_ad
             // 
             this.txt_codinv_ad.Enabled = false;
-            this.txt_codinv_ad.Location = new System.Drawing.Point(127, 32);
-            this.txt_codinv_ad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_codinv_ad.Location = new System.Drawing.Point(100, 26);
+            this.txt_codinv_ad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_codinv_ad.Name = "txt_codinv_ad";
-            this.txt_codinv_ad.Size = new System.Drawing.Size(100, 22);
+            this.txt_codinv_ad.Size = new System.Drawing.Size(76, 20);
             this.txt_codinv_ad.TabIndex = 15;
             // 
             // txt_exisinv_ad
             // 
-            this.txt_exisinv_ad.Location = new System.Drawing.Point(377, 113);
-            this.txt_exisinv_ad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_exisinv_ad.Location = new System.Drawing.Point(313, 87);
+            this.txt_exisinv_ad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_exisinv_ad.Name = "txt_exisinv_ad";
-            this.txt_exisinv_ad.Size = new System.Drawing.Size(100, 22);
+            this.txt_exisinv_ad.Size = new System.Drawing.Size(91, 20);
             this.txt_exisinv_ad.TabIndex = 16;
             this.txt_exisinv_ad.TextChanged += new System.EventHandler(this.txt_exisinv_ad_TextChanged);
             // 
             // txt_desinv_ad
             // 
-            this.txt_desinv_ad.Location = new System.Drawing.Point(127, 108);
-            this.txt_desinv_ad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_desinv_ad.Location = new System.Drawing.Point(100, 87);
+            this.txt_desinv_ad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_desinv_ad.MaxLength = 60;
             this.txt_desinv_ad.Name = "txt_desinv_ad";
-            this.txt_desinv_ad.Size = new System.Drawing.Size(100, 22);
+            this.txt_desinv_ad.Size = new System.Drawing.Size(118, 20);
             this.txt_desinv_ad.TabIndex = 17;
             this.txt_desinv_ad.TextChanged += new System.EventHandler(this.txt_desinv_ad_TextChanged);
             // 
             // txt_provinv_ad
             // 
             this.txt_provinv_ad.Enabled = false;
-            this.txt_provinv_ad.Location = new System.Drawing.Point(377, 74);
-            this.txt_provinv_ad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_provinv_ad.Location = new System.Drawing.Point(313, 23);
+            this.txt_provinv_ad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_provinv_ad.Name = "txt_provinv_ad";
-            this.txt_provinv_ad.Size = new System.Drawing.Size(100, 22);
+            this.txt_provinv_ad.Size = new System.Drawing.Size(147, 20);
             this.txt_provinv_ad.TabIndex = 18;
             // 
             // txt_Nom_ad
             // 
-            this.txt_Nom_ad.Location = new System.Drawing.Point(127, 70);
-            this.txt_Nom_ad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Nom_ad.Location = new System.Drawing.Point(100, 58);
+            this.txt_Nom_ad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Nom_ad.MaxLength = 80;
             this.txt_Nom_ad.Name = "txt_Nom_ad";
-            this.txt_Nom_ad.Size = new System.Drawing.Size(100, 22);
+            this.txt_Nom_ad.Size = new System.Drawing.Size(118, 20);
             this.txt_Nom_ad.TabIndex = 19;
             this.txt_Nom_ad.TextChanged += new System.EventHandler(this.txt_Nom_ad_TextChanged);
             // 
             // txt_catinv_ad
             // 
-            this.txt_catinv_ad.Location = new System.Drawing.Point(377, 28);
-            this.txt_catinv_ad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_catinv_ad.Location = new System.Drawing.Point(313, 55);
+            this.txt_catinv_ad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_catinv_ad.MaxLength = 1;
             this.txt_catinv_ad.Name = "txt_catinv_ad";
-            this.txt_catinv_ad.Size = new System.Drawing.Size(100, 22);
+            this.txt_catinv_ad.Size = new System.Drawing.Size(91, 20);
             this.txt_catinv_ad.TabIndex = 20;
             this.txt_catinv_ad.TextChanged += new System.EventHandler(this.txt_catinv_ad_TextChanged);
             // 
@@ -175,74 +162,37 @@ namespace Drogueria_proyecto
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(36, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Código:";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(36, 74);
+            this.label3.Location = new System.Drawing.Point(27, 59);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 16);
+            this.label3.Size = new System.Drawing.Size(66, 18);
             this.label3.TabIndex = 23;
             this.label3.Text = "Nombre:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(36, 112);
+            this.label4.Location = new System.Drawing.Point(12, 89);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 16);
+            this.label4.Size = new System.Drawing.Size(91, 18);
             this.label4.TabIndex = 24;
             this.label4.Text = "Descripción:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Silver;
-            this.label5.Location = new System.Drawing.Point(279, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 16);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Categoría:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Silver;
-            this.label6.Location = new System.Drawing.Point(279, 74);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 16);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Proveedor:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Silver;
-            this.label7.Location = new System.Drawing.Point(279, 111);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 16);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Existencia:";
             // 
             // btnBuscarad
             // 
             this.btnBuscarad.BackColor = System.Drawing.Color.SlateGray;
             this.btnBuscarad.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarad.Location = new System.Drawing.Point(657, 36);
-            this.btnBuscarad.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarad.Location = new System.Drawing.Point(444, 10);
             this.btnBuscarad.Name = "btnBuscarad";
-            this.btnBuscarad.Size = new System.Drawing.Size(109, 27);
+            this.btnBuscarad.Size = new System.Drawing.Size(91, 45);
             this.btnBuscarad.TabIndex = 28;
             this.btnBuscarad.Text = "Buscar";
             this.btnBuscarad.UseVisualStyleBackColor = false;
@@ -264,13 +214,13 @@ namespace Drogueria_proyecto
             this.existenciaproductoDataGridViewTextBoxColumn,
             this.precioproductoDataGridViewTextBoxColumn});
             this.dgv_prod_ad.DataSource = this.productoBindingSource1;
-            this.dgv_prod_ad.Location = new System.Drawing.Point(196, 338);
+            this.dgv_prod_ad.Location = new System.Drawing.Point(147, 275);
             this.dgv_prod_ad.Margin = new System.Windows.Forms.Padding(1);
             this.dgv_prod_ad.Name = "dgv_prod_ad";
             this.dgv_prod_ad.RowHeadersVisible = false;
             this.dgv_prod_ad.RowHeadersWidth = 123;
             this.dgv_prod_ad.RowTemplate.Height = 46;
-            this.dgv_prod_ad.Size = new System.Drawing.Size(857, 288);
+            this.dgv_prod_ad.Size = new System.Drawing.Size(679, 248);
             this.dgv_prod_ad.TabIndex = 29;
             this.dgv_prod_ad.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvg_administrador_producto_CellDoubleClick);
             // 
@@ -282,7 +232,7 @@ namespace Drogueria_proyecto
             this.codigoproductoDataGridViewTextBoxColumn.MinimumWidth = 15;
             this.codigoproductoDataGridViewTextBoxColumn.Name = "codigoproductoDataGridViewTextBoxColumn";
             this.codigoproductoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codigoproductoDataGridViewTextBoxColumn.Width = 80;
+            this.codigoproductoDataGridViewTextBoxColumn.Width = 65;
             // 
             // nombreproductoDataGridViewTextBoxColumn
             // 
@@ -358,10 +308,10 @@ namespace Drogueria_proyecto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Location = new System.Drawing.Point(179, 1);
+            this.panel2.Location = new System.Drawing.Point(134, 1);
             this.panel2.Margin = new System.Windows.Forms.Padding(1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(887, 43);
+            this.panel2.Size = new System.Drawing.Size(701, 35);
             this.panel2.TabIndex = 31;
             // 
             // label8
@@ -370,10 +320,10 @@ namespace Drogueria_proyecto
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Location = new System.Drawing.Point(412, 9);
+            this.label8.Location = new System.Drawing.Point(309, 7);
             this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 25);
+            this.label8.Size = new System.Drawing.Size(81, 20);
             this.label8.TabIndex = 8;
             this.label8.Text = "Producto";
             // 
@@ -416,34 +366,13 @@ namespace Drogueria_proyecto
             // 
             this.productoTableAdapter1.ClearBeforeFill = true;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Silver;
-            this.label9.Location = new System.Drawing.Point(508, 116);
-            this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 16);
-            this.label9.TabIndex = 32;
-            this.label9.Text = "Precio:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(565, 113);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(109, 22);
-            this.textBox1.TabIndex = 33;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.SlateGray;
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(489, 20);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(313, 10);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(109, 37);
+            this.btnEliminar.Size = new System.Drawing.Size(91, 45);
             this.btnEliminar.TabIndex = 14;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -453,10 +382,9 @@ namespace Drogueria_proyecto
             // 
             this.btnModificar.BackColor = System.Drawing.Color.SlateGray;
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(323, 20);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificar.Location = new System.Drawing.Point(186, 10);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(109, 37);
+            this.btnModificar.Size = new System.Drawing.Size(91, 45);
             this.btnModificar.TabIndex = 13;
             this.btnModificar.Text = "Modifcar";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -466,10 +394,9 @@ namespace Drogueria_proyecto
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.SlateGray;
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(163, 20);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Location = new System.Drawing.Point(55, 10);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(109, 37);
+            this.btnAgregar.Size = new System.Drawing.Size(91, 45);
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -482,146 +409,89 @@ namespace Drogueria_proyecto
             this.panel4.Controls.Add(this.btnAgregar);
             this.panel4.Controls.Add(this.btnModificar);
             this.panel4.Controls.Add(this.btnEliminar);
-            this.panel4.Location = new System.Drawing.Point(221, 238);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Controls.Add(this.btnBuscarad);
+            this.panel4.Location = new System.Drawing.Point(166, 193);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(767, 73);
+            this.panel4.Size = new System.Drawing.Size(625, 67);
             this.panel4.TabIndex = 35;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(127, 32);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 15;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(377, 113);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 16;
-            this.textBox3.TextChanged += new System.EventHandler(this.txt_exisinv_ad_TextChanged);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(127, 108);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.MaxLength = 60;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 17;
-            this.textBox4.TextChanged += new System.EventHandler(this.txt_desinv_ad_TextChanged);
-            // 
-            // textBox5
-            // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(377, 74);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 18;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(127, 70);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.MaxLength = 80;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 19;
-            this.textBox6.TextChanged += new System.EventHandler(this.txt_Nom_ad_TextChanged);
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(377, 28);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.MaxLength = 1;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 20;
-            this.textBox7.TextChanged += new System.EventHandler(this.txt_catinv_ad_TextChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label10.Location = new System.Drawing.Point(36, 36);
+            this.label10.Location = new System.Drawing.Point(33, 28);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 16);
+            this.label10.Size = new System.Drawing.Size(60, 18);
             this.label10.TabIndex = 22;
             this.label10.Text = "Código:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.Silver;
-            this.label11.Location = new System.Drawing.Point(36, 74);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 16);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "Nombre:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.Silver;
-            this.label12.Location = new System.Drawing.Point(36, 112);
+            this.label12.Location = new System.Drawing.Point(27, 91);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(82, 16);
+            this.label12.Size = new System.Drawing.Size(66, 13);
             this.label12.TabIndex = 24;
             this.label12.Text = "Descripción:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label13.Location = new System.Drawing.Point(279, 31);
+            this.label13.Location = new System.Drawing.Point(230, 57);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(69, 16);
+            this.label13.Size = new System.Drawing.Size(76, 18);
             this.label13.TabIndex = 25;
             this.label13.Text = "Categoría:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label14.Location = new System.Drawing.Point(279, 74);
+            this.label14.Location = new System.Drawing.Point(230, 22);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(74, 16);
+            this.label14.Size = new System.Drawing.Size(81, 18);
             this.label14.TabIndex = 26;
             this.label14.Text = "Proveedor:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label15.Location = new System.Drawing.Point(279, 111);
+            this.label15.Location = new System.Drawing.Point(230, 87);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(71, 16);
+            this.label15.Size = new System.Drawing.Size(79, 18);
             this.label15.TabIndex = 27;
             this.label15.Text = "Existencia:";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label16.Location = new System.Drawing.Point(508, 116);
+            this.label16.Location = new System.Drawing.Point(441, 57);
             this.label16.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(49, 16);
+            this.label16.Size = new System.Drawing.Size(55, 18);
             this.label16.TabIndex = 32;
             this.label16.Text = "Precio:";
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(565, 113);
+            this.textBox8.Location = new System.Drawing.Point(498, 57);
             this.textBox8.Margin = new System.Windows.Forms.Padding(1);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(109, 22);
+            this.textBox8.Size = new System.Drawing.Size(116, 20);
             this.textBox8.TabIndex = 33;
             this.textBox8.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -634,34 +504,19 @@ namespace Drogueria_proyecto
             this.panel5.Controls.Add(this.textBox8);
             this.panel5.Controls.Add(this.txt_exisinv_ad);
             this.panel5.Controls.Add(this.label16);
-            this.panel5.Controls.Add(this.textBox2);
             this.panel5.Controls.Add(this.txt_desinv_ad);
-            this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Controls.Add(this.textBox3);
-            this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.txt_provinv_ad);
-            this.panel5.Controls.Add(this.textBox4);
             this.panel5.Controls.Add(this.txt_Nom_ad);
-            this.panel5.Controls.Add(this.textBox5);
             this.panel5.Controls.Add(this.txt_catinv_ad);
             this.panel5.Controls.Add(this.label15);
-            this.panel5.Controls.Add(this.textBox6);
-            this.panel5.Controls.Add(this.btnBuscarad);
-            this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.label14);
-            this.panel5.Controls.Add(this.textBox7);
-            this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(221, 49);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Location = new System.Drawing.Point(166, 40);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(785, 170);
+            this.panel5.Size = new System.Drawing.Size(625, 138);
             this.panel5.TabIndex = 36;
             // 
             // panel1
@@ -676,17 +531,17 @@ namespace Drogueria_proyecto
             this.panel1.Location = new System.Drawing.Point(0, -2);
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(179, 693);
+            this.panel1.Size = new System.Drawing.Size(134, 577);
             this.panel1.TabIndex = 30;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Drogueria_proyecto.Properties.Resources.pildora1;
-            this.pictureBox1.Location = new System.Drawing.Point(49, 74);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 68);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 74);
+            this.pictureBox1.Size = new System.Drawing.Size(78, 75);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -695,10 +550,9 @@ namespace Drogueria_proyecto
             // 
             this.btnRegresar.BackColor = System.Drawing.Color.SlateGray;
             this.btnRegresar.ForeColor = System.Drawing.Color.White;
-            this.btnRegresar.Location = new System.Drawing.Point(32, 432);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegresar.Location = new System.Drawing.Point(12, 351);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(109, 46);
+            this.btnRegresar.Size = new System.Drawing.Size(111, 50);
             this.btnRegresar.TabIndex = 2;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = false;
@@ -710,27 +564,27 @@ namespace Drogueria_proyecto
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(28, 30);
+            this.label1.Location = new System.Drawing.Point(21, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
+            this.label1.Size = new System.Drawing.Size(107, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "MedExpress";
             // 
             // fr_Producto_Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(1067, 690);
+            this.ClientSize = new System.Drawing.Size(836, 574);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgv_prod_ad);
             this.Controls.Add(this.panel4);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1061, 728);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(800, 599);
             this.Name = "fr_Producto_Admin";
             this.Text = "Producto_Ad";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -767,12 +621,8 @@ namespace Drogueria_proyecto
         private System.Windows.Forms.TextBox txt_Nom_ad;
         private System.Windows.Forms.TextBox txt_catinv_ad;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnBuscarad;
         private System.Windows.Forms.DataGridView dgv_prod_ad;
         private System.Windows.Forms.Panel panel1;
@@ -794,8 +644,6 @@ namespace Drogueria_proyecto
         private DROGUERIADataSet20 dROGUERIADataSet20;
         private System.Windows.Forms.BindingSource productoBindingSource1;
         private DROGUERIADataSet20TableAdapters.ProductoTableAdapter productoTableAdapter1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoproductoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreproductoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionproductoDataGridViewTextBoxColumn;
@@ -811,16 +659,9 @@ namespace Drogueria_proyecto
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        public System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
     }
 }

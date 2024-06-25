@@ -247,10 +247,10 @@ namespace Drogueria_proyecto
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (validaciones.validarprecio(textBox1.Text, "El precio no permite caracteres especiales ni letras"))
+            if (validaciones.validarprecio(textBox8.Text, "El precio no permite caracteres especiales ni letras"))
             {
-                errorP_despro_ad.SetError(textBox1, "El precio no permite caracteres especiales ni letras");
-                textBox1.Text = "";
+                errorP_despro_ad.SetError(textBox8, "El precio no permite caracteres especiales ni letras");
+                textBox8.Text = "";
             }
 
         }
