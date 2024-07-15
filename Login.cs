@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using static Drogueria_proyecto.fr_menu_gerente;
+using System.Runtime.InteropServices;
+
+
 namespace Drogueria_proyecto
 {
     public partial class Login : Form
@@ -15,7 +19,16 @@ namespace Drogueria_proyecto
         public Login()
         {
             InitializeComponent();
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.WindowState = FormWindowState.Maximized;
+            // Asegurar que la barra de tareas sea visible
+            this.MaximumSize = new Size(Screen.PrimaryScreen.WorkingArea.Width, Screen.PrimaryScreen.WorkingArea.Height);
+          
+
         }
+
 
         private void cb_cargo_login_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -24,7 +37,10 @@ namespace Drogueria_proyecto
 
         private void Login_Load(object sender, EventArgs e)
         {
-            
+            Color bgColor = RGBColors.colorBg;
+            BackColor = bgColor;
+
+
         }
 
         
@@ -155,7 +171,81 @@ namespace Drogueria_proyecto
             // Opcional: puedes cerrar el formulario actual si ya no lo necesitas
             // this.Close();
         }
+
+        //Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+
+        /// <summary>
+        /// Minimiza el formulario cuando se hace clic en el botón de minimizar.
+        /// </summary>
+        public void ToggleWindoeStateMini()
+        {
+            // Cambiar el estado de la ventana a minimizado
+             this.WindowState = FormWindowState.Minimized;
+            
+        }
+        private void BtnMinimizar_Click(object sender, EventArgs e)
+        {
+            ToggleWindoeStateMini();
+        }
+
+        /// <summary>
+        /// Maximiza o restaura el tamaño del formulario cuando se hace clic en el botón de maximizar.
+        /// </summary>
+        public void ToggleWindowState()
+        {
+            if (this.WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void BtnMaximizar_Click(object sender, EventArgs e)
+        {
+            ToggleWindowState();
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void PanelTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+
+        /// <summary>
+        /// Maneja el evento de redimensionamiento del formulario fr_menu_gerente.
+        /// </summary>
+        public void ToggleRezise() {
+
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                // Si la ventana está maximizada, quita el borde del formulario
+                FormBorderStyle = FormBorderStyle.None;
+            }
+            else
+            {
+                // Si la ventana no está maximizada, permite redimensionar el formulario
+                FormBorderStyle = FormBorderStyle.Sizable;
+                CenterToScreen();
+            }
+        }
+
+        private void Login_Resize(object sender, EventArgs e)
+        {
+            ToggleRezise();
+           
+        }
     }
+
 
 
 }

@@ -31,8 +31,6 @@ namespace Drogueria_proyecto
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fr_gerente_inventario));
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.txt_gr_catinv = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_gr_nominv = new System.Windows.Forms.TextBox();
@@ -74,11 +72,8 @@ namespace Drogueria_proyecto
             this.txt_precioPro_g = new System.Windows.Forms.TextBox();
             this.errorPro_precioPro_g = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorP_preciopro_ge = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_grinv_regresar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet18)).BeginInit();
@@ -92,175 +87,169 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorPro_precioPro_g)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_preciopro_ge)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(141, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(727, 35);
-            this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(230, 9);
-            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 20);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Productos";
             // 
             // txt_gr_catinv
             // 
-            this.txt_gr_catinv.Location = new System.Drawing.Point(501, 96);
+            this.txt_gr_catinv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_gr_catinv.Location = new System.Drawing.Point(174, 81);
             this.txt_gr_catinv.Margin = new System.Windows.Forms.Padding(1);
             this.txt_gr_catinv.MaxLength = 1;
+            this.txt_gr_catinv.Multiline = true;
             this.txt_gr_catinv.Name = "txt_gr_catinv";
-            this.txt_gr_catinv.Size = new System.Drawing.Size(84, 20);
+            this.txt_gr_catinv.Size = new System.Drawing.Size(263, 24);
             this.txt_gr_catinv.TabIndex = 18;
             this.txt_gr_catinv.TextChanged += new System.EventHandler(this.txt_gr_catinv_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(423, 98);
+            this.label5.Location = new System.Drawing.Point(41, 79);
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 18);
+            this.label5.Size = new System.Drawing.Size(134, 29);
             this.label5.TabIndex = 17;
             this.label5.Text = "Categoría:";
             // 
             // txt_gr_nominv
             // 
-            this.txt_gr_nominv.Location = new System.Drawing.Point(501, 64);
+            this.txt_gr_nominv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_gr_nominv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_gr_nominv.Location = new System.Drawing.Point(621, 19);
             this.txt_gr_nominv.Margin = new System.Windows.Forms.Padding(1);
             this.txt_gr_nominv.MaxLength = 80;
+            this.txt_gr_nominv.Multiline = true;
             this.txt_gr_nominv.Name = "txt_gr_nominv";
-            this.txt_gr_nominv.Size = new System.Drawing.Size(143, 20);
+            this.txt_gr_nominv.Size = new System.Drawing.Size(263, 24);
             this.txt_gr_nominv.TabIndex = 16;
             this.txt_gr_nominv.TextChanged += new System.EventHandler(this.txt_gr_nominv_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(423, 64);
+            this.label6.Location = new System.Drawing.Point(463, 19);
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 18);
+            this.label6.Size = new System.Drawing.Size(114, 29);
             this.label6.TabIndex = 15;
             this.label6.Text = "Nombre:";
             // 
             // txt_gr_desinv
             // 
-            this.txt_gr_desinv.Location = new System.Drawing.Point(234, 134);
+            this.txt_gr_desinv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_gr_desinv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_gr_desinv.Location = new System.Drawing.Point(621, 139);
             this.txt_gr_desinv.Margin = new System.Windows.Forms.Padding(1);
             this.txt_gr_desinv.MaxLength = 60;
+            this.txt_gr_desinv.Multiline = true;
             this.txt_gr_desinv.Name = "txt_gr_desinv";
-            this.txt_gr_desinv.Size = new System.Drawing.Size(137, 20);
+            this.txt_gr_desinv.Size = new System.Drawing.Size(263, 24);
             this.txt_gr_desinv.TabIndex = 14;
             this.txt_gr_desinv.TextChanged += new System.EventHandler(this.txt_gr_desinv_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(141, 135);
+            this.label4.Location = new System.Drawing.Point(463, 136);
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 18);
+            this.label4.Size = new System.Drawing.Size(159, 29);
             this.label4.TabIndex = 13;
             this.label4.Text = "Descripción:";
             // 
             // txt_codinv_gr
             // 
             this.txt_codinv_gr.Enabled = false;
-            this.txt_codinv_gr.Location = new System.Drawing.Point(234, 61);
+            this.txt_codinv_gr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_codinv_gr.Location = new System.Drawing.Point(174, 24);
             this.txt_codinv_gr.Margin = new System.Windows.Forms.Padding(1);
+            this.txt_codinv_gr.Multiline = true;
             this.txt_codinv_gr.Name = "txt_codinv_gr";
-            this.txt_codinv_gr.Size = new System.Drawing.Size(84, 20);
+            this.txt_codinv_gr.Size = new System.Drawing.Size(263, 24);
             this.txt_codinv_gr.TabIndex = 12;
             this.txt_codinv_gr.TextChanged += new System.EventHandler(this.txt_codinv_gr_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(165, 60);
+            this.label3.Location = new System.Drawing.Point(41, 19);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 18);
+            this.label3.Size = new System.Drawing.Size(105, 29);
             this.label3.TabIndex = 11;
             this.label3.Text = "Código:";
             // 
             // txt_exisinv
             // 
-            this.txt_exisinv.Location = new System.Drawing.Point(501, 136);
+            this.txt_exisinv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_exisinv.Location = new System.Drawing.Point(174, 141);
             this.txt_exisinv.Margin = new System.Windows.Forms.Padding(1);
+            this.txt_exisinv.Multiline = true;
             this.txt_exisinv.Name = "txt_exisinv";
-            this.txt_exisinv.Size = new System.Drawing.Size(84, 20);
+            this.txt_exisinv.Size = new System.Drawing.Size(263, 24);
             this.txt_exisinv.TabIndex = 22;
             this.txt_exisinv.TextChanged += new System.EventHandler(this.txt_exisinv_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(423, 135);
+            this.label7.Location = new System.Drawing.Point(41, 139);
             this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 18);
+            this.label7.Size = new System.Drawing.Size(139, 29);
             this.label7.TabIndex = 21;
             this.label7.Text = "Existencia:";
             // 
             // txt_gr_provinv
             // 
+            this.txt_gr_provinv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_gr_provinv.Enabled = false;
-            this.txt_gr_provinv.Location = new System.Drawing.Point(234, 98);
+            this.txt_gr_provinv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_gr_provinv.Location = new System.Drawing.Point(621, 79);
             this.txt_gr_provinv.Margin = new System.Windows.Forms.Padding(1);
+            this.txt_gr_provinv.Multiline = true;
             this.txt_gr_provinv.Name = "txt_gr_provinv";
-            this.txt_gr_provinv.Size = new System.Drawing.Size(137, 20);
+            this.txt_gr_provinv.Size = new System.Drawing.Size(263, 24);
             this.txt_gr_provinv.TabIndex = 20;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Location = new System.Drawing.Point(151, 98);
+            this.label8.Location = new System.Drawing.Point(463, 76);
             this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 18);
+            this.label8.Size = new System.Drawing.Size(142, 29);
             this.label8.TabIndex = 19;
             this.label8.Text = "Proveedor:";
             // 
             // btn_gr_modinv
             // 
-            this.btn_gr_modinv.BackColor = System.Drawing.Color.SlateGray;
-            this.btn_gr_modinv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gr_modinv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_gr_modinv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
+            this.btn_gr_modinv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gr_modinv.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_gr_modinv.ForeColor = System.Drawing.Color.White;
-            this.btn_gr_modinv.Location = new System.Drawing.Point(757, 97);
+            this.btn_gr_modinv.Location = new System.Drawing.Point(602, 4);
             this.btn_gr_modinv.Margin = new System.Windows.Forms.Padding(1);
             this.btn_gr_modinv.Name = "btn_gr_modinv";
-            this.btn_gr_modinv.Size = new System.Drawing.Size(86, 44);
+            this.btn_gr_modinv.Size = new System.Drawing.Size(135, 49);
             this.btn_gr_modinv.TabIndex = 26;
             this.btn_gr_modinv.Text = "Modificar";
             this.btn_gr_modinv.UseVisualStyleBackColor = false;
@@ -268,13 +257,15 @@ namespace Drogueria_proyecto
             // 
             // btn_gr_elinv
             // 
-            this.btn_gr_elinv.BackColor = System.Drawing.Color.SlateGray;
-            this.btn_gr_elinv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gr_elinv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_gr_elinv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
+            this.btn_gr_elinv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gr_elinv.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_gr_elinv.ForeColor = System.Drawing.Color.White;
-            this.btn_gr_elinv.Location = new System.Drawing.Point(757, 156);
+            this.btn_gr_elinv.Location = new System.Drawing.Point(749, 4);
             this.btn_gr_elinv.Margin = new System.Windows.Forms.Padding(1);
             this.btn_gr_elinv.Name = "btn_gr_elinv";
-            this.btn_gr_elinv.Size = new System.Drawing.Size(86, 44);
+            this.btn_gr_elinv.Size = new System.Drawing.Size(135, 49);
             this.btn_gr_elinv.TabIndex = 25;
             this.btn_gr_elinv.Text = "Eliminar";
             this.btn_gr_elinv.UseVisualStyleBackColor = false;
@@ -282,13 +273,15 @@ namespace Drogueria_proyecto
             // 
             // btn_gr_agreinv
             // 
-            this.btn_gr_agreinv.BackColor = System.Drawing.Color.SlateGray;
-            this.btn_gr_agreinv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gr_agreinv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_gr_agreinv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
+            this.btn_gr_agreinv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gr_agreinv.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_gr_agreinv.ForeColor = System.Drawing.Color.White;
-            this.btn_gr_agreinv.Location = new System.Drawing.Point(757, 40);
+            this.btn_gr_agreinv.Location = new System.Drawing.Point(452, 4);
             this.btn_gr_agreinv.Margin = new System.Windows.Forms.Padding(1);
             this.btn_gr_agreinv.Name = "btn_gr_agreinv";
-            this.btn_gr_agreinv.Size = new System.Drawing.Size(86, 44);
+            this.btn_gr_agreinv.Size = new System.Drawing.Size(135, 49);
             this.btn_gr_agreinv.TabIndex = 23;
             this.btn_gr_agreinv.Text = "Agregar";
             this.btn_gr_agreinv.UseVisualStyleBackColor = false;
@@ -301,6 +294,7 @@ namespace Drogueria_proyecto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(115)))), ((int)(((byte)(148)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigoproductoDataGridViewTextBoxColumn,
@@ -311,14 +305,14 @@ namespace Drogueria_proyecto
             this.existenciaproductoDataGridViewTextBoxColumn,
             this.precioproductoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.productoBindingSource2;
-            this.dataGridView1.Location = new System.Drawing.Point(150, 244);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 297);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(1);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 123;
             this.dataGridView1.RowTemplate.Height = 46;
-            this.dataGridView1.Size = new System.Drawing.Size(693, 307);
+            this.dataGridView1.Size = new System.Drawing.Size(934, 266);
             this.dataGridView1.TabIndex = 27;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
@@ -400,13 +394,15 @@ namespace Drogueria_proyecto
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.SlateGray;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(658, 96);
+            this.button1.Location = new System.Drawing.Point(302, 4);
             this.button1.Margin = new System.Windows.Forms.Padding(1);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 44);
+            this.button1.Size = new System.Drawing.Size(135, 49);
             this.button1.TabIndex = 28;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = false;
@@ -453,21 +449,23 @@ namespace Drogueria_proyecto
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label9.Location = new System.Drawing.Point(434, 180);
+            this.label9.Location = new System.Drawing.Point(41, 190);
             this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 18);
+            this.label9.Size = new System.Drawing.Size(96, 29);
             this.label9.TabIndex = 29;
             this.label9.Text = "Precio:";
             // 
             // txt_precioPro_g
             // 
-            this.txt_precioPro_g.Location = new System.Drawing.Point(501, 180);
+            this.txt_precioPro_g.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_precioPro_g.Location = new System.Drawing.Point(174, 199);
             this.txt_precioPro_g.Margin = new System.Windows.Forms.Padding(1);
+            this.txt_precioPro_g.Multiline = true;
             this.txt_precioPro_g.Name = "txt_precioPro_g";
-            this.txt_precioPro_g.Size = new System.Drawing.Size(143, 20);
+            this.txt_precioPro_g.Size = new System.Drawing.Size(263, 24);
             this.txt_precioPro_g.TabIndex = 30;
             this.txt_precioPro_g.TextChanged += new System.EventHandler(this.txt_precioPro_g_TextChanged);
             // 
@@ -479,87 +477,49 @@ namespace Drogueria_proyecto
             // 
             this.errorP_preciopro_ge.ContainerControl = this;
             // 
-            // panel1
+            // guna2Panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.panel1.BackgroundImage = global::Drogueria_proyecto.Properties.Resources.Fondo2;
-            this.panel1.Controls.Add(this.btn_grinv_regresar);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(2, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(137, 559);
-            this.panel1.TabIndex = 1;
+            this.guna2Panel1.Controls.Add(this.txt_precioPro_g);
+            this.guna2Panel1.Controls.Add(this.txt_codinv_gr);
+            this.guna2Panel1.Controls.Add(this.label9);
+            this.guna2Panel1.Controls.Add(this.label4);
+            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.Controls.Add(this.txt_exisinv);
+            this.guna2Panel1.Controls.Add(this.txt_gr_desinv);
+            this.guna2Panel1.Controls.Add(this.txt_gr_catinv);
+            this.guna2Panel1.Controls.Add(this.label7);
+            this.guna2Panel1.Controls.Add(this.txt_gr_provinv);
+            this.guna2Panel1.Controls.Add(this.label6);
+            this.guna2Panel1.Controls.Add(this.label8);
+            this.guna2Panel1.Controls.Add(this.label5);
+            this.guna2Panel1.Controls.Add(this.txt_gr_nominv);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(934, 236);
+            this.guna2Panel1.TabIndex = 31;
             // 
-            // btn_grinv_regresar
+            // guna2Panel2
             // 
-            this.btn_grinv_regresar.BackColor = System.Drawing.Color.SlateGray;
-            this.btn_grinv_regresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_grinv_regresar.ForeColor = System.Drawing.Color.White;
-            this.btn_grinv_regresar.Location = new System.Drawing.Point(8, 372);
-            this.btn_grinv_regresar.Margin = new System.Windows.Forms.Padding(1);
-            this.btn_grinv_regresar.Name = "btn_grinv_regresar";
-            this.btn_grinv_regresar.Size = new System.Drawing.Size(111, 50);
-            this.btn_grinv_regresar.TabIndex = 6;
-            this.btn_grinv_regresar.Text = "Regresar";
-            this.btn_grinv_regresar.UseVisualStyleBackColor = false;
-            this.btn_grinv_regresar.Click += new System.EventHandler(this.btn_grinv_regresar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Drogueria_proyecto.Properties.Resources.pildora1;
-            this.pictureBox1.Location = new System.Drawing.Point(31, 61);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 87);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(13, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "MedExpress";
+            this.guna2Panel2.Controls.Add(this.button1);
+            this.guna2Panel2.Controls.Add(this.btn_gr_agreinv);
+            this.guna2Panel2.Controls.Add(this.btn_gr_modinv);
+            this.guna2Panel2.Controls.Add(this.btn_gr_elinv);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 236);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(934, 57);
+            this.guna2Panel2.TabIndex = 32;
             // 
             // Fr_gerente_inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(866, 561);
-            this.Controls.Add(this.txt_precioPro_g);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(115)))), ((int)(((byte)(148)))));
+            this.ClientSize = new System.Drawing.Size(934, 561);
+            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btn_gr_modinv);
-            this.Controls.Add(this.btn_gr_elinv);
-            this.Controls.Add(this.btn_gr_agreinv);
-            this.Controls.Add(this.txt_exisinv);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txt_gr_provinv);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txt_gr_catinv);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txt_gr_nominv);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txt_gr_desinv);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txt_codinv_gr);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(1);
             this.MinimumSize = new System.Drawing.Size(800, 599);
@@ -567,8 +527,6 @@ namespace Drogueria_proyecto
             this.Text = "Productos_G";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Fr_gerente_inventario_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet18)).EndInit();
@@ -582,22 +540,14 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorPro_precioPro_g)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_preciopro_ge)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_grinv_regresar;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_gr_catinv;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_gr_nominv;
@@ -639,5 +589,7 @@ namespace Drogueria_proyecto
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ErrorProvider errorPro_precioPro_g;
         private System.Windows.Forms.ErrorProvider errorP_preciopro_ge;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
     }
 }

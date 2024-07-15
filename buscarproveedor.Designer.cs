@@ -40,9 +40,15 @@ namespace Drogueria_proyecto
             this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dROGUERIADataSet9 = new Drogueria_proyecto.DROGUERIADataSet9();
             this.proveedorTableAdapter = new Drogueria_proyecto.DROGUERIADataSet9TableAdapters.ProveedorTableAdapter();
+            this.PanelTitulo = new Guna.UI2.WinForms.Guna2Panel();
+            this.BtnSalir = new FontAwesome.Sharp.IconButton();
+            this.BtnMaximizar = new FontAwesome.Sharp.IconButton();
+            this.BtnMinimizar = new FontAwesome.Sharp.IconButton();
+            this.iconCurrentChildForm = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet9)).BeginInit();
+            this.PanelTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -52,6 +58,8 @@ namespace Drogueria_proyecto
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigoproveedorDataGridViewTextBoxColumn,
@@ -60,12 +68,12 @@ namespace Drogueria_proyecto
             this.correoproveedorDataGridViewTextBoxColumn,
             this.telefonoproveedorDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.proveedorBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 66);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 123;
-            this.dataGridView1.Size = new System.Drawing.Size(760, 537);
+            this.dataGridView1.Size = new System.Drawing.Size(757, 483);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -87,7 +95,6 @@ namespace Drogueria_proyecto
             this.nombreproveedorDataGridViewTextBoxColumn.MinimumWidth = 15;
             this.nombreproveedorDataGridViewTextBoxColumn.Name = "nombreproveedorDataGridViewTextBoxColumn";
             this.nombreproveedorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreproveedorDataGridViewTextBoxColumn.Width = 200;
             // 
             // direccionproveedorDataGridViewTextBoxColumn
             // 
@@ -96,7 +103,6 @@ namespace Drogueria_proyecto
             this.direccionproveedorDataGridViewTextBoxColumn.MinimumWidth = 15;
             this.direccionproveedorDataGridViewTextBoxColumn.Name = "direccionproveedorDataGridViewTextBoxColumn";
             this.direccionproveedorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.direccionproveedorDataGridViewTextBoxColumn.Width = 200;
             // 
             // correoproveedorDataGridViewTextBoxColumn
             // 
@@ -105,7 +111,6 @@ namespace Drogueria_proyecto
             this.correoproveedorDataGridViewTextBoxColumn.MinimumWidth = 15;
             this.correoproveedorDataGridViewTextBoxColumn.Name = "correoproveedorDataGridViewTextBoxColumn";
             this.correoproveedorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.correoproveedorDataGridViewTextBoxColumn.Width = 200;
             // 
             // telefonoproveedorDataGridViewTextBoxColumn
             // 
@@ -114,7 +119,6 @@ namespace Drogueria_proyecto
             this.telefonoproveedorDataGridViewTextBoxColumn.MinimumWidth = 15;
             this.telefonoproveedorDataGridViewTextBoxColumn.Name = "telefonoproveedorDataGridViewTextBoxColumn";
             this.telefonoproveedorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.telefonoproveedorDataGridViewTextBoxColumn.Width = 200;
             // 
             // proveedorBindingSource
             // 
@@ -130,12 +134,103 @@ namespace Drogueria_proyecto
             // 
             this.proveedorTableAdapter.ClearBeforeFill = true;
             // 
+            // PanelTitulo
+            // 
+            this.PanelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
+            this.PanelTitulo.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.PanelTitulo.Controls.Add(this.BtnSalir);
+            this.PanelTitulo.Controls.Add(this.BtnMaximizar);
+            this.PanelTitulo.Controls.Add(this.BtnMinimizar);
+            this.PanelTitulo.Controls.Add(this.iconCurrentChildForm);
+            this.PanelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelTitulo.Location = new System.Drawing.Point(0, 0);
+            this.PanelTitulo.Name = "PanelTitulo";
+            this.PanelTitulo.Size = new System.Drawing.Size(784, 60);
+            this.PanelTitulo.TabIndex = 2;
+            this.PanelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTitulo_MouseDown);
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSalir.AutoSize = true;
+            this.BtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
+            this.BtnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSalir.FlatAppearance.BorderSize = 0;
+            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalir.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnSalir.IconChar = FontAwesome.Sharp.IconChar.TimesRectangle;
+            this.BtnSalir.IconColor = System.Drawing.Color.White;
+            this.BtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnSalir.IconSize = 25;
+            this.BtnSalir.Location = new System.Drawing.Point(722, 17);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(31, 31);
+            this.BtnSalir.TabIndex = 4;
+            this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            // 
+            // BtnMaximizar
+            // 
+            this.BtnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnMaximizar.AutoSize = true;
+            this.BtnMaximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
+            this.BtnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnMaximizar.FlatAppearance.BorderSize = 0;
+            this.BtnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMaximizar.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnMaximizar.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
+            this.BtnMaximizar.IconColor = System.Drawing.Color.White;
+            this.BtnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnMaximizar.IconSize = 25;
+            this.BtnMaximizar.Location = new System.Drawing.Point(685, 17);
+            this.BtnMaximizar.Name = "BtnMaximizar";
+            this.BtnMaximizar.Size = new System.Drawing.Size(31, 31);
+            this.BtnMaximizar.TabIndex = 3;
+            this.BtnMaximizar.UseVisualStyleBackColor = false;
+            this.BtnMaximizar.Click += new System.EventHandler(this.BtnMaximizar_Click);
+            // 
+            // BtnMinimizar
+            // 
+            this.BtnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnMinimizar.AutoSize = true;
+            this.BtnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
+            this.BtnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnMinimizar.FlatAppearance.BorderSize = 0;
+            this.BtnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMinimizar.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnMinimizar.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.BtnMinimizar.IconColor = System.Drawing.Color.White;
+            this.BtnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnMinimizar.IconSize = 25;
+            this.BtnMinimizar.Location = new System.Drawing.Point(648, 17);
+            this.BtnMinimizar.Name = "BtnMinimizar";
+            this.BtnMinimizar.Size = new System.Drawing.Size(31, 31);
+            this.BtnMinimizar.TabIndex = 2;
+            this.BtnMinimizar.UseVisualStyleBackColor = false;
+            this.BtnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click);
+            // 
+            // iconCurrentChildForm
+            // 
+            this.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
+            this.iconCurrentChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconCurrentChildForm.ForeColor = System.Drawing.Color.Transparent;
+            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.iconCurrentChildForm.IconColor = System.Drawing.Color.White;
+            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCurrentChildForm.IconSize = 25;
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(15, 17);
+            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(31, 26);
+            this.iconCurrentChildForm.TabIndex = 1;
+            this.iconCurrentChildForm.UseVisualStyleBackColor = false;
+            // 
             // buscarproveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(115)))), ((int)(((byte)(148)))));
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.PanelTitulo);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 600);
@@ -143,9 +238,12 @@ namespace Drogueria_proyecto
             this.Text = "buscarproveedorG";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.buscarproveedor_Load);
+            this.Resize += new System.EventHandler(this.buscarproveedor_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet9)).EndInit();
+            this.PanelTitulo.ResumeLayout(false);
+            this.PanelTitulo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -161,5 +259,10 @@ namespace Drogueria_proyecto
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionproveedorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn correoproveedorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoproveedorDataGridViewTextBoxColumn;
+        private Guna.UI2.WinForms.Guna2Panel PanelTitulo;
+        private FontAwesome.Sharp.IconButton BtnSalir;
+        private FontAwesome.Sharp.IconButton BtnMaximizar;
+        private FontAwesome.Sharp.IconButton BtnMinimizar;
+        private FontAwesome.Sharp.IconButton iconCurrentChildForm;
     }
 }
