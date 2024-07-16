@@ -34,16 +34,19 @@ namespace Drogueria_proyecto
             this.txbCorreo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.btnCambiar = new System.Windows.Forms.Button();
+            this.PanelTitulo = new Guna.UI2.WinForms.Guna2Panel();
+            this.BtnSalir = new FontAwesome.Sharp.IconButton();
+            this.iconCurrentChildForm = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PanelTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEnviar
             // 
-            this.btnEnviar.BackColor = System.Drawing.Color.SlateGray;
-            this.btnEnviar.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
             resources.ApplyResources(this.btnEnviar, "btnEnviar");
+            this.btnEnviar.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.UseVisualStyleBackColor = false;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
@@ -66,32 +69,60 @@ namespace Drogueria_proyecto
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Red;
-            this.btnCerrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            resources.ApplyResources(this.btnCerrar, "btnCerrar");
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // btnCambiar
             // 
-            this.btnCambiar.BackColor = System.Drawing.Color.SlateGray;
-            this.btnCambiar.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnCambiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
             resources.ApplyResources(this.btnCambiar, "btnCambiar");
+            this.btnCambiar.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnCambiar.Name = "btnCambiar";
             this.btnCambiar.UseVisualStyleBackColor = false;
             this.btnCambiar.Click += new System.EventHandler(this.btnCambiar_Click);
+            // 
+            // PanelTitulo
+            // 
+            this.PanelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
+            this.PanelTitulo.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.PanelTitulo.Controls.Add(this.BtnSalir);
+            this.PanelTitulo.Controls.Add(this.iconCurrentChildForm);
+            resources.ApplyResources(this.PanelTitulo, "PanelTitulo");
+            this.PanelTitulo.Name = "PanelTitulo";
+            this.PanelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTitulo_MouseDown);
+            // 
+            // BtnSalir
+            // 
+            resources.ApplyResources(this.BtnSalir, "BtnSalir");
+            this.BtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
+            this.BtnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSalir.FlatAppearance.BorderSize = 0;
+            this.BtnSalir.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnSalir.IconChar = FontAwesome.Sharp.IconChar.TimesRectangle;
+            this.BtnSalir.IconColor = System.Drawing.Color.White;
+            this.BtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnSalir.IconSize = 25;
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            // 
+            // iconCurrentChildForm
+            // 
+            this.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
+            resources.ApplyResources(this.iconCurrentChildForm, "iconCurrentChildForm");
+            this.iconCurrentChildForm.ForeColor = System.Drawing.Color.Transparent;
+            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.iconCurrentChildForm.IconColor = System.Drawing.Color.White;
+            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCurrentChildForm.IconSize = 25;
+            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
+            this.iconCurrentChildForm.UseVisualStyleBackColor = false;
             // 
             // SecurityForm
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(46)))), ((int)(((byte)(120)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(115)))), ((int)(((byte)(148)))));
+            this.Controls.Add(this.PanelTitulo);
             this.Controls.Add(this.btnCambiar);
-            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txbCorreo);
@@ -99,7 +130,10 @@ namespace Drogueria_proyecto
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SecurityForm";
             this.Load += new System.EventHandler(this.SecurityForm_Load);
+            this.Resize += new System.EventHandler(this.SecurityForm_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.PanelTitulo.ResumeLayout(false);
+            this.PanelTitulo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,7 +145,9 @@ namespace Drogueria_proyecto
         private System.Windows.Forms.TextBox txbCorreo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnCambiar;
+        private Guna.UI2.WinForms.Guna2Panel PanelTitulo;
+        private FontAwesome.Sharp.IconButton BtnSalir;
+        private FontAwesome.Sharp.IconButton iconCurrentChildForm;
     }
 }

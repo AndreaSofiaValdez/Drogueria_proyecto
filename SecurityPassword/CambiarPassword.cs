@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,16 @@ namespace Drogueria_proyecto.SecurityPassword
         public CambiarPassword()
         {
             InitializeComponent();
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            // Establecer el estilo del borde del formulario a un tamaño fijo
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
+            // Opcional: Deshabilitar los botones de maximizar y minimizar si también lo deseas
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+
         }
 
         private void btnCambiarPass_Click(object sender, EventArgs e)
@@ -86,16 +97,41 @@ namespace Drogueria_proyecto.SecurityPassword
             }
         }
 
-        private void CambiarPassword_Load(object sender, EventArgs e)
+        private void BtnSalir_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void CambiarPassword_Resize(object sender, EventArgs e)
         {
-            Login Login = new Login();
-            Login.Show();
-            this.Hide();
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                // Si la ventana está maximizada, quita el borde del formulario
+                FormBorderStyle = FormBorderStyle.FixedSingle;
+            }
+            else
+            {
+                // Si la ventana no está maximizada, permite redimensionar el formulario
+                FormBorderStyle = FormBorderStyle.FixedSingle;
+                CenterToScreen();
+            }
+        }
+        //Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void PanelTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            SecurityForm SF = new SecurityForm();
+            SF.Show();
+            this.Close();
         }
     }
 }

@@ -42,7 +42,7 @@ namespace Drogueria_proyecto
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconButton();
             this.PanelLateral = new Guna.UI2.WinForms.Guna2Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.button_menug_prov = new FontAwesome.Sharp.IconButton();
             this.button_menug_inv = new FontAwesome.Sharp.IconButton();
             this.button_menug_cli = new FontAwesome.Sharp.IconButton();
             this.PLogo = new Guna.UI2.WinForms.Guna2Panel();
@@ -213,7 +213,7 @@ namespace Drogueria_proyecto
             this.PanelLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
             this.PanelLateral.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
             this.PanelLateral.Controls.Add(this.iconButton3);
-            this.PanelLateral.Controls.Add(this.iconButton2);
+            this.PanelLateral.Controls.Add(this.button_menug_prov);
             this.PanelLateral.Controls.Add(this.button_menug_inv);
             this.PanelLateral.Controls.Add(this.button_menug_cli);
             this.PanelLateral.Controls.Add(this.PLogo);
@@ -247,29 +247,30 @@ namespace Drogueria_proyecto
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = false;
             // 
-            // iconButton2
+            // button_menug_prov
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.iconButton2.FlatAppearance.BorderSize = 4;
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 32;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 397);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton2.Size = new System.Drawing.Size(300, 80);
-            this.iconButton2.TabIndex = 3;
-            this.iconButton2.Text = "Proveedores";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.button_menug_prov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
+            this.button_menug_prov.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_menug_prov.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_menug_prov.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_menug_prov.FlatAppearance.BorderSize = 4;
+            this.button_menug_prov.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_menug_prov.ForeColor = System.Drawing.Color.White;
+            this.button_menug_prov.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
+            this.button_menug_prov.IconColor = System.Drawing.Color.White;
+            this.button_menug_prov.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.button_menug_prov.IconSize = 32;
+            this.button_menug_prov.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_menug_prov.Location = new System.Drawing.Point(0, 397);
+            this.button_menug_prov.Name = "button_menug_prov";
+            this.button_menug_prov.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_menug_prov.Size = new System.Drawing.Size(300, 80);
+            this.button_menug_prov.TabIndex = 3;
+            this.button_menug_prov.Text = "Proveedores";
+            this.button_menug_prov.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_menug_prov.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_menug_prov.UseVisualStyleBackColor = false;
+            this.button_menug_prov.Click += new System.EventHandler(this.button_menug_prov_Click_1);
             // 
             // button_menug_inv
             // 
@@ -386,7 +387,7 @@ namespace Drogueria_proyecto
         private FontAwesome.Sharp.IconButton iconCurrentChildForm;
         private Guna.UI2.WinForms.Guna2Panel panelDesktop;
         private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton button_menug_prov;
         private FontAwesome.Sharp.IconButton button_menug_inv;
         private FontAwesome.Sharp.IconButton BtnSalir;
         private FontAwesome.Sharp.IconButton BtnMaximizar;

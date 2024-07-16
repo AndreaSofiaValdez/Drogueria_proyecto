@@ -208,6 +208,11 @@ namespace Drogueria_proyecto
                 txt_gr_telprov.Text = "";
             }
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     
