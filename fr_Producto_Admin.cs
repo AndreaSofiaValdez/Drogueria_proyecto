@@ -66,12 +66,13 @@ namespace Drogueria_proyecto
                     cls_Conexion BD = new cls_Conexion();
                     BD.abrir();
                     SqlCommand agregar = new SqlCommand("insert into Producto values (@nombre_producto, @descripcion_producto ,@categoria_producto, @proveedor_producto, " +
-                        "@existencia)", BD.sconexion);
+                        "@existencia, @precio_producto)", BD.sconexion);
                     agregar.Parameters.AddWithValue("@nombre_producto", txt_Nom_ad.Text);
                     agregar.Parameters.AddWithValue("@descripcion_producto", txt_desinv_ad.Text);
                     agregar.Parameters.AddWithValue("@categoria_producto", txt_catinv_ad.Text);
                     agregar.Parameters.AddWithValue("@proveedor_producto", txt_provinv_ad.Text);
                     agregar.Parameters.AddWithValue("@existencia", txt_exisinv_ad.Text);
+                    agregar.Parameters.AddWithValue("@precio_producto", textBox8.Text);
 
 
                     agregar.ExecuteNonQuery();
@@ -82,6 +83,7 @@ namespace Drogueria_proyecto
                     txt_desinv_ad.Clear();
                     txt_Nom_ad.Clear();
                     txt_provinv_ad.Clear();
+                    textBox8.Clear();
 
                     this.txt_Nom_ad.Focus();
                     cls_Conexion clsConexion1 = new cls_Conexion();
