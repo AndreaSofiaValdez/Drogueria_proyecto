@@ -149,5 +149,53 @@ namespace Drogueria_proyecto
         {
 
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtIDP.Text == string.Empty || txtPrecio.Text == string.Empty || txtSubtotal.Text == string.Empty || txtImp.Text == string.Empty || txtTotal.Text == string.Empty)
+                {
+                    MessageBox.Show("Error... No puede insertar datos en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    cls_Conexion BD = new cls_Conexion();
+                    BD.abrir();
+                    SqlCommand agregar = new SqlCommand("insert into Facturass values (@empleado_factura, @cliente_factura ,@Id_producto, @nombre_producto, " +
+                        "@precio, @cantidad, @subtotal, @impuesto, @total)", BD.sconexion);
+                    agregar.Parameters.AddWithValue("@empleado_factura", cboxEmp.Text);
+                    agregar.Parameters.AddWithValue("@cliente_factura", cboxCliente.Text);
+                    agregar.Parameters.AddWithValue("@Id_producto", txtIDP.Text);
+                    agregar.Parameters.AddWithValue("@nombre_producto", txtProducto.Text);
+                    agregar.Parameters.AddWithValue("@precio", txtPrecio.Text);
+                    agregar.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
+                    agregar.Parameters.AddWithValue("@subtotal", txtSubtotal.Text);
+                    agregar.Parameters.AddWithValue("@impuesto", txtImp.Text);
+                    agregar.Parameters.AddWithValue("@total", txtTotal.Text);
+
+                    agregar.ExecuteNonQuery();
+                    BD.cerrar();
+                    txtIDP.Clear();
+                    txtProducto.Clear();
+                    txtPrecio.Clear();
+                    txtCantidad.Clear();
+                    txtImp.Clear();
+                    txtTotal.Clear();
+
+                    this.txtProducto.Focus();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error...El codigo ya existe en la base de datos");
+            }
+
+            //errorP_catpro_ad.Clear();
+            //errorP_despro_ad.Clear();
+            //errorP_existpro_ad.Clear();
+            //errorP_nombpro_ad.Clear();
+        }
     }
 }
