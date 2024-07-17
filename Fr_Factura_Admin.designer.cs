@@ -83,6 +83,9 @@ namespace Drogueria_proyecto
             this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvFactura = new System.Windows.Forms.DataGridView();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource1)).BeginInit();
@@ -431,7 +434,7 @@ namespace Drogueria_proyecto
             // 
             this.btnModificar.BackColor = System.Drawing.Color.SlateGray;
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(211, 30);
+            this.btnModificar.Location = new System.Drawing.Point(169, 30);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(91, 45);
             this.btnModificar.TabIndex = 48;
@@ -443,7 +446,7 @@ namespace Drogueria_proyecto
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.SlateGray;
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(409, 30);
+            this.btnEliminar.Location = new System.Drawing.Point(284, 30);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(91, 45);
             this.btnEliminar.TabIndex = 49;
@@ -453,6 +456,7 @@ namespace Drogueria_proyecto
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnImprimir);
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.btnAgregar);
@@ -472,6 +476,32 @@ namespace Drogueria_proyecto
             this.dgvFactura.Size = new System.Drawing.Size(1076, 150);
             this.dgvFactura.TabIndex = 51;
             this.dgvFactura.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFactura_CellContentDoubleClick);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackColor = System.Drawing.Color.SlateGray;
+            this.btnImprimir.ForeColor = System.Drawing.Color.White;
+            this.btnImprimir.Location = new System.Drawing.Point(401, 30);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(91, 45);
+            this.btnImprimir.TabIndex = 50;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // Fr_Factura_Admin
             // 
@@ -590,5 +620,8 @@ namespace Drogueria_proyecto
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dgvFactura;
+        private System.Windows.Forms.Button btnImprimir;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

@@ -304,5 +304,19 @@ namespace Drogueria_proyecto
                 MessageBox.Show("Error...El codigo ya existe en la base de datos");
             }
         }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap imagebmp = new Bitmap(dgvFactura.Width, dgvFactura.Height);
+            dgvFactura.DrawToBitmap(imagebmp, new Rectangle(0, 0, dgvFactura.Width, dgvFactura.Height));
+            e.Graphics.DrawImage(imagebmp, 120, 20);
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.PrintPreviewControl.Zoom = 1;
+            printPreviewDialog1.ShowDialog();
+        }
     }
 }
