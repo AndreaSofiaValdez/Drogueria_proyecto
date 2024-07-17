@@ -47,15 +47,9 @@ namespace Drogueria_proyecto
             this.producto_vendedor = new Drogueria_proyecto.producto_vendedor();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dROGUERIADataSet = new Drogueria_proyecto.DROGUERIADataSet();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
             this.productoTableAdapter = new Drogueria_proyecto.DROGUERIADataSetTableAdapters.ProductoTableAdapter();
             this.view_productoTableAdapter = new Drogueria_proyecto.producto_vendedorTableAdapters.view_productoTableAdapter();
             this.view_productoTableAdapter1 = new Drogueria_proyecto.DROGUERIADataSet21TableAdapters.view_productoTableAdapter();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnRegresar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_producto_v)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewproductoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet21)).BeginInit();
@@ -63,9 +57,6 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.producto_vendedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_producto_v
@@ -75,6 +66,8 @@ namespace Drogueria_proyecto
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_producto_v.AutoGenerateColumns = false;
+            this.dgv_producto_v.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_producto_v.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(115)))), ((int)(((byte)(148)))));
             this.dgv_producto_v.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_producto_v.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.expr1DataGridViewTextBoxColumn,
@@ -87,14 +80,14 @@ namespace Drogueria_proyecto
             this.precioproductoDataGridViewTextBoxColumn,
             this.expr3DataGridViewTextBoxColumn});
             this.dgv_producto_v.DataSource = this.viewproductoBindingSource1;
-            this.dgv_producto_v.Location = new System.Drawing.Point(145, 70);
+            this.dgv_producto_v.Location = new System.Drawing.Point(1, 0);
             this.dgv_producto_v.Margin = new System.Windows.Forms.Padding(1);
             this.dgv_producto_v.Name = "dgv_producto_v";
             this.dgv_producto_v.ReadOnly = true;
             this.dgv_producto_v.RowHeadersVisible = false;
             this.dgv_producto_v.RowHeadersWidth = 123;
             this.dgv_producto_v.RowTemplate.Height = 46;
-            this.dgv_producto_v.Size = new System.Drawing.Size(650, 397);
+            this.dgv_producto_v.Size = new System.Drawing.Size(805, 551);
             this.dgv_producto_v.TabIndex = 32;
             this.dgv_producto_v.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_producto_v_CellContentClick);
             // 
@@ -115,7 +108,6 @@ namespace Drogueria_proyecto
             this.expr2DataGridViewTextBoxColumn.MinimumWidth = 15;
             this.expr2DataGridViewTextBoxColumn.Name = "expr2DataGridViewTextBoxColumn";
             this.expr2DataGridViewTextBoxColumn.ReadOnly = true;
-            this.expr2DataGridViewTextBoxColumn.Width = 300;
             // 
             // expr5DataGridViewTextBoxColumn
             // 
@@ -124,7 +116,6 @@ namespace Drogueria_proyecto
             this.expr5DataGridViewTextBoxColumn.MinimumWidth = 15;
             this.expr5DataGridViewTextBoxColumn.Name = "expr5DataGridViewTextBoxColumn";
             this.expr5DataGridViewTextBoxColumn.ReadOnly = true;
-            this.expr5DataGridViewTextBoxColumn.Width = 200;
             // 
             // expr4DataGridViewTextBoxColumn
             // 
@@ -134,7 +125,6 @@ namespace Drogueria_proyecto
             this.expr4DataGridViewTextBoxColumn.Name = "expr4DataGridViewTextBoxColumn";
             this.expr4DataGridViewTextBoxColumn.ReadOnly = true;
             this.expr4DataGridViewTextBoxColumn.Visible = false;
-            this.expr4DataGridViewTextBoxColumn.Width = 300;
             // 
             // expr6DataGridViewTextBoxColumn
             // 
@@ -144,7 +134,6 @@ namespace Drogueria_proyecto
             this.expr6DataGridViewTextBoxColumn.Name = "expr6DataGridViewTextBoxColumn";
             this.expr6DataGridViewTextBoxColumn.ReadOnly = true;
             this.expr6DataGridViewTextBoxColumn.Visible = false;
-            this.expr6DataGridViewTextBoxColumn.Width = 300;
             // 
             // descripcioncategoriaDataGridViewTextBoxColumn
             // 
@@ -153,7 +142,6 @@ namespace Drogueria_proyecto
             this.descripcioncategoriaDataGridViewTextBoxColumn.MinimumWidth = 15;
             this.descripcioncategoriaDataGridViewTextBoxColumn.Name = "descripcioncategoriaDataGridViewTextBoxColumn";
             this.descripcioncategoriaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descripcioncategoriaDataGridViewTextBoxColumn.Width = 200;
             // 
             // nombreproveedorDataGridViewTextBoxColumn
             // 
@@ -162,7 +150,6 @@ namespace Drogueria_proyecto
             this.nombreproveedorDataGridViewTextBoxColumn.MinimumWidth = 15;
             this.nombreproveedorDataGridViewTextBoxColumn.Name = "nombreproveedorDataGridViewTextBoxColumn";
             this.nombreproveedorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreproveedorDataGridViewTextBoxColumn.Width = 200;
             // 
             // precioproductoDataGridViewTextBoxColumn
             // 
@@ -171,7 +158,6 @@ namespace Drogueria_proyecto
             this.precioproductoDataGridViewTextBoxColumn.MinimumWidth = 15;
             this.precioproductoDataGridViewTextBoxColumn.Name = "precioproductoDataGridViewTextBoxColumn";
             this.precioproductoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioproductoDataGridViewTextBoxColumn.Width = 125;
             // 
             // expr3DataGridViewTextBoxColumn
             // 
@@ -180,7 +166,6 @@ namespace Drogueria_proyecto
             this.expr3DataGridViewTextBoxColumn.MinimumWidth = 15;
             this.expr3DataGridViewTextBoxColumn.Name = "expr3DataGridViewTextBoxColumn";
             this.expr3DataGridViewTextBoxColumn.ReadOnly = true;
-            this.expr3DataGridViewTextBoxColumn.Width = 125;
             // 
             // viewproductoBindingSource1
             // 
@@ -212,31 +197,6 @@ namespace Drogueria_proyecto
             this.dROGUERIADataSet.DataSetName = "DROGUERIADataSet";
             this.dROGUERIADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Location = new System.Drawing.Point(135, 1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(669, 35);
-            this.panel2.TabIndex = 33;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Location = new System.Drawing.Point(305, 7);
-            this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 20);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Producto";
-            // 
             // productoTableAdapter
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
@@ -249,67 +209,13 @@ namespace Drogueria_proyecto
             // 
             this.view_productoTableAdapter1.ClearBeforeFill = true;
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.panel1.BackgroundImage = global::Drogueria_proyecto.Properties.Resources.Fondo2;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnRegresar);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(134, 560);
-            this.panel1.TabIndex = 31;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Drogueria_proyecto.Properties.Resources.pildora1;
-            this.pictureBox1.Location = new System.Drawing.Point(37, 60);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(58, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnRegresar
-            // 
-            this.btnRegresar.BackColor = System.Drawing.Color.SlateGray;
-            this.btnRegresar.ForeColor = System.Drawing.Color.White;
-            this.btnRegresar.Location = new System.Drawing.Point(11, 370);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(111, 50);
-            this.btnRegresar.TabIndex = 2;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = false;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(21, 24);
-            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "MedExpress";
-            // 
             // fr_Productos_vendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(115)))), ((int)(((byte)(148)))));
             this.ClientSize = new System.Drawing.Size(805, 561);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgv_producto_v);
-            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(1);
             this.MinimumSize = new System.Drawing.Size(800, 599);
@@ -324,24 +230,12 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.producto_vendedor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnRegresar;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgv_producto_v;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label8;
         private DROGUERIADataSet dROGUERIADataSet;
         private System.Windows.Forms.BindingSource productoBindingSource;
         private DROGUERIADataSetTableAdapters.ProductoTableAdapter productoTableAdapter;
