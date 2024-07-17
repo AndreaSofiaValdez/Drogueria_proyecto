@@ -182,7 +182,7 @@ namespace Drogueria_proyecto
         private void button_menug_cli_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.colorTxtWhile);
-            OpenChildForm(new Fr_Cliente_Admin());
+            //OpenChildForm(new Fr_Cliente_Admin());
         }
 
         private void button_menug_inv_Click(object sender, EventArgs e)

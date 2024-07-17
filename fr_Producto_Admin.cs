@@ -65,7 +65,7 @@ namespace Drogueria_proyecto
         {
             try
             {
-                if (txt_exisinv_ad.Text == string.Empty || txt_catinv_ad.Text == string.Empty || txt_desinv_ad.Text == string.Empty || txt_Nom_ad.Text == string.Empty || txt_provinv_ad.Text == string.Empty)
+                if (txt_codinv_ad.Text == string.Empty || txt_catinv_ad.Text == string.Empty || txt_desinv_ad.Text == string.Empty || txt_Nom_ad.Text == string.Empty || txt_provinv_ad.Text == string.Empty)
                 {
                     MessageBox.Show("Error... No puede insertar datos en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
