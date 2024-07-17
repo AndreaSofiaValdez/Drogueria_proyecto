@@ -256,6 +256,16 @@ namespace Drogueria_proyecto
             }
 
         }
+
+        private void txt_codinv_ad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_prod_ad_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 

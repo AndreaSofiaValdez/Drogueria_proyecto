@@ -107,6 +107,7 @@ namespace Drogueria_proyecto
             this.txt_codinv_ad.Name = "txt_codinv_ad";
             this.txt_codinv_ad.Size = new System.Drawing.Size(76, 20);
             this.txt_codinv_ad.TabIndex = 15;
+            this.txt_codinv_ad.TextChanged += new System.EventHandler(this.txt_codinv_ad_TextChanged);
             // 
             // txt_exisinv_ad
             // 
@@ -220,8 +221,9 @@ namespace Drogueria_proyecto
             this.dgv_prod_ad.RowHeadersVisible = false;
             this.dgv_prod_ad.RowHeadersWidth = 123;
             this.dgv_prod_ad.RowTemplate.Height = 46;
-            this.dgv_prod_ad.Size = new System.Drawing.Size(679, 248);
+            this.dgv_prod_ad.Size = new System.Drawing.Size(1034, 248);
             this.dgv_prod_ad.TabIndex = 29;
+            this.dgv_prod_ad.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_prod_ad_CellContentClick);
             this.dgv_prod_ad.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvg_administrador_producto_CellDoubleClick);
             // 
             // codigoproductoDataGridViewTextBoxColumn
@@ -311,7 +313,7 @@ namespace Drogueria_proyecto
             this.panel2.Location = new System.Drawing.Point(134, 1);
             this.panel2.Margin = new System.Windows.Forms.Padding(1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(701, 35);
+            this.panel2.Size = new System.Drawing.Size(1056, 35);
             this.panel2.TabIndex = 31;
             // 
             // label8
@@ -412,7 +414,7 @@ namespace Drogueria_proyecto
             this.panel4.Controls.Add(this.btnBuscarad);
             this.panel4.Location = new System.Drawing.Point(166, 193);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(625, 67);
+            this.panel4.Size = new System.Drawing.Size(980, 67);
             this.panel4.TabIndex = 35;
             // 
             // label10
@@ -516,7 +518,7 @@ namespace Drogueria_proyecto
             this.panel5.Controls.Add(this.label12);
             this.panel5.Location = new System.Drawing.Point(166, 40);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(625, 138);
+            this.panel5.Size = new System.Drawing.Size(980, 138);
             this.panel5.TabIndex = 36;
             // 
             // panel1
@@ -576,7 +578,7 @@ namespace Drogueria_proyecto
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(836, 574);
+            this.ClientSize = new System.Drawing.Size(1191, 574);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
