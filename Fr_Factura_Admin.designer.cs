@@ -82,6 +82,7 @@ namespace Drogueria_proyecto
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvFactura = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource1)).BeginInit();
@@ -102,6 +103,7 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorPro_cantFact_ad)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFactura)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewFacturaBindingSource3
@@ -111,7 +113,6 @@ namespace Drogueria_proyecto
             // dROGUERIADataSet19
             // 
             this.dROGUERIADataSet19.DataSetName = "DROGUERIADataSet19";
-            this.dROGUERIADataSet19.Namespace = "http://tempuri.org/DROGUERIADataSet19.xsd";
             this.dROGUERIADataSet19.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridViewFacturaBindingSource1
@@ -121,7 +122,6 @@ namespace Drogueria_proyecto
             // dGVFacturaDataSet19
             // 
             this.dGVFacturaDataSet19.DataSetName = "DGVFacturaDataSet19";
-            this.dGVFacturaDataSet19.Namespace = "http://tempuri.org/DGVFacturaDataSet19.xsd";
             this.dGVFacturaDataSet19.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridViewFacturaBindingSource
@@ -131,7 +131,6 @@ namespace Drogueria_proyecto
             // dROGUERIADataSet14
             // 
             this.dROGUERIADataSet14.DataSetName = "DROGUERIADataSet14";
-            this.dROGUERIADataSet14.Namespace = "http://tempuri.org/DROGUERIADataSet14.xsd";
             this.dROGUERIADataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // facturaBindingSource
@@ -141,7 +140,6 @@ namespace Drogueria_proyecto
             // dROGUERIADataSet3
             // 
             this.dROGUERIADataSet3.DataSetName = "DROGUERIADataSet3";
-            this.dROGUERIADataSet3.Namespace = "http://tempuri.org/DROGUERIADataSet3.xsd";
             this.dROGUERIADataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // contextMenuStrip1
@@ -155,9 +153,10 @@ namespace Drogueria_proyecto
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(61, 67);
+            this.label2.Location = new System.Drawing.Point(46, 54);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 24);
+            this.label2.Size = new System.Drawing.Size(114, 18);
             this.label2.TabIndex = 25;
             this.label2.Text = "Código Factura:";
             // 
@@ -166,9 +165,10 @@ namespace Drogueria_proyecto
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(61, 233);
+            this.label3.Location = new System.Drawing.Point(46, 189);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 24);
+            this.label3.Size = new System.Drawing.Size(57, 18);
             this.label3.TabIndex = 26;
             this.label3.Text = "Cliente:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -178,9 +178,10 @@ namespace Drogueria_proyecto
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(588, 36);
+            this.label4.Location = new System.Drawing.Point(441, 29);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 24);
+            this.label4.Size = new System.Drawing.Size(73, 18);
             this.label4.TabIndex = 27;
             this.label4.Text = "Producto:";
             // 
@@ -189,9 +190,10 @@ namespace Drogueria_proyecto
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(588, 73);
+            this.label5.Location = new System.Drawing.Point(441, 59);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 24);
+            this.label5.Size = new System.Drawing.Size(55, 18);
             this.label5.TabIndex = 28;
             this.label5.Text = "Precio:";
             // 
@@ -200,9 +202,10 @@ namespace Drogueria_proyecto
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(588, 100);
+            this.label6.Location = new System.Drawing.Point(441, 81);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 24);
+            this.label6.Size = new System.Drawing.Size(70, 18);
             this.label6.TabIndex = 29;
             this.label6.Text = "Cantidad:";
             // 
@@ -211,9 +214,10 @@ namespace Drogueria_proyecto
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(61, 145);
+            this.label7.Location = new System.Drawing.Point(46, 118);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 24);
+            this.label7.Size = new System.Drawing.Size(79, 18);
             this.label7.TabIndex = 30;
             this.label7.Text = "Empleado:";
             // 
@@ -232,7 +236,6 @@ namespace Drogueria_proyecto
             // cbx_producto
             // 
             this.cbx_producto.DataSetName = "cbx_producto";
-            this.cbx_producto.Namespace = "http://tempuri.org/cbx_producto.xsd";
             this.cbx_producto.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // productoTableAdapter
@@ -246,7 +249,6 @@ namespace Drogueria_proyecto
             // dROGUERIADataSet15
             // 
             this.dROGUERIADataSet15.DataSetName = "DROGUERIADataSet15";
-            this.dROGUERIADataSet15.Namespace = "http://tempuri.org/DROGUERIADataSet15.xsd";
             this.dROGUERIADataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // clienteBindingSource
@@ -256,7 +258,6 @@ namespace Drogueria_proyecto
             // cbx_cliente
             // 
             this.cbx_cliente.DataSetName = "cbx_cliente";
-            this.cbx_cliente.Namespace = "http://tempuri.org/cbx_cliente.xsd";
             this.cbx_cliente.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // clienteTableAdapter
@@ -282,7 +283,6 @@ namespace Drogueria_proyecto
             // dgvfactura_vista
             // 
             this.dgvfactura_vista.DataSetName = "dgvfactura_vista";
-            this.dgvfactura_vista.Namespace = "http://tempuri.org/dgvfactura_vista.xsd";
             this.dgvfactura_vista.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridViewFacturaBindingSource2
@@ -304,69 +304,61 @@ namespace Drogueria_proyecto
             // cboxEmp
             // 
             this.cboxEmp.FormattingEnabled = true;
-            this.cboxEmp.Location = new System.Drawing.Point(274, 145);
-            this.cboxEmp.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxEmp.Location = new System.Drawing.Point(206, 118);
             this.cboxEmp.Name = "cboxEmp";
-            this.cboxEmp.Size = new System.Drawing.Size(160, 24);
+            this.cboxEmp.Size = new System.Drawing.Size(121, 21);
             this.cboxEmp.TabIndex = 33;
             // 
             // cboxCliente
             // 
             this.cboxCliente.FormattingEnabled = true;
-            this.cboxCliente.Location = new System.Drawing.Point(265, 233);
-            this.cboxCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxCliente.Location = new System.Drawing.Point(199, 189);
             this.cboxCliente.Name = "cboxCliente";
-            this.cboxCliente.Size = new System.Drawing.Size(160, 24);
+            this.cboxCliente.Size = new System.Drawing.Size(121, 21);
             this.cboxCliente.TabIndex = 34;
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(688, 100);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCantidad.Location = new System.Drawing.Point(516, 81);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(132, 22);
+            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
             this.txtCantidad.TabIndex = 36;
             this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
             // txtFactura
             // 
-            this.txtFactura.Location = new System.Drawing.Point(284, 67);
-            this.txtFactura.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFactura.Location = new System.Drawing.Point(213, 54);
             this.txtFactura.Name = "txtFactura";
-            this.txtFactura.Size = new System.Drawing.Size(132, 22);
+            this.txtFactura.Size = new System.Drawing.Size(100, 20);
             this.txtFactura.TabIndex = 37;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(688, 67);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrecio.Location = new System.Drawing.Point(516, 54);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(132, 22);
+            this.txtPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtPrecio.TabIndex = 38;
             // 
             // txtIDP
             // 
-            this.txtIDP.Location = new System.Drawing.Point(688, 31);
-            this.txtIDP.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIDP.Location = new System.Drawing.Point(516, 25);
             this.txtIDP.Name = "txtIDP";
-            this.txtIDP.Size = new System.Drawing.Size(29, 22);
+            this.txtIDP.Size = new System.Drawing.Size(23, 20);
             this.txtIDP.TabIndex = 39;
             this.txtIDP.TextChanged += new System.EventHandler(this.txtIDP_TextChanged);
             // 
             // txtProducto
             // 
-            this.txtProducto.Location = new System.Drawing.Point(727, 31);
-            this.txtProducto.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProducto.Location = new System.Drawing.Point(545, 25);
             this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(476, 22);
+            this.txtProducto.Size = new System.Drawing.Size(358, 20);
             this.txtProducto.TabIndex = 40;
             // 
             // txtSubtotal
             // 
-            this.txtSubtotal.Location = new System.Drawing.Point(1329, 32);
-            this.txtSubtotal.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSubtotal.Location = new System.Drawing.Point(997, 26);
             this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.Size = new System.Drawing.Size(132, 22);
+            this.txtSubtotal.Size = new System.Drawing.Size(100, 20);
             this.txtSubtotal.TabIndex = 42;
             this.txtSubtotal.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -375,19 +367,19 @@ namespace Drogueria_proyecto
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label9.Location = new System.Drawing.Point(1229, 32);
+            this.label9.Location = new System.Drawing.Point(922, 26);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 24);
+            this.label9.Size = new System.Drawing.Size(66, 18);
             this.label9.TabIndex = 41;
             this.label9.Text = "Subtotal:";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // txtImp
             // 
-            this.txtImp.Location = new System.Drawing.Point(1391, 74);
-            this.txtImp.Margin = new System.Windows.Forms.Padding(4);
+            this.txtImp.Location = new System.Drawing.Point(1043, 60);
             this.txtImp.Name = "txtImp";
-            this.txtImp.Size = new System.Drawing.Size(132, 22);
+            this.txtImp.Size = new System.Drawing.Size(100, 20);
             this.txtImp.TabIndex = 44;
             // 
             // label10
@@ -395,18 +387,18 @@ namespace Drogueria_proyecto
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label10.Location = new System.Drawing.Point(1229, 73);
+            this.label10.Location = new System.Drawing.Point(922, 59);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(144, 24);
+            this.label10.Size = new System.Drawing.Size(116, 18);
             this.label10.TabIndex = 43;
             this.label10.Text = "Impuesto (15%):";
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(1329, 110);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotal.Location = new System.Drawing.Point(997, 89);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(132, 22);
+            this.txtTotal.Size = new System.Drawing.Size(100, 20);
             this.txtTotal.TabIndex = 46;
             this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
             // 
@@ -415,9 +407,10 @@ namespace Drogueria_proyecto
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label11.Location = new System.Drawing.Point(1229, 110);
+            this.label11.Location = new System.Drawing.Point(922, 89);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 24);
+            this.label11.Size = new System.Drawing.Size(45, 18);
             this.label11.TabIndex = 45;
             this.label11.Text = "Total:";
             this.label11.Click += new System.EventHandler(this.label11_Click);
@@ -426,10 +419,9 @@ namespace Drogueria_proyecto
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.SlateGray;
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(68, 37);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Location = new System.Drawing.Point(51, 30);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(121, 55);
+            this.btnAgregar.Size = new System.Drawing.Size(91, 45);
             this.btnAgregar.TabIndex = 47;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -439,43 +431,55 @@ namespace Drogueria_proyecto
             // 
             this.btnModificar.BackColor = System.Drawing.Color.SlateGray;
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(281, 37);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificar.Location = new System.Drawing.Point(211, 30);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(121, 55);
+            this.btnModificar.Size = new System.Drawing.Size(91, 45);
             this.btnModificar.TabIndex = 48;
             this.btnModificar.Text = "Modifcar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.SlateGray;
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(545, 37);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(409, 30);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(121, 55);
+            this.btnEliminar.Size = new System.Drawing.Size(91, 45);
             this.btnEliminar.TabIndex = 49;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.btnAgregar);
-            this.groupBox1.Location = new System.Drawing.Point(89, 303);
+            this.groupBox1.Location = new System.Drawing.Point(67, 246);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(718, 125);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(538, 102);
             this.groupBox1.TabIndex = 50;
             this.groupBox1.TabStop = false;
             // 
+            // dgvFactura
+            // 
+            this.dgvFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFactura.Location = new System.Drawing.Point(67, 377);
+            this.dgvFactura.Name = "dgvFactura";
+            this.dgvFactura.Size = new System.Drawing.Size(1076, 150);
+            this.dgvFactura.TabIndex = 51;
+            this.dgvFactura.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFactura_CellContentDoubleClick);
+            // 
             // Fr_Factura_Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(2056, 690);
+            this.ClientSize = new System.Drawing.Size(1542, 561);
+            this.Controls.Add(this.dgvFactura);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label11);
@@ -498,8 +502,8 @@ namespace Drogueria_proyecto
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(15, 15);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1061, 726);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(800, 597);
             this.Name = "Fr_Factura_Admin";
             this.Load += new System.EventHandler(this.Fr_Factura_Admin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource3)).EndInit();
@@ -522,8 +526,10 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorPro_cantFact_ad)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFactura)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.GroupBox groupBox1;
@@ -583,5 +589,6 @@ namespace Drogueria_proyecto
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridView dgvFactura;
     }
 }

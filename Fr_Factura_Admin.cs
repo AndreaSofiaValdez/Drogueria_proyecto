@@ -16,9 +16,14 @@ namespace Drogueria_proyecto
 {
     public partial class Fr_Factura_Admin : Form
     {
+        SqlConnection datagrid = new SqlConnection(@"Data Source = localhost; Initial Catalog = DROGUERIA; Integrated Security = True;");
+        SqlCommand datagridcmd;
+        SqlDataAdapter adpt;
+        DataTable dt;
         public Fr_Factura_Admin()
         {
             InitializeComponent();
+            showdata();
         }
         private void Fr_Factura_Admin_Load(object sender, EventArgs e)
         {
@@ -47,6 +52,8 @@ namespace Drogueria_proyecto
 
 
             conn.Close();
+
+           
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -177,6 +184,7 @@ namespace Drogueria_proyecto
 
                     agregar.ExecuteNonQuery();
                     BD.cerrar();
+                    showdata();
                     txtIDP.Clear();
                     txtProducto.Clear();
                     txtPrecio.Clear();
@@ -196,6 +204,105 @@ namespace Drogueria_proyecto
             //errorP_despro_ad.Clear();
             //errorP_existpro_ad.Clear();
             //errorP_nombpro_ad.Clear();
+        }
+
+
+        public void showdata()
+        {
+            adpt = new SqlDataAdapter("select * from Facturass", datagrid);
+            dt = new DataTable();
+            adpt.Fill(dt);
+            dgvFactura.DataSource = dt;
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtIDP.Text == string.Empty || txtPrecio.Text == string.Empty || txtSubtotal.Text == string.Empty || txtImp.Text == string.Empty || txtTotal.Text == string.Empty)
+                {
+                    MessageBox.Show("Error... No puede modificar datos en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    cls_Conexion BD = new cls_Conexion();
+                    BD.abrir();
+                    SqlCommand modificar = new SqlCommand("update Facturass set empleado_factura=@empleado_factura,cliente_factura=@cliente_factura,Id_producto=@Id_producto," +
+                        "nombre_producto=@nombre_producto, precio=@precio , cantidad=@cantidad, subtotal=@subtotal, total=@total, " +
+                        "impuesto=@impuesto where Id_factura=@Id_factura", BD.sconexion);
+
+                    modificar.Parameters.AddWithValue("@Id_factura", txtFactura.Text);
+                    modificar.Parameters.AddWithValue("@empleado_factura", cboxEmp.Text);
+                    modificar.Parameters.AddWithValue("@cliente_factura", cboxCliente.Text);
+                    modificar.Parameters.AddWithValue("@Id_producto", txtIDP.Text);
+                    modificar.Parameters.AddWithValue("@nombre_producto", txtProducto.Text);
+                    modificar.Parameters.AddWithValue("@precio", txtPrecio.Text);
+                    modificar.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
+                    modificar.Parameters.AddWithValue("@subtotal", txtSubtotal.Text);
+                    modificar.Parameters.AddWithValue("@impuesto", txtImp.Text);
+                    modificar.Parameters.AddWithValue("@total", txtTotal.Text);
+
+
+                    modificar.ExecuteNonQuery();
+                    BD.cerrar();
+                    showdata();
+                    txtIDP.Clear();
+                    txtProducto.Clear();
+                    txtPrecio.Clear();
+                    txtCantidad.Clear();
+                    txtImp.Clear();
+                    txtTotal.Clear();
+
+                    this.txtProducto.Focus();
+
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error...El codigo ya existe en la base de datos");
+            }
+        }
+
+        private void dgvFactura_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //txtIDP.Text = dgvFactura.CurrentRow.Cells[4].Value.ToString();
+            //txtProducto.Text = dgvFactura.CurrentRow.Cells[5].Value.ToString();
+            //txtPrecio.Text = dgvFactura.CurrentRow.Cells[6].Value.ToString();
+            //txtCantidad.Text = dgvFactura.CurrentRow.Cells[7].Value.ToString();
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                    cls_Conexion BD = new cls_Conexion();
+                    BD.abrir();
+                    SqlCommand eliminar = new SqlCommand("delete from Facturass where Id_factura=@Id_factura", BD.sconexion);
+                    eliminar.Parameters.AddWithValue("@Id_factura", Convert.ToInt32(txtFactura.Text));
+
+
+
+                    eliminar.ExecuteNonQuery();
+                    BD.cerrar();
+                    showdata();
+                    txtIDP.Clear();
+                    txtProducto.Clear();
+                    txtPrecio.Clear();
+                    txtCantidad.Clear();
+                    txtImp.Clear();
+                    txtTotal.Clear();
+
+                    this.txtProducto.Focus();
+                }
+            
+            catch
+            {
+                MessageBox.Show("Error...El codigo ya existe en la base de datos");
+            }
         }
     }
 }

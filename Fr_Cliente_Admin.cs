@@ -220,5 +220,10 @@ namespace Drogueria_proyecto
                 MessageBox.Show("Error...El codigo ya existe en la base de datos");
             }
         }
+
+        private void dtg_administrador_empleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

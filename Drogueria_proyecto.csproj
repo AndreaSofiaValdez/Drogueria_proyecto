@@ -101,11 +101,6 @@
     </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="cls_Conexion.cs" />
-    <Compile Include="DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DROGUERIADataSet.cs">
       <DependentUpon>DROGUERIADataSet.xsd</DependentUpon>
     </Compile>
@@ -126,6 +121,11 @@
     </Compile>
     <Compile Include="DROGUERIADataSet3.cs">
       <DependentUpon>DROGUERIADataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facturass.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Facturass.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -509,17 +509,6 @@
     <None Include="cbx_producto.xss">
       <DependentUpon>cbx_producto.xsd</DependentUpon>
     </None>
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
     <None Include="DGVFacturaDataSet19.xsc">
       <DependentUpon>DGVFacturaDataSet19.xsd</DependentUpon>
     </None>
@@ -827,6 +816,17 @@
     </None>
     <None Include="DROGUERIADataSet9.xss">
       <DependentUpon>DROGUERIADataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Facturass.xsc">
+      <DependentUpon>Facturass.xsd</DependentUpon>
+    </None>
+    <None Include="Facturass.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Facturass.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Facturass.xss">
+      <DependentUpon>Facturass.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="producto_vendedor.xsc">
