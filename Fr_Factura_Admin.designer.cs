@@ -31,7 +31,7 @@ namespace Drogueria_proyecto
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fr_Factura_Admin));
-            this.dgv_administrador_factura = new System.Windows.Forms.DataGridView();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.dataGridViewFacturaBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.dROGUERIADataSet19 = new Drogueria_proyecto.DROGUERIADataSet19();
             this.dataGridViewFacturaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -47,6 +47,11 @@ namespace Drogueria_proyecto
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.facturaTableAdapter = new Drogueria_proyecto.DROGUERIADataSet3TableAdapters.FacturaTableAdapter();
             this.dataGridViewFacturaTableAdapter = new Drogueria_proyecto.DROGUERIADataSet14TableAdapters.DataGridViewFacturaTableAdapter();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -66,9 +71,19 @@ namespace Drogueria_proyecto
             this.dataGridViewFacturaTableAdapter2 = new Drogueria_proyecto.dgvfactura_vistaTableAdapters.DataGridViewFacturaTableAdapter();
             this.dataGridViewFacturaTableAdapter3 = new Drogueria_proyecto.DROGUERIADataSet19TableAdapters.DataGridViewFacturaTableAdapter();
             this.errorPro_cantFact_ad = new System.Windows.Forms.ErrorProvider(this.components);
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_administrador_factura)).BeginInit();
+            this.cboxEmp = new System.Windows.Forms.ComboBox();
+            this.cboxCliente = new System.Windows.Forms.ComboBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtIDP = new System.Windows.Forms.TextBox();
+            this.txtProducto = new System.Windows.Forms.TextBox();
+            this.txtSubtotal = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtImp = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource1)).BeginInit();
@@ -77,6 +92,9 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet3)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_producto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxEmpleadoBindingSource)).BeginInit();
@@ -88,30 +106,19 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dgvfactura_vista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorPro_cantFact_ad)).BeginInit();
-            this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgv_administrador_factura
+            // btnRegresar
             // 
-            this.dgv_administrador_factura.AllowUserToAddRows = false;
-            this.dgv_administrador_factura.AllowUserToDeleteRows = false;
-            this.dgv_administrador_factura.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_administrador_factura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_administrador_factura.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(115)))), ((int)(((byte)(148)))));
-            this.dgv_administrador_factura.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_administrador_factura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_administrador_factura.Location = new System.Drawing.Point(79, 355);
-            this.dgv_administrador_factura.Name = "dgv_administrador_factura";
-            this.dgv_administrador_factura.ReadOnly = true;
-            this.dgv_administrador_factura.RowHeadersVisible = false;
-            this.dgv_administrador_factura.RowHeadersWidth = 51;
-            this.dgv_administrador_factura.Size = new System.Drawing.Size(249, 211);
-            this.dgv_administrador_factura.TabIndex = 3;
-            this.dgv_administrador_factura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_administrador_factura_CellContentClick_1);
-            this.dgv_administrador_factura.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_administrador_factura_CellDoubleClick);
+            this.btnRegresar.BackColor = System.Drawing.Color.SlateGray;
+            this.btnRegresar.ForeColor = System.Drawing.Color.White;
+            this.btnRegresar.Location = new System.Drawing.Point(17, 267);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(111, 50);
+            this.btnRegresar.TabIndex = 2;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // dataGridViewFacturaBindingSource3
             // 
@@ -153,83 +160,6 @@ namespace Drogueria_proyecto
             this.dROGUERIADataSet3.DataSetName = "DROGUERIADataSet3";
             this.dROGUERIADataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(371, 0);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(140, 49);
-            this.btnEliminar.TabIndex = 17;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(225, 0);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(140, 49);
-            this.btnModificar.TabIndex = 16;
-            this.btnModificar.Text = "Modifcar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(79, 0);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(140, 49);
-            this.btnAgregar.TabIndex = 15;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // txt_IdFactura_gr
-            // 
-            this.txt_IdFactura_gr.Enabled = false;
-            this.txt_IdFactura_gr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_IdFactura_gr.Location = new System.Drawing.Point(79, 80);
-            this.txt_IdFactura_gr.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_IdFactura_gr.Multiline = true;
-            this.txt_IdFactura_gr.Name = "txt_IdFactura_gr";
-            this.txt_IdFactura_gr.Size = new System.Drawing.Size(263, 24);
-            this.txt_IdFactura_gr.TabIndex = 18;
-            // 
-            // txt_precio_gr
-            // 
-            this.txt_precio_gr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_precio_gr.Enabled = false;
-            this.txt_precio_gr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_precio_gr.Location = new System.Drawing.Point(431, 160);
-            this.txt_precio_gr.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_precio_gr.Multiline = true;
-            this.txt_precio_gr.Name = "txt_precio_gr";
-            this.txt_precio_gr.Size = new System.Drawing.Size(263, 24);
-            this.txt_precio_gr.TabIndex = 19;
-            this.txt_precio_gr.TextChanged += new System.EventHandler(this.txt_precio_gr_TextChanged);
-            // 
-            // txt_cantidad_gr
-            // 
-            this.txt_cantidad_gr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_cantidad_gr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cantidad_gr.Location = new System.Drawing.Point(431, 237);
-            this.txt_cantidad_gr.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_cantidad_gr.Multiline = true;
-            this.txt_cantidad_gr.Name = "txt_cantidad_gr";
-            this.txt_cantidad_gr.Size = new System.Drawing.Size(263, 24);
-            this.txt_cantidad_gr.TabIndex = 21;
-            this.txt_cantidad_gr.TextChanged += new System.EventHandler(this.txt_cantidad_gr_TextChanged);
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -239,74 +169,141 @@ namespace Drogueria_proyecto
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(74, 49);
+            this.label2.Location = new System.Drawing.Point(156, 72);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 29);
+            this.label2.Size = new System.Drawing.Size(114, 18);
             this.label2.TabIndex = 25;
             this.label2.Text = "Código Factura:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(74, 130);
+            this.label3.Location = new System.Drawing.Point(156, 130);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 29);
+            this.label3.Size = new System.Drawing.Size(57, 18);
             this.label3.TabIndex = 26;
             this.label3.Text = "Cliente:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(426, 48);
+            this.label4.Location = new System.Drawing.Point(573, 74);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 29);
+            this.label4.Size = new System.Drawing.Size(73, 18);
             this.label4.TabIndex = 27;
             this.label4.Text = "Producto:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(426, 129);
+            this.label5.Location = new System.Drawing.Point(573, 104);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 29);
+            this.label5.Size = new System.Drawing.Size(55, 18);
             this.label5.TabIndex = 28;
             this.label5.Text = "Precio:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(426, 206);
+            this.label6.Location = new System.Drawing.Point(573, 126);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 29);
+            this.label6.Size = new System.Drawing.Size(70, 18);
             this.label6.TabIndex = 29;
             this.label6.Text = "Cantidad:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(74, 207);
+            this.label7.Location = new System.Drawing.Point(156, 101);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(139, 29);
+            this.label7.Size = new System.Drawing.Size(79, 18);
             this.label7.TabIndex = 30;
             this.label7.Text = "Empleado:";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.panel1.BackgroundImage = global::Drogueria_proyecto.Properties.Resources.Fondo2;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btnRegresar);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(1, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(140, 558);
+            this.panel1.TabIndex = 31;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Drogueria_proyecto.Properties.Resources.pildora1;
+            this.pictureBox1.Location = new System.Drawing.Point(36, 57);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(76, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(21, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "MedExpress";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Location = new System.Drawing.Point(141, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1401, 34);
+            this.panel2.TabIndex = 32;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label8.Location = new System.Drawing.Point(366, 6);
+            this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(71, 20);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Factura";
             // 
             // facturaTableAdapter
             // 
@@ -315,23 +312,6 @@ namespace Drogueria_proyecto
             // dataGridViewFacturaTableAdapter
             // 
             this.dataGridViewFacturaTableAdapter.ClearBeforeFill = true;
-            // 
-            // cbx_producto_fact
-            // 
-            this.cbx_producto_fact.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbx_producto_fact.DataSource = this.productoBindingSource;
-            this.cbx_producto_fact.DisplayMember = "nombre_producto";
-            this.cbx_producto_fact.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbx_producto_fact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbx_producto_fact.FormattingEnabled = true;
-            this.cbx_producto_fact.Location = new System.Drawing.Point(431, 79);
-            this.cbx_producto_fact.Margin = new System.Windows.Forms.Padding(1);
-            this.cbx_producto_fact.Name = "cbx_producto_fact";
-            this.cbx_producto_fact.Size = new System.Drawing.Size(263, 28);
-            this.cbx_producto_fact.TabIndex = 33;
-            this.cbx_producto_fact.ValueMember = "codigo_producto";
-            this.cbx_producto_fact.SelectedIndexChanged += new System.EventHandler(this.cbx_producto_fact_SelectedIndexChanged);
             // 
             // productoBindingSource
             // 
@@ -347,21 +327,6 @@ namespace Drogueria_proyecto
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
             // 
-            // cbx_empleado_fact
-            // 
-            this.cbx_empleado_fact.DataSource = this.cbxEmpleadoBindingSource;
-            this.cbx_empleado_fact.DisplayMember = "nombre_empleado";
-            this.cbx_empleado_fact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbx_empleado_fact.FormattingEnabled = true;
-            this.cbx_empleado_fact.ItemHeight = 20;
-            this.cbx_empleado_fact.Location = new System.Drawing.Point(79, 237);
-            this.cbx_empleado_fact.Margin = new System.Windows.Forms.Padding(1);
-            this.cbx_empleado_fact.Name = "cbx_empleado_fact";
-            this.cbx_empleado_fact.Size = new System.Drawing.Size(263, 28);
-            this.cbx_empleado_fact.TabIndex = 34;
-            this.cbx_empleado_fact.ValueMember = "codigo_empleado";
-            this.cbx_empleado_fact.SelectedIndexChanged += new System.EventHandler(this.cbx_empleado_fact_SelectedIndexChanged);
-            // 
             // cbxEmpleadoBindingSource
             // 
             this.cbxEmpleadoBindingSource.DataMember = "cbx_Empleado";
@@ -371,18 +336,6 @@ namespace Drogueria_proyecto
             // 
             this.dROGUERIADataSet15.DataSetName = "DROGUERIADataSet15";
             this.dROGUERIADataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cbx_cliente_fact
-            // 
-            this.cbx_cliente_fact.DataSource = this.clienteBindingSource;
-            this.cbx_cliente_fact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbx_cliente_fact.FormattingEnabled = true;
-            this.cbx_cliente_fact.Location = new System.Drawing.Point(79, 160);
-            this.cbx_cliente_fact.Margin = new System.Windows.Forms.Padding(1);
-            this.cbx_cliente_fact.Name = "cbx_cliente_fact";
-            this.cbx_cliente_fact.Size = new System.Drawing.Size(263, 28);
-            this.cbx_cliente_fact.TabIndex = 35;
-            this.cbx_cliente_fact.SelectedIndexChanged += new System.EventHandler(this.cbx_cliente_fact_SelectedIndexChanged);
             // 
             // clienteBindingSource
             // 
@@ -416,26 +369,8 @@ namespace Drogueria_proyecto
             // 
             // dgvfactura_vista
             // 
-            this.dgvdetalle.AllowUserToAddRows = false;
-            this.dgvdetalle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvdetalle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvdetalle.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(115)))), ((int)(((byte)(148)))));
-            this.dgvdetalle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvdetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvdetalle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idproducto,
-            this.cantidad,
-            this.precio,
-            this.subtotalproducto});
-            this.dgvdetalle.Location = new System.Drawing.Point(332, 355);
-            this.dgvdetalle.Margin = new System.Windows.Forms.Padding(1);
-            this.dgvdetalle.Name = "dgvdetalle";
-            this.dgvdetalle.RowHeadersWidth = 123;
-            this.dgvdetalle.RowTemplate.Height = 46;
-            this.dgvdetalle.Size = new System.Drawing.Size(362, 211);
-            this.dgvdetalle.TabIndex = 36;
-            this.dgvdetalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdetalle_CellContentClick);
+            this.dgvfactura_vista.DataSetName = "dgvfactura_vista";
+            this.dgvfactura_vista.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridViewFacturaBindingSource2
             // 
@@ -456,17 +391,11 @@ namespace Drogueria_proyecto
             // 
             // cboxEmp
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(554, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 49);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.cboxEmp.FormattingEnabled = true;
+            this.cboxEmp.Location = new System.Drawing.Point(240, 101);
+            this.cboxEmp.Name = "cboxEmp";
+            this.cboxEmp.Size = new System.Drawing.Size(121, 21);
+            this.cboxEmp.TabIndex = 33;
             // 
             // cboxCliente
             // 
@@ -476,22 +405,13 @@ namespace Drogueria_proyecto
             this.cboxCliente.Size = new System.Drawing.Size(121, 21);
             this.cboxCliente.TabIndex = 34;
             // 
-            // cboxProducto
+            // txtCantidad
             // 
-            this.cboxProducto.FormattingEnabled = true;
-            this.cboxProducto.Location = new System.Drawing.Point(234, 161);
-            this.cboxProducto.Name = "cboxProducto";
-            this.cboxProducto.Size = new System.Drawing.Size(121, 21);
-            this.cboxProducto.TabIndex = 35;
-            this.cboxProducto.SelectedIndexChanged += new System.EventHandler(this.cboxProducto_SelectedIndexChanged);
-            this.cboxProducto.SelectedValueChanged += new System.EventHandler(this.cboxProducto_SelectedValueChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(648, 99);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 36;
+            this.txtCantidad.Location = new System.Drawing.Point(648, 126);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
+            this.txtCantidad.TabIndex = 36;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
             // textBox2
             // 
@@ -502,57 +422,117 @@ namespace Drogueria_proyecto
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(633, 73);
+            this.txtPrecio.Location = new System.Drawing.Point(648, 99);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtPrecio.TabIndex = 38;
             // 
-            // guna2Panel1
+            // txtIDP
             // 
-            this.guna2Panel1.Controls.Add(this.cbx_cliente_fact);
-            this.guna2Panel1.Controls.Add(this.txt_IdFactura_gr);
-            this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Controls.Add(this.cbx_producto_fact);
-            this.guna2Panel1.Controls.Add(this.label7);
-            this.guna2Panel1.Controls.Add(this.label6);
-            this.guna2Panel1.Controls.Add(this.cbx_empleado_fact);
-            this.guna2Panel1.Controls.Add(this.label5);
-            this.guna2Panel1.Controls.Add(this.txt_cantidad_gr);
-            this.guna2Panel1.Controls.Add(this.label4);
-            this.guna2Panel1.Controls.Add(this.txt_precio_gr);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(784, 300);
-            this.guna2Panel1.TabIndex = 38;
+            this.txtIDP.Location = new System.Drawing.Point(648, 70);
+            this.txtIDP.Name = "txtIDP";
+            this.txtIDP.Size = new System.Drawing.Size(23, 20);
+            this.txtIDP.TabIndex = 39;
+            this.txtIDP.TextChanged += new System.EventHandler(this.txtIDP_TextChanged);
             // 
-            // guna2Panel2
+            // txtProducto
             // 
-            this.guna2Panel2.Controls.Add(this.button1);
-            this.guna2Panel2.Controls.Add(this.btnAgregar);
-            this.guna2Panel2.Controls.Add(this.btnModificar);
-            this.guna2Panel2.Controls.Add(this.btnEliminar);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 300);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(784, 49);
-            this.guna2Panel2.TabIndex = 39;
+            this.txtProducto.Location = new System.Drawing.Point(677, 70);
+            this.txtProducto.Name = "txtProducto";
+            this.txtProducto.Size = new System.Drawing.Size(358, 20);
+            this.txtProducto.TabIndex = 40;
+            // 
+            // txtSubtotal
+            // 
+            this.txtSubtotal.Location = new System.Drawing.Point(1129, 71);
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.Size = new System.Drawing.Size(100, 20);
+            this.txtSubtotal.TabIndex = 42;
+            this.txtSubtotal.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label9.Location = new System.Drawing.Point(1054, 71);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 18);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Subtotal:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // txtImp
+            // 
+            this.txtImp.Location = new System.Drawing.Point(1175, 105);
+            this.txtImp.Name = "txtImp";
+            this.txtImp.Size = new System.Drawing.Size(100, 20);
+            this.txtImp.TabIndex = 44;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label10.Location = new System.Drawing.Point(1054, 104);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(116, 18);
+            this.label10.TabIndex = 43;
+            this.label10.Text = "Impuesto (15%):";
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Location = new System.Drawing.Point(1129, 134);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.TabIndex = 46;
+            this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label11.Location = new System.Drawing.Point(1054, 134);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(45, 18);
+            this.label11.TabIndex = 45;
+            this.label11.Text = "Total:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // Fr_Factura_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(115)))), ((int)(((byte)(148)))));
-            this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.dgvdetalle);
-            this.Controls.Add(this.dgv_administrador_factura);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.ClientSize = new System.Drawing.Size(1542, 561);
+            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txtImp);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txtSubtotal);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtProducto);
+            this.Controls.Add(this.txtIDP);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.cboxCliente);
+            this.Controls.Add(this.cboxEmp);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(800, 600);
+            this.MinimumSize = new System.Drawing.Size(800, 599);
             this.Name = "Fr_Factura_Admin";
             this.Text = "Factura_Ad";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -565,6 +545,11 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet3)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_producto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxEmpleadoBindingSource)).EndInit();
@@ -576,22 +561,13 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dgvfactura_vista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorPro_cantFact_ad)).EndInit();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgv_administrador_factura;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox txt_IdFactura_gr;
-        private System.Windows.Forms.TextBox txt_precio_gr;
-        private System.Windows.Forms.TextBox txt_cantidad_gr;
-        private System.Windows.Forms.TextBox txt_cantidad_gr;
+        private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -599,6 +575,11 @@ namespace Drogueria_proyecto
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label8;
         private DROGUERIADataSet3 dROGUERIADataSet3;
         private System.Windows.Forms.BindingSource facturaBindingSource;
         private DROGUERIADataSet3TableAdapters.FacturaTableAdapter facturaTableAdapter;
@@ -625,12 +606,19 @@ namespace Drogueria_proyecto
         private DROGUERIADataSet19 dROGUERIADataSet19;
         private System.Windows.Forms.BindingSource dataGridViewFacturaBindingSource3;
         private DROGUERIADataSet19TableAdapters.DataGridViewFacturaTableAdapter dataGridViewFacturaTableAdapter3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idproducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subtotalproducto;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subtotalproducto;
+        private System.Windows.Forms.ErrorProvider errorPro_cantFact_ad;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.ComboBox cboxCliente;
+        private System.Windows.Forms.ComboBox cboxEmp;
+        private System.Windows.Forms.TextBox txtProducto;
+        private System.Windows.Forms.TextBox txtIDP;
+        private System.Windows.Forms.TextBox txtSubtotal;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtImp;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Label label11;
     }
 }

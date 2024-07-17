@@ -44,17 +44,7 @@ namespace Drogueria_proyecto
             cboxCliente.DataSource = table2;
             cboxCliente.DisplayMember = "nombre_cliente";
             cboxCliente.ValueMember = "codigo_cliente";
-            //////////////////////
-            SqlCommand cmdss = new SqlCommand("Select codigo_producto, nombre_producto from Producto", conn);
-            SqlDataAdapter dass = new SqlDataAdapter();
-            dass.SelectCommand = cmdss;
-            DataTable table3 = new DataTable();
-            dass.Fill(table3);
 
-
-            cboxProducto.DataSource = table3;
-            cboxProducto.DisplayMember = "nombre_producto";
-            cboxProducto.ValueMember = "codigo_producto";
 
             conn.Close();
         }
@@ -81,37 +71,8 @@ namespace Drogueria_proyecto
         private void label3_Click(object sender, EventArgs e)
         {
 
-        }
-        public static decimal GetProductPrice(string productName)
-        {
-            decimal price = 0;
+        
 
-
-
-            using (SqlConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=DROGUERIA;Integrated Security=True"))
-            {
-                connection.Open();
-
-                string sql = "SELECT precio_producto FROM Producto WHERE nombre_producto = @nombre_producto";
-                SqlCommand command = new SqlCommand(sql, connection);
-
-                command.Parameters.AddWithValue("@nombre_producto", productName);
-
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        price = Convert.ToDecimal(reader["precio_producto"]);
-                    }
-                    else
-                    {
-
-                        Console.WriteLine("Producto no encontrado!");
-                    }
-                }
-            }
-
-            return price;
         }
         private void cboxProducto_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -130,25 +91,63 @@ namespace Drogueria_proyecto
 
         private void cboxProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboxProducto.SelectedIndex != -1) // Check if an item is selected
-            {
-                {
-                    if (cboxProducto.SelectedIndex != -1)
-                    {
-                        string productName = cboxProducto.SelectedItem.ToString();
 
-                        decimal price = GetProductPrice(productName);
-                        if (price > 0)
-                        {
-                            txtPrecio.Text = price.ToString();
-                        }
-                        else
-                        {
-                            txtPrecio.Text = "Precio no encontrado!";
-                        }
-                    }
+        }
+
+        private void txtIDP_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection conexionp = new SqlConnection("Data Source = localhost; Initial Catalog = DROGUERIA; Integrated Security = True");
+            conexionp.Open();
+            if (txtIDP.Text != "")
+            {
+                SqlCommand cmd = new SqlCommand("Select nombre_producto, precio_producto from Producto where codigo_producto = @codigo_producto", conexionp);
+                cmd.Parameters.AddWithValue("@codigo_producto", int.Parse(txtIDP.Text));
+                SqlDataReader da = cmd.ExecuteReader();
+                while (da.Read())
+                {
+                    txtProducto.Text = da.GetValue(0).ToString();
+                    txtPrecio.Text = da.GetValue(1).ToString();
                 }
+                conexionp.Close();
+
             }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCantidad.Text != "")
+            {
+                decimal cantidad, subtotal, precio = 1;
+                cantidad = Decimal.Parse(txtCantidad.Text);
+                precio = Decimal.Parse(txtPrecio.Text);
+                subtotal = cantidad * precio;
+                txtSubtotal.Text = Convert.ToString(subtotal = cantidad * precio);
+                decimal total =0, impuesto = 0.15m;
+                total = subtotal+(subtotal * impuesto);
+                txtTotal.Text = Convert.ToString(total);
+                txtImp.Text = Convert.ToString(subtotal * impuesto);
+            }
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTotal_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
