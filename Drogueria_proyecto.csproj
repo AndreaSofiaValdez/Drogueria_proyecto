@@ -101,6 +101,11 @@
     </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="cls_Conexion.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DROGUERIADataSet.cs">
       <DependentUpon>DROGUERIADataSet.xsd</DependentUpon>
     </Compile>
@@ -503,6 +508,17 @@
     </None>
     <None Include="cbx_producto.xss">
       <DependentUpon>cbx_producto.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="DGVFacturaDataSet19.xsc">
       <DependentUpon>DGVFacturaDataSet19.xsd</DependentUpon>

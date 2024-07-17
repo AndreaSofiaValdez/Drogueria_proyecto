@@ -31,7 +31,6 @@ namespace Drogueria_proyecto
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fr_Factura_Admin));
-            this.btnRegresar = new System.Windows.Forms.Button();
             this.dataGridViewFacturaBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.dROGUERIADataSet19 = new Drogueria_proyecto.DROGUERIADataSet19();
             this.dataGridViewFacturaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -47,11 +46,6 @@ namespace Drogueria_proyecto
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
             this.facturaTableAdapter = new Drogueria_proyecto.DROGUERIADataSet3TableAdapters.FacturaTableAdapter();
             this.dataGridViewFacturaTableAdapter = new Drogueria_proyecto.DROGUERIADataSet14TableAdapters.DataGridViewFacturaTableAdapter();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -92,9 +86,6 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet3)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_producto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxEmpleadoBindingSource)).BeginInit();
@@ -107,18 +98,6 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorPro_cantFact_ad)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnRegresar
-            // 
-            this.btnRegresar.BackColor = System.Drawing.Color.SlateGray;
-            this.btnRegresar.ForeColor = System.Drawing.Color.White;
-            this.btnRegresar.Location = new System.Drawing.Point(17, 267);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(111, 50);
-            this.btnRegresar.TabIndex = 2;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = false;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // dataGridViewFacturaBindingSource3
             // 
@@ -238,72 +217,6 @@ namespace Drogueria_proyecto
             this.label7.Size = new System.Drawing.Size(79, 18);
             this.label7.TabIndex = 30;
             this.label7.Text = "Empleado:";
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.panel1.BackgroundImage = global::Drogueria_proyecto.Properties.Resources.Fondo2;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnRegresar);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(1, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(140, 558);
-            this.panel1.TabIndex = 31;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Drogueria_proyecto.Properties.Resources.pildora1;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 57);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(76, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(21, 21);
-            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "MedExpress";
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Location = new System.Drawing.Point(141, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1401, 34);
-            this.panel2.TabIndex = 32;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Location = new System.Drawing.Point(366, 6);
-            this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 20);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Factura";
             // 
             // facturaTableAdapter
             // 
@@ -522,8 +435,6 @@ namespace Drogueria_proyecto
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.cboxCliente);
             this.Controls.Add(this.cboxEmp);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -545,11 +456,6 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet3)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_producto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxEmpleadoBindingSource)).EndInit();
@@ -567,7 +473,6 @@ namespace Drogueria_proyecto
         }
 
         #endregion
-        private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -575,11 +480,6 @@ namespace Drogueria_proyecto
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label8;
         private DROGUERIADataSet3 dROGUERIADataSet3;
         private System.Windows.Forms.BindingSource facturaBindingSource;
         private DROGUERIADataSet3TableAdapters.FacturaTableAdapter facturaTableAdapter;
