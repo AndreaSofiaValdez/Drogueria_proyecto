@@ -36,12 +36,17 @@ namespace Drogueria_proyecto
             this.labelfechag = new System.Windows.Forms.Label();
             this.labelhorag = new System.Windows.Forms.Label();
             this.PanelTitulo = new Guna.UI2.WinForms.Guna2Panel();
+            this.LbTituloPanel = new System.Windows.Forms.Label();
             this.BtnSalir = new FontAwesome.Sharp.IconButton();
             this.BtnMaximizar = new FontAwesome.Sharp.IconButton();
             this.BtnMinimizar = new FontAwesome.Sharp.IconButton();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconButton();
             this.PanelLateral = new Guna.UI2.WinForms.Guna2Panel();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.PReportServices = new Guna.UI2.WinForms.Guna2Panel();
+            this.BtnReportProduct = new FontAwesome.Sharp.IconButton();
+            this.BtnReportFactu = new FontAwesome.Sharp.IconButton();
+            this.BtnReportClient = new FontAwesome.Sharp.IconButton();
+            this.btnReportes = new FontAwesome.Sharp.IconButton();
             this.button_menug_prov = new FontAwesome.Sharp.IconButton();
             this.button_menug_inv = new FontAwesome.Sharp.IconButton();
             this.button_menug_cli = new FontAwesome.Sharp.IconButton();
@@ -52,6 +57,7 @@ namespace Drogueria_proyecto
             this.panelDesktop.SuspendLayout();
             this.PanelTitulo.SuspendLayout();
             this.PanelLateral.SuspendLayout();
+            this.PReportServices.SuspendLayout();
             this.PLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnInicio)).BeginInit();
             this.SuspendLayout();
@@ -122,6 +128,7 @@ namespace Drogueria_proyecto
             // 
             this.PanelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
             this.PanelTitulo.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.PanelTitulo.Controls.Add(this.LbTituloPanel);
             this.PanelTitulo.Controls.Add(this.BtnSalir);
             this.PanelTitulo.Controls.Add(this.BtnMaximizar);
             this.PanelTitulo.Controls.Add(this.BtnMinimizar);
@@ -132,6 +139,19 @@ namespace Drogueria_proyecto
             this.PanelTitulo.Size = new System.Drawing.Size(758, 60);
             this.PanelTitulo.TabIndex = 1;
             this.PanelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTitulo_MouseDown_1);
+            // 
+            // LbTituloPanel
+            // 
+            this.LbTituloPanel.AutoSize = true;
+            this.LbTituloPanel.BackColor = System.Drawing.Color.Transparent;
+            this.LbTituloPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbTituloPanel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LbTituloPanel.Location = new System.Drawing.Point(66, 18);
+            this.LbTituloPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.LbTituloPanel.Name = "LbTituloPanel";
+            this.LbTituloPanel.Size = new System.Drawing.Size(222, 24);
+            this.LbTituloPanel.TabIndex = 5;
+            this.LbTituloPanel.Text = "BIENVENIDO GERENTE";
             // 
             // BtnSalir
             // 
@@ -212,7 +232,8 @@ namespace Drogueria_proyecto
             // 
             this.PanelLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
             this.PanelLateral.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.PanelLateral.Controls.Add(this.iconButton3);
+            this.PanelLateral.Controls.Add(this.PReportServices);
+            this.PanelLateral.Controls.Add(this.btnReportes);
             this.PanelLateral.Controls.Add(this.button_menug_prov);
             this.PanelLateral.Controls.Add(this.button_menug_inv);
             this.PanelLateral.Controls.Add(this.button_menug_cli);
@@ -223,29 +244,122 @@ namespace Drogueria_proyecto
             this.PanelLateral.Size = new System.Drawing.Size(300, 854);
             this.PanelLateral.TabIndex = 0;
             // 
-            // iconButton3
+            // PReportServices
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.iconButton3.FlatAppearance.BorderSize = 4;
-            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Dashboard;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 32;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 477);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton3.Size = new System.Drawing.Size(300, 80);
-            this.iconButton3.TabIndex = 4;
-            this.iconButton3.Text = "Reporte";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.PReportServices.Controls.Add(this.BtnReportProduct);
+            this.PReportServices.Controls.Add(this.BtnReportFactu);
+            this.PReportServices.Controls.Add(this.BtnReportClient);
+            this.PReportServices.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PReportServices.Location = new System.Drawing.Point(0, 557);
+            this.PReportServices.Name = "PReportServices";
+            this.PReportServices.Size = new System.Drawing.Size(300, 240);
+            this.PReportServices.TabIndex = 5;
+            this.PReportServices.Visible = false;
+            // 
+            // BtnReportProduct
+            // 
+            this.BtnReportProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
+            this.BtnReportProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnReportProduct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnReportProduct.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BtnReportProduct.FlatAppearance.BorderSize = 4;
+            this.BtnReportProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
+            this.BtnReportProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReportProduct.ForeColor = System.Drawing.Color.White;
+            this.BtnReportProduct.IconChar = FontAwesome.Sharp.IconChar.FileContract;
+            this.BtnReportProduct.IconColor = System.Drawing.Color.White;
+            this.BtnReportProduct.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnReportProduct.IconSize = 32;
+            this.BtnReportProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnReportProduct.Location = new System.Drawing.Point(0, 160);
+            this.BtnReportProduct.Name = "BtnReportProduct";
+            this.BtnReportProduct.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnReportProduct.Size = new System.Drawing.Size(300, 80);
+            this.BtnReportProduct.TabIndex = 7;
+            this.BtnReportProduct.Text = "Reporte Producto";
+            this.BtnReportProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnReportProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnReportProduct.UseVisualStyleBackColor = false;
+            this.BtnReportProduct.Click += new System.EventHandler(this.BtnReportProduct_Click);
+            // 
+            // BtnReportFactu
+            // 
+            this.BtnReportFactu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
+            this.BtnReportFactu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnReportFactu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnReportFactu.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BtnReportFactu.FlatAppearance.BorderSize = 4;
+            this.BtnReportFactu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
+            this.BtnReportFactu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReportFactu.ForeColor = System.Drawing.Color.White;
+            this.BtnReportFactu.IconChar = FontAwesome.Sharp.IconChar.FileContract;
+            this.BtnReportFactu.IconColor = System.Drawing.Color.White;
+            this.BtnReportFactu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnReportFactu.IconSize = 32;
+            this.BtnReportFactu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnReportFactu.Location = new System.Drawing.Point(0, 80);
+            this.BtnReportFactu.Name = "BtnReportFactu";
+            this.BtnReportFactu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnReportFactu.Size = new System.Drawing.Size(300, 80);
+            this.BtnReportFactu.TabIndex = 6;
+            this.BtnReportFactu.Text = "Reporte Factura";
+            this.BtnReportFactu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnReportFactu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnReportFactu.UseVisualStyleBackColor = false;
+            this.BtnReportFactu.Click += new System.EventHandler(this.BtnReportFactu_Click);
+            // 
+            // BtnReportClient
+            // 
+            this.BtnReportClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
+            this.BtnReportClient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnReportClient.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnReportClient.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BtnReportClient.FlatAppearance.BorderSize = 4;
+            this.BtnReportClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
+            this.BtnReportClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReportClient.ForeColor = System.Drawing.Color.White;
+            this.BtnReportClient.IconChar = FontAwesome.Sharp.IconChar.FileContract;
+            this.BtnReportClient.IconColor = System.Drawing.Color.White;
+            this.BtnReportClient.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnReportClient.IconSize = 32;
+            this.BtnReportClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnReportClient.Location = new System.Drawing.Point(0, 0);
+            this.BtnReportClient.Name = "BtnReportClient";
+            this.BtnReportClient.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnReportClient.Size = new System.Drawing.Size(300, 80);
+            this.BtnReportClient.TabIndex = 5;
+            this.BtnReportClient.Text = "Reporte Cliente";
+            this.BtnReportClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnReportClient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnReportClient.UseVisualStyleBackColor = false;
+            this.BtnReportClient.Click += new System.EventHandler(this.BtnReportClient_Click);
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
+            this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportes.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnReportes.FlatAppearance.BorderSize = 4;
+            this.btnReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
+            this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
+            this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.ForeColor = System.Drawing.Color.White;
+            this.btnReportes.IconChar = FontAwesome.Sharp.IconChar.FileDownload;
+            this.btnReportes.IconColor = System.Drawing.Color.White;
+            this.btnReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReportes.IconSize = 32;
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.Location = new System.Drawing.Point(0, 477);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReportes.Size = new System.Drawing.Size(300, 80);
+            this.btnReportes.TabIndex = 4;
+            this.btnReportes.Text = "Reporte";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // button_menug_prov
             // 
@@ -254,6 +368,7 @@ namespace Drogueria_proyecto
             this.button_menug_prov.Dock = System.Windows.Forms.DockStyle.Top;
             this.button_menug_prov.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button_menug_prov.FlatAppearance.BorderSize = 4;
+            this.button_menug_prov.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
             this.button_menug_prov.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_menug_prov.ForeColor = System.Drawing.Color.White;
             this.button_menug_prov.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
@@ -279,6 +394,7 @@ namespace Drogueria_proyecto
             this.button_menug_inv.Dock = System.Windows.Forms.DockStyle.Top;
             this.button_menug_inv.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button_menug_inv.FlatAppearance.BorderSize = 4;
+            this.button_menug_inv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
             this.button_menug_inv.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_menug_inv.ForeColor = System.Drawing.Color.White;
             this.button_menug_inv.IconChar = FontAwesome.Sharp.IconChar.Archive;
@@ -304,6 +420,7 @@ namespace Drogueria_proyecto
             this.button_menug_cli.Dock = System.Windows.Forms.DockStyle.Top;
             this.button_menug_cli.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button_menug_cli.FlatAppearance.BorderSize = 4;
+            this.button_menug_cli.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
             this.button_menug_cli.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_menug_cli.ForeColor = System.Drawing.Color.White;
             this.button_menug_cli.IconChar = FontAwesome.Sharp.IconChar.User;
@@ -369,6 +486,7 @@ namespace Drogueria_proyecto
             this.PanelTitulo.ResumeLayout(false);
             this.PanelTitulo.PerformLayout();
             this.PanelLateral.ResumeLayout(false);
+            this.PReportServices.ResumeLayout(false);
             this.PLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BtnInicio)).EndInit();
             this.ResumeLayout(false);
@@ -386,7 +504,7 @@ namespace Drogueria_proyecto
         private System.Windows.Forms.Label lbTitulo;
         private FontAwesome.Sharp.IconButton iconCurrentChildForm;
         private Guna.UI2.WinForms.Guna2Panel panelDesktop;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton btnReportes;
         private FontAwesome.Sharp.IconButton button_menug_prov;
         private FontAwesome.Sharp.IconButton button_menug_inv;
         private FontAwesome.Sharp.IconButton BtnSalir;
@@ -394,5 +512,10 @@ namespace Drogueria_proyecto
         private FontAwesome.Sharp.IconButton BtnMinimizar;
         private System.Windows.Forms.Label labelhorag;
         private System.Windows.Forms.Label labelfechag;
+        private Guna.UI2.WinForms.Guna2Panel PReportServices;
+        private FontAwesome.Sharp.IconButton BtnReportProduct;
+        private FontAwesome.Sharp.IconButton BtnReportFactu;
+        private FontAwesome.Sharp.IconButton BtnReportClient;
+        private System.Windows.Forms.Label LbTituloPanel;
     }
 }
