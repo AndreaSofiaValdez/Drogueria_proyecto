@@ -57,51 +57,89 @@ namespace Drogueria_proyecto
 
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        Class1 validaciones = new Class1();
+        private void txt_gr_telclien_TextChanged_1(object sender, EventArgs e)
         {
-            try
+            if(validaciones.validarNumeros(txt_gr_telclien.Text,"El numero de telefono solo debe contener numeros"))
             {
-                if (txt_nombclien_gr.Text == string.Empty || txt_gr_correoclien.Text == string.Empty || txt_gr_dirclien.Text == string.Empty || txt_gr_correoclien.Text == string.Empty || txt_gr_telclien.Text == string.Empty)
-                {
-                    MessageBox.Show("Error... No puede insertar datos en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-
-                    cls_Conexion BD = new cls_Conexion();
-                    BD.abrir();
-                    SqlCommand agregar = new SqlCommand("insert into Cliente values (@nombre_cliente,@direccion_cliente, @correo_cliente,@telefono_cliente)", BD.sconexion);
-                    agregar.Parameters.AddWithValue("@nombre_cliente", txt_nombclien_gr.Text);
-                    agregar.Parameters.AddWithValue("@correo_cliente", txt_gr_correoclien.Text);
-                    agregar.Parameters.AddWithValue("@direccion_cliente", txt_gr_dirclien.Text);
-                    agregar.Parameters.AddWithValue("@telefono_cliente", txt_gr_telclien.Text);
-
-
-                    agregar.ExecuteNonQuery();
-                    BD.cerrar();
-                    txt_idcliente_gr.Clear();
-                    txt_nombclien_gr.Clear();
-                    txt_gr_correoclien.Clear();
-                    txt_gr_dirclien.Clear();
-                    txt_gr_telclien.Clear();
-                   
-
-                    this.txt_idcliente_gr.Focus();
-                    cls_Conexion clsConexion1 = new cls_Conexion();
-                    clsConexion1.cargarDatos(dtg_administrador_empleado, "Cliente");
-                }
+                errorP_telcl_ad.SetError(txt_gr_telclien, "El numero de telefono solo debe contener numeros");
+                txt_gr_telclien.Text = "";
             }
-            catch
-            {
-                MessageBox.Show("Error...El codigo ya existe en la base de datos");
-            }
-            errorP_nombcli_ad.Clear();
-            errorP_dircl_ad.Clear();
-            errorP_dircl_ad.Clear();
-            errorPro_correoCli_ad.Clear();
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void txt_gr_dirclien_TextChanged_1(object sender, EventArgs e)
+        {
+            if (validaciones.validarLetrasyNumeros(txt_gr_dirclien.Text, "La direccion solo debe contener letras y numeros"))
+            {
+                errorP_dircl_ad.SetError(txt_gr_dirclien, "La direccion solo debe contener letras y numeros");
+                txt_gr_dirclien.Text = "";
+            }
+        }
+
+        private void txt_gr_correoclien_TextChanged_1(object sender, EventArgs e)
+        {
+            if (validaciones.validarcorreo(txt_gr_correoclien.Text, "El correo solo permite @ _ . y letras"))
+            {
+                errorPro_correoCli_ad.SetError(txt_gr_correoclien, "El correo solo permite @ _ . y letras");
+                txt_gr_correoclien.Text = "";
+            }
+        }
+
+        private void txt_nombclien_gr_TextChanged_1(object sender, EventArgs e)
+        {
+            if (validaciones.validarLetrasyNumeros(txt_nombclien_gr.Text, "El nombre solo permite # numeros y letras"))
+            {
+                errorP_nombcli_ad.SetError(txt_nombclien_gr, "El nombre solo permite # numeros y letras");
+                txt_nombclien_gr.Text = "";
+            }
+        }
+
+        private void btn_gr_agreclien_Click(object sender, EventArgs e)
+        {
+                try
+                {
+                    if (txt_nombclien_gr.Text == string.Empty || txt_gr_correoclien.Text == string.Empty || txt_gr_dirclien.Text == string.Empty || txt_gr_correoclien.Text == string.Empty || txt_gr_telclien.Text == string.Empty)
+                    {
+                        MessageBox.Show("Error... No puede insertar datos en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+
+                        cls_Conexion BD = new cls_Conexion();
+                        BD.abrir();
+                        SqlCommand agregar = new SqlCommand("insert into Cliente values (@nombre_cliente,@direccion_cliente, @correo_cliente,@telefono_cliente)", BD.sconexion);
+                        agregar.Parameters.AddWithValue("@nombre_cliente", txt_nombclien_gr.Text);
+                        agregar.Parameters.AddWithValue("@correo_cliente", txt_gr_correoclien.Text);
+                        agregar.Parameters.AddWithValue("@direccion_cliente", txt_gr_dirclien.Text);
+                        agregar.Parameters.AddWithValue("@telefono_cliente", txt_gr_telclien.Text);
+
+
+                        agregar.ExecuteNonQuery();
+                        BD.cerrar();
+                        txt_idcliente_gr.Clear();
+                        txt_nombclien_gr.Clear();
+                        txt_gr_correoclien.Clear();
+                        txt_gr_dirclien.Clear();
+                        txt_gr_telclien.Clear();
+
+
+                        this.txt_idcliente_gr.Focus();
+                        cls_Conexion clsConexion1 = new cls_Conexion();
+                        clsConexion1.cargarDatos(dtg_administrador_empleado, "Cliente");
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Error...El codigo ya existe en la base de datos");
+                }
+                errorP_nombcli_ad.Clear();
+                errorP_dircl_ad.Clear();
+                errorP_dircl_ad.Clear();
+                errorPro_correoCli_ad.Clear();
+            
+        }
+
+        private void btn_gr_modclien_Click(object sender, EventArgs e)
         {
             try
             {
@@ -146,7 +184,7 @@ namespace Drogueria_proyecto
             errorPro_correoCli_ad.Clear();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btn_gr_eliclien_Click(object sender, EventArgs e)
         {
             try
             {
@@ -180,56 +218,6 @@ namespace Drogueria_proyecto
             catch
             {
                 MessageBox.Show("Error...El codigo ya existe en la base de datos");
-            }
-
-        }
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Fr_Administrador fr_Administrador = new Fr_Administrador();
-            fr_Administrador.Show();
-        }
-
-
-
-        Class1 validaciones = new Class1();
-        private void txt_nombclien_gr_TextChanged(object sender, EventArgs e)
-        {
-            if (validaciones.validarLetrasyNumeros(txt_nombclien_gr.Text, "El nombre solo permite # numeros y letras"))
-            {
-                errorP_nombcli_ad.SetError(txt_nombclien_gr, "El nombre solo permite # numeros y letras");
-                txt_nombclien_gr.Text = "";
-            }
-
-        }
-
-        private void txt_gr_correoclien_TextChanged(object sender, EventArgs e)
-        {
-            if (validaciones.validarcorreo(txt_gr_correoclien.Text, "El correo solo permite @ _ . y letras"))
-            {
-                errorPro_correoCli_ad.SetError(txt_gr_correoclien, "El correo solo permite @ _ . y letras");
-                txt_gr_correoclien.Text = "";
-            }
-
-
-        }
-
-        private void txt_gr_dirclien_TextChanged(object sender, EventArgs e)
-        {
-            if (validaciones.validarLetrasyNumeros(txt_gr_dirclien.Text,"La direccion solo debe contener letras y numeros"))
-            {
-                errorP_dircl_ad.SetError(txt_gr_dirclien, "La direccion solo debe contener letras y numeros");
-                txt_gr_dirclien.Text = "";
-            }
-        }
-
-        private void txt_gr_telclien_TextChanged(object sender, EventArgs e)
-        {
-            if(validaciones.validarNumeros(txt_gr_telclien.Text,"El numero de telefono solo debe contener numeros"))
-            {
-                errorP_telcl_ad.SetError(txt_gr_telclien, "El numero de telefono solo debe contener numeros");
-                txt_gr_telclien.Text = "";
             }
         }
     }

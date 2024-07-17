@@ -98,7 +98,7 @@ namespace Drogueria_proyecto
             this.txt_gr_corprov.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_gr_corprov.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_gr_corprov.Location = new System.Drawing.Point(395, 130);
+            this.txt_gr_corprov.Location = new System.Drawing.Point(410, 130);
             this.txt_gr_corprov.Margin = new System.Windows.Forms.Padding(1);
             this.txt_gr_corprov.MaxLength = 60;
             this.txt_gr_corprov.Multiline = true;
@@ -111,7 +111,7 @@ namespace Drogueria_proyecto
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(390, 100);
+            this.label5.Location = new System.Drawing.Point(405, 100);
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 29);
@@ -124,7 +124,7 @@ namespace Drogueria_proyecto
             this.txt_gr_nomprov.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_gr_nomprov.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_gr_nomprov.Location = new System.Drawing.Point(395, 52);
+            this.txt_gr_nomprov.Location = new System.Drawing.Point(410, 52);
             this.txt_gr_nomprov.Margin = new System.Windows.Forms.Padding(1);
             this.txt_gr_nomprov.MaxLength = 50;
             this.txt_gr_nomprov.Multiline = true;
@@ -138,7 +138,7 @@ namespace Drogueria_proyecto
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(390, 22);
+            this.label6.Location = new System.Drawing.Point(405, 22);
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(114, 29);
@@ -150,7 +150,7 @@ namespace Drogueria_proyecto
             this.txt_gr_desprov.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_gr_desprov.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_gr_desprov.Location = new System.Drawing.Point(395, 213);
+            this.txt_gr_desprov.Location = new System.Drawing.Point(410, 213);
             this.txt_gr_desprov.Margin = new System.Windows.Forms.Padding(1);
             this.txt_gr_desprov.MaxLength = 60;
             this.txt_gr_desprov.Multiline = true;
@@ -164,7 +164,7 @@ namespace Drogueria_proyecto
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(390, 183);
+            this.label4.Location = new System.Drawing.Point(405, 183);
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 29);

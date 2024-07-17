@@ -17,6 +17,15 @@ namespace Drogueria_proyecto
         {
             InitializeComponent();
         }
+        public void cargartxtproveedor(string id)
+        {
+            txt_provinv_ad.Text = id;
+        }
+        public string ProveedorID
+        {
+            get { return txt_provinv_ad.Text; }
+            set { txt_provinv_ad.Text = value; }
+        }
 
         private void fr_Producto_Admin_Load(object sender, EventArgs e)
         {
@@ -188,8 +197,8 @@ namespace Drogueria_proyecto
         private void btnBuscarad_Click(object sender, EventArgs e)
         {
             buscarproveedorad buscarprov = new buscarproveedorad();
-            buscarprov.Show();
-            this.Close();
+            buscarprov.Owner = this; // Establece el formulario actual como el propietario
+            buscarprov.ShowDialog();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)

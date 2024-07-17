@@ -83,6 +83,8 @@ namespace Drogueria_proyecto
                 //Current Child Form Icon
                 iconCurrentChildForm.IconChar = currentBtn.IconChar;
                 iconCurrentChildForm.IconColor = color;
+                LbTituloPanel.Text = currentBtn.Text.ToUpper();
+                LbTituloPanel.Font = new Font(LbTituloPanel.Font, FontStyle.Bold);
 
             }
         }
@@ -97,6 +99,7 @@ namespace Drogueria_proyecto
                 currentBtn.IconColor = Color.Gainsboro;
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+                LbTituloPanel.Text = "BIENVENIDO GERENTE";
             }
         }
 
@@ -151,7 +154,7 @@ namespace Drogueria_proyecto
             currentChildForm.Close();
             Reset();
         }
-
+        //Boton para cerrar salir del sistema 
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -165,21 +168,7 @@ namespace Drogueria_proyecto
             labelfechag.Text = DateTime.Now.ToLongDateString();
 
         }
-
-        //Boton para cerrar salir del sistema 
-        private void button_menug_salir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            FrmLogin.Show();
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            fr_menu_gerente.ActiveForm.Hide();
-            menuReporte menuReporte = new menuReporte();
-            menuReporte.Show();
-        }
+        //Este rederiza el fomulario dependiendo del tamano de la pantalla
         private void fr_menu_gerente_Resize(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Maximized)
@@ -194,7 +183,7 @@ namespace Drogueria_proyecto
                 CenterToScreen();
             }
         }
-
+        //Boton para maximizar la pantalla
         private void BtnMaximizar_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Normal)
@@ -202,7 +191,7 @@ namespace Drogueria_proyecto
             else
                 this.WindowState = FormWindowState.Normal;
         }
-
+        //Boton para Minimizar la pantalla
         private void BtnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -229,7 +218,46 @@ namespace Drogueria_proyecto
             ActivateButton(sender, RGBColors.colorTxtWhile);
             OpenChildForm(new Fr_gerente_proveedores());
         }
-        
-       
+
+        //Boton Desplegable de reporte 
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            //Despliega los botones de los diferentes reportes 
+            
+            if (!PReportServices.Visible)
+            {
+                PReportServices.Visible = true;
+                ActivateButton(sender, RGBColors.colorTxtWhile);
+                btnReportes.IconChar = FontAwesome.Sharp.IconChar.FileArrowUp;    
+                
+            }
+            else
+            {
+                PReportServices.Visible = false;
+                this.btnReportes.IconChar = FontAwesome.Sharp.IconChar.FileArrowDown;
+                DisableButton();
+                
+
+            }
+        }
+
+        //Botones de Reportes 
+        private void BtnReportClient_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.colorTxtWhile);
+            OpenChildForm(new FormReporteCliente());
+        }
+
+        private void BtnReportFactu_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.colorTxtWhile);
+            OpenChildForm(new FormReporteFactura());
+        }
+
+        private void BtnReportProduct_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.colorTxtWhile);
+            OpenChildForm(new FormReporteProducto());
+        }
     }
 }

@@ -43,8 +43,6 @@ namespace Drogueria_proyecto
             this.PanelTitulo = new Guna.UI2.WinForms.Guna2Panel();
             this.BtnSalir = new FontAwesome.Sharp.IconButton();
             this.BtnMaximizar = new FontAwesome.Sharp.IconButton();
-            this.BtnMinimizar = new FontAwesome.Sharp.IconButton();
-            this.iconCurrentChildForm = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet9)).BeginInit();
@@ -140,8 +138,6 @@ namespace Drogueria_proyecto
             this.PanelTitulo.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
             this.PanelTitulo.Controls.Add(this.BtnSalir);
             this.PanelTitulo.Controls.Add(this.BtnMaximizar);
-            this.PanelTitulo.Controls.Add(this.BtnMinimizar);
-            this.PanelTitulo.Controls.Add(this.iconCurrentChildForm);
             this.PanelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTitulo.Location = new System.Drawing.Point(0, 0);
             this.PanelTitulo.Name = "PanelTitulo";
@@ -189,41 +185,6 @@ namespace Drogueria_proyecto
             this.BtnMaximizar.UseVisualStyleBackColor = false;
             this.BtnMaximizar.Click += new System.EventHandler(this.BtnMaximizar_Click);
             // 
-            // BtnMinimizar
-            // 
-            this.BtnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnMinimizar.AutoSize = true;
-            this.BtnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
-            this.BtnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnMinimizar.FlatAppearance.BorderSize = 0;
-            this.BtnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMinimizar.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnMinimizar.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.BtnMinimizar.IconColor = System.Drawing.Color.White;
-            this.BtnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnMinimizar.IconSize = 25;
-            this.BtnMinimizar.Location = new System.Drawing.Point(648, 17);
-            this.BtnMinimizar.Name = "BtnMinimizar";
-            this.BtnMinimizar.Size = new System.Drawing.Size(31, 31);
-            this.BtnMinimizar.TabIndex = 2;
-            this.BtnMinimizar.UseVisualStyleBackColor = false;
-            this.BtnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click);
-            // 
-            // iconCurrentChildForm
-            // 
-            this.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
-            this.iconCurrentChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconCurrentChildForm.ForeColor = System.Drawing.Color.Transparent;
-            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.House;
-            this.iconCurrentChildForm.IconColor = System.Drawing.Color.White;
-            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChildForm.IconSize = 25;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(15, 17);
-            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(31, 26);
-            this.iconCurrentChildForm.TabIndex = 1;
-            this.iconCurrentChildForm.UseVisualStyleBackColor = false;
-            // 
             // buscarproveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,7 +223,5 @@ namespace Drogueria_proyecto
         private Guna.UI2.WinForms.Guna2Panel PanelTitulo;
         private FontAwesome.Sharp.IconButton BtnSalir;
         private FontAwesome.Sharp.IconButton BtnMaximizar;
-        private FontAwesome.Sharp.IconButton BtnMinimizar;
-        private FontAwesome.Sharp.IconButton iconCurrentChildForm;
     }
 }

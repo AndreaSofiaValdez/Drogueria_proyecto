@@ -39,21 +39,6 @@ namespace Drogueria_proyecto
             this.telefonoclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dROGUERIADataSet1 = new Drogueria_proyecto.DROGUERIADataSet1();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.txt_idcliente_gr = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txt_gr_telclien = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt_gr_dirclien = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txt_gr_correoclien = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_nombclien_gr = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.dROGUERIADataSet = new Drogueria_proyecto.DROGUERIADataSet();
             this.dROGUERIADataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.errorP_nombrecl_ad = new System.Windows.Forms.ErrorProvider(this.components);
@@ -62,14 +47,24 @@ namespace Drogueria_proyecto
             this.errorP_telcl_ad = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorPro_correoCli_ad = new System.Windows.Forms.ErrorProvider(this.components);
             this.clienteTableAdapter = new Drogueria_proyecto.DROGUERIADataSet1TableAdapters.ClienteTableAdapter();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnRegresar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txt_idcliente_gr = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_nombclien_gr = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_gr_correoclien = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_gr_telclien = new System.Windows.Forms.TextBox();
+            this.txt_gr_dirclien = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_gr_eliclien = new System.Windows.Forms.Button();
+            this.btn_gr_agreclien = new System.Windows.Forms.Button();
+            this.btn_gr_modclien = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_administrador_empleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet1)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_nombrecl_ad)).BeginInit();
@@ -77,8 +72,8 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.errorP_dircl_ad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_telcl_ad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorPro_correoCli_ad)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtg_administrador_empleado
@@ -87,6 +82,9 @@ namespace Drogueria_proyecto
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtg_administrador_empleado.AutoGenerateColumns = false;
+            this.dtg_administrador_empleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtg_administrador_empleado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtg_administrador_empleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(115)))), ((int)(((byte)(148)))));
             this.dtg_administrador_empleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_administrador_empleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigoclienteDataGridViewTextBoxColumn,
@@ -95,12 +93,11 @@ namespace Drogueria_proyecto
             this.correoclienteDataGridViewTextBoxColumn,
             this.telefonoclienteDataGridViewTextBoxColumn});
             this.dtg_administrador_empleado.DataSource = this.clienteBindingSource;
-            this.dtg_administrador_empleado.Location = new System.Drawing.Point(212, 281);
-            this.dtg_administrador_empleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtg_administrador_empleado.Location = new System.Drawing.Point(0, 331);
             this.dtg_administrador_empleado.Name = "dtg_administrador_empleado";
             this.dtg_administrador_empleado.RowHeadersVisible = false;
             this.dtg_administrador_empleado.RowHeadersWidth = 51;
-            this.dtg_administrador_empleado.Size = new System.Drawing.Size(803, 395);
+            this.dtg_administrador_empleado.Size = new System.Drawing.Size(784, 229);
             this.dtg_administrador_empleado.TabIndex = 3;
             this.dtg_administrador_empleado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_gerente_clientes_CellDoubleClick);
             // 
@@ -112,7 +109,7 @@ namespace Drogueria_proyecto
             this.codigoclienteDataGridViewTextBoxColumn.MinimumWidth = 15;
             this.codigoclienteDataGridViewTextBoxColumn.Name = "codigoclienteDataGridViewTextBoxColumn";
             this.codigoclienteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codigoclienteDataGridViewTextBoxColumn.Width = 80;
+            this.codigoclienteDataGridViewTextBoxColumn.Width = 65;
             // 
             // nombreclienteDataGridViewTextBoxColumn
             // 
@@ -120,7 +117,6 @@ namespace Drogueria_proyecto
             this.nombreclienteDataGridViewTextBoxColumn.HeaderText = "Nombre";
             this.nombreclienteDataGridViewTextBoxColumn.MinimumWidth = 15;
             this.nombreclienteDataGridViewTextBoxColumn.Name = "nombreclienteDataGridViewTextBoxColumn";
-            this.nombreclienteDataGridViewTextBoxColumn.Width = 300;
             // 
             // direccionclienteDataGridViewTextBoxColumn
             // 
@@ -128,7 +124,6 @@ namespace Drogueria_proyecto
             this.direccionclienteDataGridViewTextBoxColumn.HeaderText = "Dirección";
             this.direccionclienteDataGridViewTextBoxColumn.MinimumWidth = 15;
             this.direccionclienteDataGridViewTextBoxColumn.Name = "direccionclienteDataGridViewTextBoxColumn";
-            this.direccionclienteDataGridViewTextBoxColumn.Width = 200;
             // 
             // correoclienteDataGridViewTextBoxColumn
             // 
@@ -136,7 +131,6 @@ namespace Drogueria_proyecto
             this.correoclienteDataGridViewTextBoxColumn.HeaderText = "Correo";
             this.correoclienteDataGridViewTextBoxColumn.MinimumWidth = 15;
             this.correoclienteDataGridViewTextBoxColumn.Name = "correoclienteDataGridViewTextBoxColumn";
-            this.correoclienteDataGridViewTextBoxColumn.Width = 200;
             // 
             // telefonoclienteDataGridViewTextBoxColumn
             // 
@@ -144,7 +138,6 @@ namespace Drogueria_proyecto
             this.telefonoclienteDataGridViewTextBoxColumn.HeaderText = "Teléfono";
             this.telefonoclienteDataGridViewTextBoxColumn.MinimumWidth = 15;
             this.telefonoclienteDataGridViewTextBoxColumn.Name = "telefonoclienteDataGridViewTextBoxColumn";
-            this.telefonoclienteDataGridViewTextBoxColumn.Width = 300;
             // 
             // clienteBindingSource
             // 
@@ -155,179 +148,6 @@ namespace Drogueria_proyecto
             // 
             this.dROGUERIADataSet1.DataSetName = "DROGUERIADataSet1";
             this.dROGUERIADataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.SlateGray;
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(685, 215);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(110, 50);
-            this.btnEliminar.TabIndex = 17;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.SlateGray;
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(520, 215);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(110, 50);
-            this.btnModificar.TabIndex = 16;
-            this.btnModificar.Text = "Modifcar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.SlateGray;
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(357, 215);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(110, 50);
-            this.btnAgregar.TabIndex = 15;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // txt_idcliente_gr
-            // 
-            this.txt_idcliente_gr.Enabled = false;
-            this.txt_idcliente_gr.Location = new System.Drawing.Point(357, 63);
-            this.txt_idcliente_gr.Margin = new System.Windows.Forms.Padding(1);
-            this.txt_idcliente_gr.Name = "txt_idcliente_gr";
-            this.txt_idcliente_gr.Size = new System.Drawing.Size(111, 22);
-            this.txt_idcliente_gr.TabIndex = 27;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(271, 63);
-            this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 24);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Código:";
-            // 
-            // txt_gr_telclien
-            // 
-            this.txt_gr_telclien.Location = new System.Drawing.Point(687, 108);
-            this.txt_gr_telclien.Margin = new System.Windows.Forms.Padding(1);
-            this.txt_gr_telclien.MaxLength = 8;
-            this.txt_gr_telclien.Name = "txt_gr_telclien";
-            this.txt_gr_telclien.Size = new System.Drawing.Size(144, 22);
-            this.txt_gr_telclien.TabIndex = 25;
-            this.txt_gr_telclien.TextChanged += new System.EventHandler(this.txt_gr_telclien_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(590, 106);
-            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 24);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Teléfono:";
-            // 
-            // txt_gr_dirclien
-            // 
-            this.txt_gr_dirclien.Location = new System.Drawing.Point(687, 63);
-            this.txt_gr_dirclien.Margin = new System.Windows.Forms.Padding(1);
-            this.txt_gr_dirclien.MaxLength = 60;
-            this.txt_gr_dirclien.Name = "txt_gr_dirclien";
-            this.txt_gr_dirclien.Size = new System.Drawing.Size(180, 22);
-            this.txt_gr_dirclien.TabIndex = 23;
-            this.txt_gr_dirclien.TextChanged += new System.EventHandler(this.txt_gr_dirclien_TextChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(585, 60);
-            this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 24);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Dirección:";
-            // 
-            // txt_gr_correoclien
-            // 
-            this.txt_gr_correoclien.Location = new System.Drawing.Point(357, 162);
-            this.txt_gr_correoclien.Margin = new System.Windows.Forms.Padding(1);
-            this.txt_gr_correoclien.MaxLength = 60;
-            this.txt_gr_correoclien.Name = "txt_gr_correoclien";
-            this.txt_gr_correoclien.Size = new System.Drawing.Size(205, 22);
-            this.txt_gr_correoclien.TabIndex = 21;
-            this.txt_gr_correoclien.TextChanged += new System.EventHandler(this.txt_gr_correoclien_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(282, 160);
-            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 24);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Correo:";
-            // 
-            // txt_nombclien_gr
-            // 
-            this.txt_nombclien_gr.Location = new System.Drawing.Point(357, 108);
-            this.txt_nombclien_gr.Margin = new System.Windows.Forms.Padding(1);
-            this.txt_nombclien_gr.MaxLength = 80;
-            this.txt_nombclien_gr.Name = "txt_nombclien_gr";
-            this.txt_nombclien_gr.Size = new System.Drawing.Size(191, 22);
-            this.txt_nombclien_gr.TabIndex = 19;
-            this.txt_nombclien_gr.TextChanged += new System.EventHandler(this.txt_nombclien_gr_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(271, 106);
-            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 24);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Nombre:";
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(188, 1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(879, 38);
-            this.panel2.TabIndex = 29;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(311, 6);
-            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 25);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Clientes";
             // 
             // dROGUERIADataSet
             // 
@@ -363,84 +183,238 @@ namespace Drogueria_proyecto
             // 
             this.clienteTableAdapter.ClearBeforeFill = true;
             // 
-            // panel1
+            // guna2Panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.panel1.BackgroundImage = global::Drogueria_proyecto.Properties.Resources.Fondo2;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnRegresar);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(191, 690);
-            this.panel1.TabIndex = 28;
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.Controls.Add(this.txt_idcliente_gr);
+            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.Controls.Add(this.label7);
+            this.guna2Panel1.Controls.Add(this.txt_nombclien_gr);
+            this.guna2Panel1.Controls.Add(this.label4);
+            this.guna2Panel1.Controls.Add(this.txt_gr_correoclien);
+            this.guna2Panel1.Controls.Add(this.label6);
+            this.guna2Panel1.Controls.Add(this.txt_gr_telclien);
+            this.guna2Panel1.Controls.Add(this.txt_gr_dirclien);
+            this.guna2Panel1.Controls.Add(this.label5);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(784, 273);
+            this.guna2Panel1.TabIndex = 17;
             // 
-            // pictureBox1
+            // txt_idcliente_gr
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Drogueria_proyecto.Properties.Resources.pildora1;
-            this.pictureBox1.Location = new System.Drawing.Point(37, 64);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 96);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.txt_idcliente_gr.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_idcliente_gr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_idcliente_gr.Enabled = false;
+            this.txt_idcliente_gr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_idcliente_gr.HideSelection = false;
+            this.txt_idcliente_gr.Location = new System.Drawing.Point(103, 53);
+            this.txt_idcliente_gr.Margin = new System.Windows.Forms.Padding(1);
+            this.txt_idcliente_gr.Multiline = true;
+            this.txt_idcliente_gr.Name = "txt_idcliente_gr";
+            this.txt_idcliente_gr.Size = new System.Drawing.Size(263, 24);
+            this.txt_idcliente_gr.TabIndex = 15;
             // 
-            // btnRegresar
+            // label3
             // 
-            this.btnRegresar.BackColor = System.Drawing.Color.SlateGray;
-            this.btnRegresar.ForeColor = System.Drawing.Color.White;
-            this.btnRegresar.Location = new System.Drawing.Point(16, 313);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(148, 62);
-            this.btnRegresar.TabIndex = 2;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = false;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Location = new System.Drawing.Point(400, 23);
+            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 29);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Nombre:";
             // 
-            // label1
+            // label7
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(32, 27);
-            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "MedExpress";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label7.Location = new System.Drawing.Point(98, 23);
+            this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(98, 29);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Código:";
+            // 
+            // txt_nombclien_gr
+            // 
+            this.txt_nombclien_gr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_nombclien_gr.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_nombclien_gr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_nombclien_gr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombclien_gr.Location = new System.Drawing.Point(405, 53);
+            this.txt_nombclien_gr.Margin = new System.Windows.Forms.Padding(1);
+            this.txt_nombclien_gr.MaxLength = 80;
+            this.txt_nombclien_gr.Multiline = true;
+            this.txt_nombclien_gr.Name = "txt_nombclien_gr";
+            this.txt_nombclien_gr.Size = new System.Drawing.Size(263, 24);
+            this.txt_nombclien_gr.TabIndex = 4;
+            this.txt_nombclien_gr.TextChanged += new System.EventHandler(this.txt_nombclien_gr_TextChanged_1);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label4.Location = new System.Drawing.Point(400, 109);
+            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 29);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Correo:";
+            // 
+            // txt_gr_correoclien
+            // 
+            this.txt_gr_correoclien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_gr_correoclien.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_gr_correoclien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_gr_correoclien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_gr_correoclien.Location = new System.Drawing.Point(405, 139);
+            this.txt_gr_correoclien.Margin = new System.Windows.Forms.Padding(1);
+            this.txt_gr_correoclien.MaxLength = 60;
+            this.txt_gr_correoclien.Multiline = true;
+            this.txt_gr_correoclien.Name = "txt_gr_correoclien";
+            this.txt_gr_correoclien.Size = new System.Drawing.Size(263, 24);
+            this.txt_gr_correoclien.TabIndex = 6;
+            this.txt_gr_correoclien.TextChanged += new System.EventHandler(this.txt_gr_correoclien_TextChanged_1);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.Location = new System.Drawing.Point(400, 196);
+            this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(131, 29);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Dirección:";
+            // 
+            // txt_gr_telclien
+            // 
+            this.txt_gr_telclien.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_gr_telclien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_gr_telclien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_gr_telclien.Location = new System.Drawing.Point(103, 139);
+            this.txt_gr_telclien.Margin = new System.Windows.Forms.Padding(1);
+            this.txt_gr_telclien.MaxLength = 8;
+            this.txt_gr_telclien.Multiline = true;
+            this.txt_gr_telclien.Name = "txt_gr_telclien";
+            this.txt_gr_telclien.Size = new System.Drawing.Size(263, 24);
+            this.txt_gr_telclien.TabIndex = 10;
+            this.txt_gr_telclien.TextChanged += new System.EventHandler(this.txt_gr_telclien_TextChanged_1);
+            // 
+            // txt_gr_dirclien
+            // 
+            this.txt_gr_dirclien.AllowDrop = true;
+            this.txt_gr_dirclien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_gr_dirclien.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_gr_dirclien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_gr_dirclien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_gr_dirclien.HideSelection = false;
+            this.txt_gr_dirclien.Location = new System.Drawing.Point(405, 226);
+            this.txt_gr_dirclien.Margin = new System.Windows.Forms.Padding(1);
+            this.txt_gr_dirclien.MaxLength = 60;
+            this.txt_gr_dirclien.Multiline = true;
+            this.txt_gr_dirclien.Name = "txt_gr_dirclien";
+            this.txt_gr_dirclien.Size = new System.Drawing.Size(263, 24);
+            this.txt_gr_dirclien.TabIndex = 8;
+            this.txt_gr_dirclien.TextChanged += new System.EventHandler(this.txt_gr_dirclien_TextChanged_1);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label5.Location = new System.Drawing.Point(98, 109);
+            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(125, 29);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Teléfono:";
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.AutoSize = true;
+            this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel3.Controls.Add(this.btn_gr_eliclien);
+            this.guna2Panel3.Controls.Add(this.btn_gr_agreclien);
+            this.guna2Panel3.Controls.Add(this.btn_gr_modclien);
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 273);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(784, 50);
+            this.guna2Panel3.TabIndex = 19;
+            // 
+            // btn_gr_eliclien
+            // 
+            this.btn_gr_eliclien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_gr_eliclien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
+            this.btn_gr_eliclien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gr_eliclien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gr_eliclien.ForeColor = System.Drawing.Color.White;
+            this.btn_gr_eliclien.Location = new System.Drawing.Point(528, 0);
+            this.btn_gr_eliclien.Margin = new System.Windows.Forms.Padding(1);
+            this.btn_gr_eliclien.Name = "btn_gr_eliclien";
+            this.btn_gr_eliclien.Size = new System.Drawing.Size(140, 49);
+            this.btn_gr_eliclien.TabIndex = 12;
+            this.btn_gr_eliclien.Text = "Eliminar";
+            this.btn_gr_eliclien.UseVisualStyleBackColor = false;
+            this.btn_gr_eliclien.Click += new System.EventHandler(this.btn_gr_eliclien_Click);
+            // 
+            // btn_gr_agreclien
+            // 
+            this.btn_gr_agreclien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_gr_agreclien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
+            this.btn_gr_agreclien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gr_agreclien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gr_agreclien.ForeColor = System.Drawing.Color.White;
+            this.btn_gr_agreclien.Location = new System.Drawing.Point(239, 0);
+            this.btn_gr_agreclien.Margin = new System.Windows.Forms.Padding(1);
+            this.btn_gr_agreclien.Name = "btn_gr_agreclien";
+            this.btn_gr_agreclien.Size = new System.Drawing.Size(135, 49);
+            this.btn_gr_agreclien.TabIndex = 7;
+            this.btn_gr_agreclien.Text = "Agregar";
+            this.btn_gr_agreclien.UseVisualStyleBackColor = false;
+            this.btn_gr_agreclien.Click += new System.EventHandler(this.btn_gr_agreclien_Click);
+            // 
+            // btn_gr_modclien
+            // 
+            this.btn_gr_modclien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_gr_modclien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(144)))), ((int)(((byte)(183)))));
+            this.btn_gr_modclien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gr_modclien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gr_modclien.ForeColor = System.Drawing.Color.White;
+            this.btn_gr_modclien.Location = new System.Drawing.Point(384, 0);
+            this.btn_gr_modclien.Margin = new System.Windows.Forms.Padding(1);
+            this.btn_gr_modclien.Name = "btn_gr_modclien";
+            this.btn_gr_modclien.Size = new System.Drawing.Size(135, 49);
+            this.btn_gr_modclien.TabIndex = 13;
+            this.btn_gr_modclien.Text = "Modificar";
+            this.btn_gr_modclien.UseVisualStyleBackColor = false;
+            this.btn_gr_modclien.Click += new System.EventHandler(this.btn_gr_modclien_Click);
             // 
             // Fr_Cliente_Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(1045, 690);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txt_idcliente_gr);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txt_gr_telclien);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txt_gr_dirclien);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txt_gr_correoclien);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txt_nombclien_gr);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnAgregar);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(115)))), ((int)(((byte)(148)))));
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.guna2Panel3);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.dtg_administrador_empleado);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1061, 726);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(800, 597);
             this.Name = "Fr_Cliente_Admin";
             this.Text = "Clientes_Ad";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -448,8 +422,6 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dtg_administrador_empleado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_nombrecl_ad)).EndInit();
@@ -457,35 +429,16 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.errorP_dircl_ad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_telcl_ad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorPro_correoCli_ad)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            this.guna2Panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.DataGridView dtg_administrador_empleado;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox txt_idcliente_gr;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_gr_telclien;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_gr_dirclien;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_gr_correoclien;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_nombclien_gr;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
         private DROGUERIADataSet dROGUERIADataSet;
         private System.Windows.Forms.BindingSource dROGUERIADataSetBindingSource;
         private DROGUERIADataSet1 dROGUERIADataSet1;
@@ -501,5 +454,20 @@ namespace Drogueria_proyecto
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionclienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn correoclienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoclienteDataGridViewTextBoxColumn;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.TextBox txt_idcliente_gr;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txt_nombclien_gr;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txt_gr_correoclien;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txt_gr_telclien;
+        private System.Windows.Forms.TextBox txt_gr_dirclien;
+        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private System.Windows.Forms.Button btn_gr_eliclien;
+        private System.Windows.Forms.Button btn_gr_agreclien;
+        private System.Windows.Forms.Button btn_gr_modclien;
     }
 }
