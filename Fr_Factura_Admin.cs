@@ -318,5 +318,10 @@ namespace Drogueria_proyecto
             printPreviewDialog1.PrintPreviewControl.Zoom = 1;
             printPreviewDialog1.ShowDialog();
         }
+
+        private void txtProducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

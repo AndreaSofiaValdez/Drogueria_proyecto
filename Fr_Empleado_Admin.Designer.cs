@@ -96,6 +96,7 @@ namespace Drogueria_proyecto
             this.dtg_administrador_empleado.Name = "dtg_administrador_empleado";
             this.dtg_administrador_empleado.RowHeadersVisible = false;
             this.dtg_administrador_empleado.RowHeadersWidth = 51;
+            this.dtg_administrador_empleado.RowTemplate.Height = 46;
             this.dtg_administrador_empleado.Size = new System.Drawing.Size(784, 240);
             this.dtg_administrador_empleado.TabIndex = 1;
             this.dtg_administrador_empleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_administrador_empleado_CellContentClick);

@@ -30,6 +30,7 @@ namespace Drogueria_proyecto
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fr_Cliente_Admin));
             this.dtg_administrador_empleado = new System.Windows.Forms.DataGridView();
             this.codigoclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,7 +84,6 @@ namespace Drogueria_proyecto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtg_administrador_empleado.AutoGenerateColumns = false;
             this.dtg_administrador_empleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtg_administrador_empleado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtg_administrador_empleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(115)))), ((int)(((byte)(148)))));
             this.dtg_administrador_empleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_administrador_empleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -97,6 +97,9 @@ namespace Drogueria_proyecto
             this.dtg_administrador_empleado.Name = "dtg_administrador_empleado";
             this.dtg_administrador_empleado.RowHeadersVisible = false;
             this.dtg_administrador_empleado.RowHeadersWidth = 51;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtg_administrador_empleado.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtg_administrador_empleado.RowTemplate.Height = 46;
             this.dtg_administrador_empleado.Size = new System.Drawing.Size(784, 229);
             this.dtg_administrador_empleado.TabIndex = 3;
             this.dtg_administrador_empleado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_gerente_clientes_CellDoubleClick);
