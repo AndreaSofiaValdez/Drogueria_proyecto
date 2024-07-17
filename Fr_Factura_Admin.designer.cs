@@ -32,7 +32,6 @@ namespace Drogueria_proyecto
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fr_Factura_Admin));
             this.btnRegresar = new System.Windows.Forms.Button();
-            this.dgv_administrador_factura = new System.Windows.Forms.DataGridView();
             this.dataGridViewFacturaBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.dROGUERIADataSet19 = new Drogueria_proyecto.DROGUERIADataSet19();
             this.dataGridViewFacturaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -41,12 +40,6 @@ namespace Drogueria_proyecto
             this.dROGUERIADataSet14 = new Drogueria_proyecto.DROGUERIADataSet14();
             this.facturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dROGUERIADataSet3 = new Drogueria_proyecto.DROGUERIADataSet3();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.txt_IdFactura_gr = new System.Windows.Forms.TextBox();
-            this.txt_precio_gr = new System.Windows.Forms.TextBox();
-            this.txt_cantidad_gr = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,14 +54,11 @@ namespace Drogueria_proyecto
             this.label8 = new System.Windows.Forms.Label();
             this.facturaTableAdapter = new Drogueria_proyecto.DROGUERIADataSet3TableAdapters.FacturaTableAdapter();
             this.dataGridViewFacturaTableAdapter = new Drogueria_proyecto.DROGUERIADataSet14TableAdapters.DataGridViewFacturaTableAdapter();
-            this.cbx_producto_fact = new System.Windows.Forms.ComboBox();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbx_producto = new Drogueria_proyecto.cbx_producto();
             this.productoTableAdapter = new Drogueria_proyecto.cbx_productoTableAdapters.ProductoTableAdapter();
-            this.cbx_empleado_fact = new System.Windows.Forms.ComboBox();
             this.cbxEmpleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dROGUERIADataSet15 = new Drogueria_proyecto.DROGUERIADataSet15();
-            this.cbx_cliente_fact = new System.Windows.Forms.ComboBox();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbx_cliente = new Drogueria_proyecto.cbx_cliente();
             this.clienteTableAdapter = new Drogueria_proyecto.cbx_clienteTableAdapters.ClienteTableAdapter();
@@ -76,18 +66,17 @@ namespace Drogueria_proyecto
             this.errorP_cantfact_ad = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorP_preciofact_ad = new System.Windows.Forms.ErrorProvider(this.components);
             this.dataGridViewFacturaTableAdapter1 = new Drogueria_proyecto.DGVFacturaDataSet19TableAdapters.DataGridViewFacturaTableAdapter();
-            this.dgvdetalle = new System.Windows.Forms.DataGridView();
-            this.idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotalproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
             this.dgvfactura_vista = new Drogueria_proyecto.dgvfactura_vista();
             this.dataGridViewFacturaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewFacturaTableAdapter2 = new Drogueria_proyecto.dgvfactura_vistaTableAdapters.DataGridViewFacturaTableAdapter();
             this.dataGridViewFacturaTableAdapter3 = new Drogueria_proyecto.DROGUERIADataSet19TableAdapters.DataGridViewFacturaTableAdapter();
             this.errorPro_cantFact_ad = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_administrador_factura)).BeginInit();
+            this.cboxEmp = new System.Windows.Forms.ComboBox();
+            this.cboxCliente = new System.Windows.Forms.ComboBox();
+            this.cboxProducto = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource1)).BeginInit();
@@ -107,7 +96,6 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.cbx_cliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_cantfact_ad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_preciofact_ad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvdetalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfactura_vista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorPro_cantFact_ad)).BeginInit();
@@ -124,25 +112,6 @@ namespace Drogueria_proyecto
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
-            // dgv_administrador_factura
-            // 
-            this.dgv_administrador_factura.AllowUserToAddRows = false;
-            this.dgv_administrador_factura.AllowUserToDeleteRows = false;
-            this.dgv_administrador_factura.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_administrador_factura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_administrador_factura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_administrador_factura.Location = new System.Drawing.Point(158, 220);
-            this.dgv_administrador_factura.Name = "dgv_administrador_factura";
-            this.dgv_administrador_factura.ReadOnly = true;
-            this.dgv_administrador_factura.RowHeadersVisible = false;
-            this.dgv_administrador_factura.RowHeadersWidth = 51;
-            this.dgv_administrador_factura.Size = new System.Drawing.Size(367, 329);
-            this.dgv_administrador_factura.TabIndex = 3;
-            this.dgv_administrador_factura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_administrador_factura_CellContentClick_1);
-            this.dgv_administrador_factura.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_administrador_factura_CellDoubleClick);
             // 
             // dataGridViewFacturaBindingSource3
             // 
@@ -184,70 +153,6 @@ namespace Drogueria_proyecto
             this.dROGUERIADataSet3.DataSetName = "DROGUERIADataSet3";
             this.dROGUERIADataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.SlateGray;
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(419, 168);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(86, 40);
-            this.btnEliminar.TabIndex = 17;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.SlateGray;
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(303, 168);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(86, 40);
-            this.btnModificar.TabIndex = 16;
-            this.btnModificar.Text = "Modifcar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.SlateGray;
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(189, 167);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(86, 40);
-            this.btnAgregar.TabIndex = 15;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // txt_IdFactura_gr
-            // 
-            this.txt_IdFactura_gr.Enabled = false;
-            this.txt_IdFactura_gr.Location = new System.Drawing.Point(274, 71);
-            this.txt_IdFactura_gr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_IdFactura_gr.Name = "txt_IdFactura_gr";
-            this.txt_IdFactura_gr.Size = new System.Drawing.Size(69, 20);
-            this.txt_IdFactura_gr.TabIndex = 18;
-            // 
-            // txt_precio_gr
-            // 
-            this.txt_precio_gr.Enabled = false;
-            this.txt_precio_gr.Location = new System.Drawing.Point(760, 99);
-            this.txt_precio_gr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_precio_gr.Name = "txt_precio_gr";
-            this.txt_precio_gr.Size = new System.Drawing.Size(136, 20);
-            this.txt_precio_gr.TabIndex = 19;
-            this.txt_precio_gr.TextChanged += new System.EventHandler(this.txt_precio_gr_TextChanged);
-            // 
-            // txt_cantidad_gr
-            // 
-            this.txt_cantidad_gr.Location = new System.Drawing.Point(760, 131);
-            this.txt_cantidad_gr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_cantidad_gr.Name = "txt_cantidad_gr";
-            this.txt_cantidad_gr.Size = new System.Drawing.Size(109, 20);
-            this.txt_cantidad_gr.TabIndex = 21;
-            this.txt_cantidad_gr.TextChanged += new System.EventHandler(this.txt_cantidad_gr_TextChanged);
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -259,7 +164,7 @@ namespace Drogueria_proyecto
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(156, 71);
+            this.label2.Location = new System.Drawing.Point(156, 72);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 18);
@@ -271,19 +176,20 @@ namespace Drogueria_proyecto
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(156, 126);
+            this.label3.Location = new System.Drawing.Point(156, 130);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 18);
+            this.label3.Size = new System.Drawing.Size(57, 18);
             this.label3.TabIndex = 26;
-            this.label3.Text = " Cliente:";
+            this.label3.Text = "Cliente:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(679, 59);
+            this.label4.Location = new System.Drawing.Point(156, 160);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 18);
@@ -295,7 +201,7 @@ namespace Drogueria_proyecto
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(697, 101);
+            this.label5.Location = new System.Drawing.Point(573, 72);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 18);
@@ -307,7 +213,7 @@ namespace Drogueria_proyecto
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(679, 130);
+            this.label6.Location = new System.Drawing.Point(573, 101);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 18);
@@ -319,7 +225,7 @@ namespace Drogueria_proyecto
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(371, 72);
+            this.label7.Location = new System.Drawing.Point(156, 101);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 18);
@@ -400,20 +306,6 @@ namespace Drogueria_proyecto
             // 
             this.dataGridViewFacturaTableAdapter.ClearBeforeFill = true;
             // 
-            // cbx_producto_fact
-            // 
-            this.cbx_producto_fact.DataSource = this.productoBindingSource;
-            this.cbx_producto_fact.DisplayMember = "nombre_producto";
-            this.cbx_producto_fact.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbx_producto_fact.FormattingEnabled = true;
-            this.cbx_producto_fact.Location = new System.Drawing.Point(760, 59);
-            this.cbx_producto_fact.Margin = new System.Windows.Forms.Padding(1);
-            this.cbx_producto_fact.Name = "cbx_producto_fact";
-            this.cbx_producto_fact.Size = new System.Drawing.Size(102, 21);
-            this.cbx_producto_fact.TabIndex = 33;
-            this.cbx_producto_fact.ValueMember = "codigo_producto";
-            this.cbx_producto_fact.SelectedIndexChanged += new System.EventHandler(this.cbx_producto_fact_SelectedIndexChanged);
-            // 
             // productoBindingSource
             // 
             this.productoBindingSource.DataMember = "Producto";
@@ -428,19 +320,6 @@ namespace Drogueria_proyecto
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
             // 
-            // cbx_empleado_fact
-            // 
-            this.cbx_empleado_fact.DataSource = this.cbxEmpleadoBindingSource;
-            this.cbx_empleado_fact.DisplayMember = "nombre_empleado";
-            this.cbx_empleado_fact.FormattingEnabled = true;
-            this.cbx_empleado_fact.Location = new System.Drawing.Point(453, 73);
-            this.cbx_empleado_fact.Margin = new System.Windows.Forms.Padding(1);
-            this.cbx_empleado_fact.Name = "cbx_empleado_fact";
-            this.cbx_empleado_fact.Size = new System.Drawing.Size(101, 21);
-            this.cbx_empleado_fact.TabIndex = 34;
-            this.cbx_empleado_fact.ValueMember = "codigo_empleado";
-            this.cbx_empleado_fact.SelectedIndexChanged += new System.EventHandler(this.cbx_empleado_fact_SelectedIndexChanged);
-            // 
             // cbxEmpleadoBindingSource
             // 
             this.cbxEmpleadoBindingSource.DataMember = "cbx_Empleado";
@@ -450,19 +329,6 @@ namespace Drogueria_proyecto
             // 
             this.dROGUERIADataSet15.DataSetName = "DROGUERIADataSet15";
             this.dROGUERIADataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cbx_cliente_fact
-            // 
-            this.cbx_cliente_fact.DataSource = this.clienteBindingSource;
-            this.cbx_cliente_fact.DisplayMember = "nombre_cliente";
-            this.cbx_cliente_fact.FormattingEnabled = true;
-            this.cbx_cliente_fact.Location = new System.Drawing.Point(220, 127);
-            this.cbx_cliente_fact.Margin = new System.Windows.Forms.Padding(1);
-            this.cbx_cliente_fact.Name = "cbx_cliente_fact";
-            this.cbx_cliente_fact.Size = new System.Drawing.Size(149, 21);
-            this.cbx_cliente_fact.TabIndex = 35;
-            this.cbx_cliente_fact.ValueMember = "codigo_cliente";
-            this.cbx_cliente_fact.SelectedIndexChanged += new System.EventHandler(this.cbx_cliente_fact_SelectedIndexChanged);
             // 
             // clienteBindingSource
             // 
@@ -494,65 +360,6 @@ namespace Drogueria_proyecto
             // 
             this.dataGridViewFacturaTableAdapter1.ClearBeforeFill = true;
             // 
-            // dgvdetalle
-            // 
-            this.dgvdetalle.AllowUserToAddRows = false;
-            this.dgvdetalle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvdetalle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvdetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvdetalle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idproducto,
-            this.cantidad,
-            this.precio,
-            this.subtotalproducto});
-            this.dgvdetalle.Location = new System.Drawing.Point(571, 215);
-            this.dgvdetalle.Margin = new System.Windows.Forms.Padding(1);
-            this.dgvdetalle.Name = "dgvdetalle";
-            this.dgvdetalle.RowHeadersWidth = 123;
-            this.dgvdetalle.RowTemplate.Height = 46;
-            this.dgvdetalle.Size = new System.Drawing.Size(385, 334);
-            this.dgvdetalle.TabIndex = 36;
-            this.dgvdetalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdetalle_CellContentClick);
-            // 
-            // idproducto
-            // 
-            this.idproducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.idproducto.HeaderText = "Id Producto";
-            this.idproducto.MinimumWidth = 15;
-            this.idproducto.Name = "idproducto";
-            this.idproducto.Width = 87;
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.MinimumWidth = 15;
-            this.cantidad.Name = "cantidad";
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "Precio";
-            this.precio.MinimumWidth = 15;
-            this.precio.Name = "precio";
-            // 
-            // subtotalproducto
-            // 
-            this.subtotalproducto.HeaderText = "Subtotal";
-            this.subtotalproducto.MinimumWidth = 15;
-            this.subtotalproducto.Name = "subtotalproducto";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SlateGray;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(760, 167);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 40);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // dgvfactura_vista
             // 
             this.dgvfactura_vista.DataSetName = "dgvfactura_vista";
@@ -575,17 +382,65 @@ namespace Drogueria_proyecto
             // 
             this.errorPro_cantFact_ad.ContainerControl = this;
             // 
+            // cboxEmp
+            // 
+            this.cboxEmp.FormattingEnabled = true;
+            this.cboxEmp.Location = new System.Drawing.Point(240, 101);
+            this.cboxEmp.Name = "cboxEmp";
+            this.cboxEmp.Size = new System.Drawing.Size(121, 21);
+            this.cboxEmp.TabIndex = 33;
+            // 
+            // cboxCliente
+            // 
+            this.cboxCliente.FormattingEnabled = true;
+            this.cboxCliente.Location = new System.Drawing.Point(218, 131);
+            this.cboxCliente.Name = "cboxCliente";
+            this.cboxCliente.Size = new System.Drawing.Size(121, 21);
+            this.cboxCliente.TabIndex = 34;
+            // 
+            // cboxProducto
+            // 
+            this.cboxProducto.FormattingEnabled = true;
+            this.cboxProducto.Location = new System.Drawing.Point(234, 161);
+            this.cboxProducto.Name = "cboxProducto";
+            this.cboxProducto.Size = new System.Drawing.Size(121, 21);
+            this.cboxProducto.TabIndex = 35;
+            this.cboxProducto.SelectedIndexChanged += new System.EventHandler(this.cboxProducto_SelectedIndexChanged);
+            this.cboxProducto.SelectedValueChanged += new System.EventHandler(this.cboxProducto_SelectedValueChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(648, 99);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 36;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(275, 72);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 37;
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(633, 73);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(100, 20);
+            this.txtPrecio.TabIndex = 38;
+            // 
             // Fr_Factura_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dgvdetalle);
-            this.Controls.Add(this.cbx_cliente_fact);
-            this.Controls.Add(this.cbx_empleado_fact);
-            this.Controls.Add(this.cbx_producto_fact);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cboxProducto);
+            this.Controls.Add(this.cboxCliente);
+            this.Controls.Add(this.cboxEmp);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label7);
@@ -594,21 +449,13 @@ namespace Drogueria_proyecto
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txt_cantidad_gr);
-            this.Controls.Add(this.txt_precio_gr);
-            this.Controls.Add(this.txt_IdFactura_gr);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.dgv_administrador_factura);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(800, 599);
             this.Name = "Fr_Factura_Admin";
             this.Text = "Factura_Ad";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Fr_Factura_Admin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_administrador_factura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource1)).EndInit();
@@ -630,7 +477,6 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.cbx_cliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_cantfact_ad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_preciofact_ad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvdetalle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfactura_vista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturaBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorPro_cantFact_ad)).EndInit();
@@ -641,13 +487,6 @@ namespace Drogueria_proyecto
 
         #endregion
         private System.Windows.Forms.Button btnRegresar;
-        private System.Windows.Forms.DataGridView dgv_administrador_factura;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox txt_IdFactura_gr;
-        private System.Windows.Forms.TextBox txt_precio_gr;
-        private System.Windows.Forms.TextBox txt_cantidad_gr;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -666,12 +505,9 @@ namespace Drogueria_proyecto
         private DROGUERIADataSet14 dROGUERIADataSet14;
         private System.Windows.Forms.BindingSource dataGridViewFacturaBindingSource;
         private DROGUERIADataSet14TableAdapters.DataGridViewFacturaTableAdapter dataGridViewFacturaTableAdapter;
-        private System.Windows.Forms.ComboBox cbx_producto_fact;
         private cbx_producto cbx_producto;
         private System.Windows.Forms.BindingSource productoBindingSource;
         private cbx_productoTableAdapters.ProductoTableAdapter productoTableAdapter;
-        private System.Windows.Forms.ComboBox cbx_empleado_fact;
-        private System.Windows.Forms.ComboBox cbx_cliente_fact;
         private cbx_cliente cbx_cliente;
         private System.Windows.Forms.BindingSource clienteBindingSource;
         private cbx_clienteTableAdapters.ClienteTableAdapter clienteTableAdapter;
@@ -683,8 +519,6 @@ namespace Drogueria_proyecto
         private DGVFacturaDataSet19 dGVFacturaDataSet19;
         private System.Windows.Forms.BindingSource dataGridViewFacturaBindingSource1;
         private DGVFacturaDataSet19TableAdapters.DataGridViewFacturaTableAdapter dataGridViewFacturaTableAdapter1;
-        private System.Windows.Forms.DataGridView dgvdetalle;
-        private System.Windows.Forms.Button button1;
         private dgvfactura_vista dgvfactura_vista;
         private System.Windows.Forms.BindingSource dataGridViewFacturaBindingSource2;
         private dgvfactura_vistaTableAdapters.DataGridViewFacturaTableAdapter dataGridViewFacturaTableAdapter2;
@@ -692,9 +526,11 @@ namespace Drogueria_proyecto
         private System.Windows.Forms.BindingSource dataGridViewFacturaBindingSource3;
         private DROGUERIADataSet19TableAdapters.DataGridViewFacturaTableAdapter dataGridViewFacturaTableAdapter3;
         private System.Windows.Forms.ErrorProvider errorPro_cantFact_ad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idproducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subtotalproducto;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cboxProducto;
+        private System.Windows.Forms.ComboBox cboxCliente;
+        private System.Windows.Forms.ComboBox cboxEmp;
     }
 }
