@@ -166,17 +166,6 @@ namespace Drogueria_proyecto
 
         }
 
-
-        //Boton para abrir y crear la instancia del formulario de proveedores
-        private void button_menug_prov_Click(object sender, EventArgs e)
-        {
-            fr_menu_gerente.ActiveForm.Hide();
-            Fr_gerente_proveedores fr_Gerente_Proveedores = new Fr_gerente_proveedores();
-            fr_Gerente_Proveedores.Show();
-
-        }
-
-
         //Boton para cerrar salir del sistema 
         private void button_menug_salir_Click(object sender, EventArgs e)
         {
@@ -234,6 +223,13 @@ namespace Drogueria_proyecto
             OpenChildForm(new Fr_gerente_cliente());
 
         }
-
+        //Boton para abrir y crear la instancia del formulario de proveedores
+        private void button_menug_prov_Click_1(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.colorTxtWhile);
+            OpenChildForm(new Fr_gerente_proveedores());
+        }
+        
+       
     }
 }
