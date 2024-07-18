@@ -32,14 +32,6 @@ namespace Drogueria_proyecto
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fr_Empleado_Admin));
             this.dtg_administrador_empleado = new System.Windows.Forms.DataGridView();
-            this.codigoempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigotipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dROGUERIADataSet2 = new Drogueria_proyecto.DROGUERIADataSet2();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,7 +42,6 @@ namespace Drogueria_proyecto
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.txt_tipoempl_gr = new System.Windows.Forms.TextBox();
             this.txt_pas_ad = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.errorP_usu_ad = new System.Windows.Forms.ErrorProvider(this.components);
@@ -60,12 +51,19 @@ namespace Drogueria_proyecto
             this.errorP_correoempl_ad = new System.Windows.Forms.ErrorProvider(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.txt_correoempl_gr = new System.Windows.Forms.TextBox();
-            this.empleadoTableAdapter = new Drogueria_proyecto.DROGUERIADataSet2TableAdapters.EmpleadoTableAdapter();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.combotip_empl_ad = new System.Windows.Forms.ComboBox();
+            this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dROGUERIADataSet2 = new Drogueria_proyecto.DROGUERIADataSet2();
+            this.empleadoTableAdapter = new Drogueria_proyecto.DROGUERIADataSet2TableAdapters.EmpleadoTableAdapter();
+            this.codigoempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigotipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_administrador_empleado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_usu_ad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_nombemp_ad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_pas_ad)).BeginInit();
@@ -73,6 +71,8 @@ namespace Drogueria_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.errorP_correoempl_ad)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // dtg_administrador_empleado
@@ -101,61 +101,6 @@ namespace Drogueria_proyecto
             this.dtg_administrador_empleado.TabIndex = 1;
             this.dtg_administrador_empleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_administrador_empleado_CellContentClick);
             this.dtg_administrador_empleado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_gerente_clientes_CellDoubleClick);
-            // 
-            // codigoempleadoDataGridViewTextBoxColumn
-            // 
-            this.codigoempleadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.codigoempleadoDataGridViewTextBoxColumn.DataPropertyName = "codigo_empleado";
-            this.codigoempleadoDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.codigoempleadoDataGridViewTextBoxColumn.MinimumWidth = 15;
-            this.codigoempleadoDataGridViewTextBoxColumn.Name = "codigoempleadoDataGridViewTextBoxColumn";
-            this.codigoempleadoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codigoempleadoDataGridViewTextBoxColumn.Width = 65;
-            // 
-            // nombreempleadoDataGridViewTextBoxColumn
-            // 
-            this.nombreempleadoDataGridViewTextBoxColumn.DataPropertyName = "nombre_empleado";
-            this.nombreempleadoDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreempleadoDataGridViewTextBoxColumn.MinimumWidth = 15;
-            this.nombreempleadoDataGridViewTextBoxColumn.Name = "nombreempleadoDataGridViewTextBoxColumn";
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 15;
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 15;
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            // 
-            // codigotipoDataGridViewTextBoxColumn
-            // 
-            this.codigotipoDataGridViewTextBoxColumn.DataPropertyName = "codigo_tipo";
-            this.codigotipoDataGridViewTextBoxColumn.HeaderText = "Cargo";
-            this.codigotipoDataGridViewTextBoxColumn.MinimumWidth = 15;
-            this.codigotipoDataGridViewTextBoxColumn.Name = "codigotipoDataGridViewTextBoxColumn";
-            // 
-            // correo
-            // 
-            this.correo.DataPropertyName = "correo";
-            this.correo.HeaderText = "correo";
-            this.correo.MinimumWidth = 6;
-            this.correo.Name = "correo";
-            // 
-            // empleadoBindingSource
-            // 
-            this.empleadoBindingSource.DataMember = "Empleado";
-            this.empleadoBindingSource.DataSource = this.dROGUERIADataSet2;
-            // 
-            // dROGUERIADataSet2
-            // 
-            this.dROGUERIADataSet2.DataSetName = "DROGUERIADataSet2";
-            this.dROGUERIADataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label2
             // 
@@ -277,17 +222,6 @@ namespace Drogueria_proyecto
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // txt_tipoempl_gr
-            // 
-            this.txt_tipoempl_gr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tipoempl_gr.Location = new System.Drawing.Point(61, 223);
-            this.txt_tipoempl_gr.MaxLength = 1;
-            this.txt_tipoempl_gr.Multiline = true;
-            this.txt_tipoempl_gr.Name = "txt_tipoempl_gr";
-            this.txt_tipoempl_gr.Size = new System.Drawing.Size(263, 24);
-            this.txt_tipoempl_gr.TabIndex = 9;
-            this.txt_tipoempl_gr.TextChanged += new System.EventHandler(this.txt_tipoempl_gr_TextChanged);
-            // 
             // txt_pas_ad
             // 
             this.txt_pas_ad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -355,13 +289,9 @@ namespace Drogueria_proyecto
             this.txt_correoempl_gr.TabIndex = 17;
             this.txt_correoempl_gr.TextChanged += new System.EventHandler(this.txt_correoempl_gr_TextChanged);
             // 
-            // empleadoTableAdapter
-            // 
-            this.empleadoTableAdapter.ClearBeforeFill = true;
-            // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.txt_tipoempl_gr);
+            this.guna2Panel1.Controls.Add(this.combotip_empl_ad);
             this.guna2Panel1.Controls.Add(this.txt_correoempl_gr);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.label8);
@@ -391,6 +321,73 @@ namespace Drogueria_proyecto
             this.guna2Panel2.Size = new System.Drawing.Size(784, 49);
             this.guna2Panel2.TabIndex = 19;
             // 
+            // combotip_empl_ad
+            // 
+            this.combotip_empl_ad.FormattingEnabled = true;
+            this.combotip_empl_ad.Location = new System.Drawing.Point(61, 225);
+            this.combotip_empl_ad.Name = "combotip_empl_ad";
+            this.combotip_empl_ad.Size = new System.Drawing.Size(263, 21);
+            this.combotip_empl_ad.TabIndex = 18;
+            // 
+            // empleadoBindingSource
+            // 
+            this.empleadoBindingSource.DataMember = "Empleado";
+            this.empleadoBindingSource.DataSource = this.dROGUERIADataSet2;
+            // 
+            // dROGUERIADataSet2
+            // 
+            this.dROGUERIADataSet2.DataSetName = "DROGUERIADataSet2";
+            this.dROGUERIADataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // empleadoTableAdapter
+            // 
+            this.empleadoTableAdapter.ClearBeforeFill = true;
+            // 
+            // codigoempleadoDataGridViewTextBoxColumn
+            // 
+            this.codigoempleadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.codigoempleadoDataGridViewTextBoxColumn.DataPropertyName = "codigo_empleado";
+            this.codigoempleadoDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codigoempleadoDataGridViewTextBoxColumn.MinimumWidth = 15;
+            this.codigoempleadoDataGridViewTextBoxColumn.Name = "codigoempleadoDataGridViewTextBoxColumn";
+            this.codigoempleadoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codigoempleadoDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // nombreempleadoDataGridViewTextBoxColumn
+            // 
+            this.nombreempleadoDataGridViewTextBoxColumn.DataPropertyName = "nombre_empleado";
+            this.nombreempleadoDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreempleadoDataGridViewTextBoxColumn.MinimumWidth = 15;
+            this.nombreempleadoDataGridViewTextBoxColumn.Name = "nombreempleadoDataGridViewTextBoxColumn";
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
+            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 15;
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 15;
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // codigotipoDataGridViewTextBoxColumn
+            // 
+            this.codigotipoDataGridViewTextBoxColumn.DataPropertyName = "nombre_tipo";
+            this.codigotipoDataGridViewTextBoxColumn.HeaderText = "Cargo";
+            this.codigotipoDataGridViewTextBoxColumn.MinimumWidth = 15;
+            this.codigotipoDataGridViewTextBoxColumn.Name = "codigotipoDataGridViewTextBoxColumn";
+            // 
+            // correo
+            // 
+            this.correo.DataPropertyName = "correo";
+            this.correo.HeaderText = "correo";
+            this.correo.MinimumWidth = 6;
+            this.correo.Name = "correo";
+            // 
             // Fr_Empleado_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -407,8 +404,6 @@ namespace Drogueria_proyecto
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Fr_Empleado_Admin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_administrador_empleado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_usu_ad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_nombemp_ad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP_pas_ad)).EndInit();
@@ -417,6 +412,8 @@ namespace Drogueria_proyecto
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -433,7 +430,6 @@ namespace Drogueria_proyecto
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.TextBox txt_tipoempl_gr;
         private System.Windows.Forms.TextBox txt_pas_ad;
         private System.Windows.Forms.Label label6;
         private DROGUERIADataSet2 dROGUERIADataSet2;
@@ -444,15 +440,16 @@ namespace Drogueria_proyecto
         private System.Windows.Forms.ErrorProvider errorP_pas_ad;
         private System.Windows.Forms.ErrorProvider errorP_tipempl_ad;
         private System.Windows.Forms.ErrorProvider errorP_correoempl_ad;
+        private System.Windows.Forms.TextBox txt_correoempl_gr;
+        private System.Windows.Forms.Label label8;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private System.Windows.Forms.ComboBox combotip_empl_ad;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoempleadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreempleadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigotipoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox txt_correoempl_gr;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridViewTextBoxColumn correo;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
     }
 }

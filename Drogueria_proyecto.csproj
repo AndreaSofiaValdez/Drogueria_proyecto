@@ -89,6 +89,8 @@
     <Compile Include="buscarproveedorad.Designer.cs">
       <DependentUpon>buscarproveedorad.cs</DependentUpon>
     </Compile>
+    <Compile Include="cbxCategoria.cs" />
+    <Compile Include="cbxTipoEmpleado.cs" />
     <Compile Include="cbx_cliente.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

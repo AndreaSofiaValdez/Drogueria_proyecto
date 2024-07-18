@@ -27,6 +27,8 @@ namespace Drogueria_proyecto
             set { txt_provinv_ad.Text = value; }
         }
 
+        cbxCategoria cat = new cbxCategoria();
+
         private void fr_Producto_Admin_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dROGUERIADataSet20.Producto' Puede moverla o quitarla según sea necesario.
@@ -44,6 +46,10 @@ namespace Drogueria_proyecto
             //sda.Fill(dt);
             //dgv_prod_ad.DataSource = dt;
             //BD.cerrar();
+
+            comboProdCat_ad.DataSource = cat.CargarCombo();
+            comboProdCat_ad.DisplayMember = "descripcion_categoria";
+            comboProdCat_ad.ValueMember = "codigo_categoria";
         }
 
         private void dvg_administrador_producto_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -56,7 +62,7 @@ namespace Drogueria_proyecto
             txt_codinv_ad.Text = dgv_prod_ad.CurrentRow.Cells[0].Value.ToString();
             txt_Nom_ad.Text = dgv_prod_ad.CurrentRow.Cells[1].Value.ToString();
             txt_desinv_ad.Text = dgv_prod_ad.CurrentRow.Cells[2].Value.ToString();
-            txt_catinv_ad.Text = dgv_prod_ad.CurrentRow.Cells[3].Value.ToString();
+            comboProdCat_ad.Text = dgv_prod_ad.CurrentRow.Cells[3].Value.ToString();
             txt_provinv_ad.Text = dgv_prod_ad.CurrentRow.Cells[4].Value.ToString();
             txt_exisinv_ad.Text = dgv_prod_ad.CurrentRow.Cells[5].Value.ToString();
         }
@@ -65,7 +71,7 @@ namespace Drogueria_proyecto
         {
             try
             {
-                if (txt_codinv_ad.Text == string.Empty || txt_catinv_ad.Text == string.Empty || txt_desinv_ad.Text == string.Empty || txt_Nom_ad.Text == string.Empty || txt_provinv_ad.Text == string.Empty)
+                if (txt_codinv_ad.Text == string.Empty || comboProdCat_ad.Text == string.Empty || txt_desinv_ad.Text == string.Empty || txt_Nom_ad.Text == string.Empty || txt_provinv_ad.Text == string.Empty)
                 {
                     MessageBox.Show("Error... No puede insertar datos en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -78,7 +84,7 @@ namespace Drogueria_proyecto
                         "@existencia, @precio_producto)", BD.sconexion);
                     agregar.Parameters.AddWithValue("@nombre_producto", txt_Nom_ad.Text);
                     agregar.Parameters.AddWithValue("@descripcion_producto", txt_desinv_ad.Text);
-                    agregar.Parameters.AddWithValue("@categoria_producto", txt_catinv_ad.Text);
+                    agregar.Parameters.AddWithValue("@categoria_producto", comboProdCat_ad.Text);
                     agregar.Parameters.AddWithValue("@proveedor_producto", txt_provinv_ad.Text);
                     agregar.Parameters.AddWithValue("@existencia", txt_exisinv_ad.Text);
                     agregar.Parameters.AddWithValue("@precio_producto", textBox8.Text);
@@ -88,7 +94,7 @@ namespace Drogueria_proyecto
                     BD.cerrar();
                     txt_codinv_ad.Clear();
                     txt_exisinv_ad.Clear();
-                    txt_catinv_ad.Clear();
+                    comboProdCat_ad.Text = string.Empty;
                     txt_desinv_ad.Clear();
                     txt_Nom_ad.Clear();
                     txt_provinv_ad.Clear();
@@ -114,7 +120,7 @@ namespace Drogueria_proyecto
         {
              try
                 {
-                if (txt_exisinv_ad.Text == string.Empty || txt_catinv_ad.Text == string.Empty || txt_desinv_ad.Text == string.Empty || txt_Nom_ad.Text == string.Empty || txt_provinv_ad.Text == string.Empty)
+                if (txt_exisinv_ad.Text == string.Empty || comboProdCat_ad.Text == string.Empty || txt_desinv_ad.Text == string.Empty || txt_Nom_ad.Text == string.Empty || txt_provinv_ad.Text == string.Empty)
                 {
                     MessageBox.Show("Error... No puede modificar datos en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -128,7 +134,7 @@ namespace Drogueria_proyecto
                     modificar.Parameters.AddWithValue("@codigo_producto", txt_codinv_ad.Text);
                     modificar.Parameters.AddWithValue("@nombre_producto", txt_Nom_ad.Text);
                     modificar.Parameters.AddWithValue("@descripcion_producto", txt_desinv_ad.Text);
-                    modificar.Parameters.AddWithValue("@categoria_producto", txt_catinv_ad.Text);
+                    modificar.Parameters.AddWithValue("@categoria_producto", comboProdCat_ad.Text);
                     modificar.Parameters.AddWithValue("@proveedor_producto", txt_provinv_ad.Text);
                     modificar.Parameters.AddWithValue("@existencia", txt_exisinv_ad.Text);
 
@@ -137,7 +143,7 @@ namespace Drogueria_proyecto
                     BD.cerrar();
                     txt_codinv_ad.Clear();
                     txt_exisinv_ad.Clear();
-                    txt_catinv_ad.Clear();
+                    comboProdCat_ad.Text = String.Empty;
                     txt_desinv_ad.Clear();
                     txt_Nom_ad.Clear();
                     txt_provinv_ad.Clear();
@@ -161,7 +167,7 @@ namespace Drogueria_proyecto
         {
             try
             {
-                if (txt_exisinv_ad.Text == string.Empty || txt_catinv_ad.Text == string.Empty || txt_desinv_ad.Text == string.Empty || txt_Nom_ad.Text == string.Empty || txt_provinv_ad.Text == string.Empty)
+                if (txt_exisinv_ad.Text == string.Empty || comboProdCat_ad.Text == string.Empty || txt_desinv_ad.Text == string.Empty || txt_Nom_ad.Text == string.Empty || txt_provinv_ad.Text == string.Empty)
                 {
                     MessageBox.Show("Error... No puede eliminar datos en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -178,7 +184,7 @@ namespace Drogueria_proyecto
                     BD.cerrar();
                     txt_codinv_ad.Clear();
                     txt_exisinv_ad.Clear();
-                    txt_catinv_ad.Clear();
+                    comboProdCat_ad.Text = String.Empty;
                     txt_desinv_ad.Clear();
                     txt_Nom_ad.Clear();
                     txt_provinv_ad.Clear();
@@ -227,15 +233,7 @@ namespace Drogueria_proyecto
             }
         }
 
-        private void txt_catinv_ad_TextChanged(object sender, EventArgs e)
-        {
-            if (validaciones.validarcatgopro(txt_catinv_ad.Text, "La categoría solo permite números del 1-5"))
-            {
-                errorP_catpro_ad.SetError(txt_catinv_ad, "La categoria solo permite numeros del 1-5");
-                txt_catinv_ad.Text = "";
-
-            }
-        }
+       
 
         private void txt_exisinv_ad_TextChanged(object sender, EventArgs e)
         {

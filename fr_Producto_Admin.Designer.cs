@@ -36,19 +36,11 @@ namespace Drogueria_proyecto
             this.txt_desinv_ad = new System.Windows.Forms.TextBox();
             this.txt_provinv_ad = new System.Windows.Forms.TextBox();
             this.txt_Nom_ad = new System.Windows.Forms.TextBox();
-            this.txt_catinv_ad = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnBuscarad = new System.Windows.Forms.Button();
             this.dgv_prod_ad = new System.Windows.Forms.DataGridView();
-            this.codigoproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoriaproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proveedorproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.existenciaproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dROGUERIADataSet20 = new Drogueria_proyecto.DROGUERIADataSet20();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -61,7 +53,6 @@ namespace Drogueria_proyecto
             this.errorP_despro_ad = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorP_catpro_ad = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorP_existpro_ad = new System.Windows.Forms.ErrorProvider(this.components);
-            this.productoTableAdapter1 = new Drogueria_proyecto.DROGUERIADataSet20TableAdapters.ProductoTableAdapter();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -72,7 +63,16 @@ namespace Drogueria_proyecto
             this.label16 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.comboProdCat_ad = new System.Windows.Forms.ComboBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.productoTableAdapter1 = new Drogueria_proyecto.DROGUERIADataSet20TableAdapters.ProductoTableAdapter();
+            this.codigoproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoriaproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proveedorproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.existenciaproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_prod_ad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dROGUERIADataSet20)).BeginInit();
@@ -93,7 +93,7 @@ namespace Drogueria_proyecto
             // 
             this.txt_codinv_ad.Enabled = false;
             this.txt_codinv_ad.Location = new System.Drawing.Point(86, 46);
-            this.txt_codinv_ad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_codinv_ad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_codinv_ad.Multiline = true;
             this.txt_codinv_ad.Name = "txt_codinv_ad";
             this.txt_codinv_ad.Size = new System.Drawing.Size(263, 24);
@@ -103,7 +103,7 @@ namespace Drogueria_proyecto
             // txt_exisinv_ad
             // 
             this.txt_exisinv_ad.Location = new System.Drawing.Point(84, 192);
-            this.txt_exisinv_ad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_exisinv_ad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_exisinv_ad.Multiline = true;
             this.txt_exisinv_ad.Name = "txt_exisinv_ad";
             this.txt_exisinv_ad.Size = new System.Drawing.Size(263, 24);
@@ -115,7 +115,7 @@ namespace Drogueria_proyecto
             this.txt_desinv_ad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_desinv_ad.Location = new System.Drawing.Point(434, 115);
-            this.txt_desinv_ad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_desinv_ad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_desinv_ad.MaxLength = 60;
             this.txt_desinv_ad.Multiline = true;
             this.txt_desinv_ad.Name = "txt_desinv_ad";
@@ -129,7 +129,7 @@ namespace Drogueria_proyecto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_provinv_ad.Enabled = false;
             this.txt_provinv_ad.Location = new System.Drawing.Point(434, 192);
-            this.txt_provinv_ad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_provinv_ad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_provinv_ad.Multiline = true;
             this.txt_provinv_ad.Name = "txt_provinv_ad";
             this.txt_provinv_ad.Size = new System.Drawing.Size(263, 24);
@@ -140,24 +140,13 @@ namespace Drogueria_proyecto
             this.txt_Nom_ad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Nom_ad.Location = new System.Drawing.Point(434, 46);
-            this.txt_Nom_ad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Nom_ad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Nom_ad.MaxLength = 80;
             this.txt_Nom_ad.Multiline = true;
             this.txt_Nom_ad.Name = "txt_Nom_ad";
             this.txt_Nom_ad.Size = new System.Drawing.Size(263, 24);
             this.txt_Nom_ad.TabIndex = 19;
             this.txt_Nom_ad.TextChanged += new System.EventHandler(this.txt_Nom_ad_TextChanged);
-            // 
-            // txt_catinv_ad
-            // 
-            this.txt_catinv_ad.Location = new System.Drawing.Point(86, 115);
-            this.txt_catinv_ad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_catinv_ad.MaxLength = 1;
-            this.txt_catinv_ad.Multiline = true;
-            this.txt_catinv_ad.Name = "txt_catinv_ad";
-            this.txt_catinv_ad.Size = new System.Drawing.Size(263, 24);
-            this.txt_catinv_ad.TabIndex = 20;
-            this.txt_catinv_ad.TextChanged += new System.EventHandler(this.txt_catinv_ad_TextChanged);
             // 
             // contextMenuStrip1
             // 
@@ -231,58 +220,6 @@ namespace Drogueria_proyecto
             this.dgv_prod_ad.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_prod_ad_CellContentClick);
             this.dgv_prod_ad.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvg_administrador_producto_CellDoubleClick);
             // 
-            // codigoproductoDataGridViewTextBoxColumn
-            // 
-            this.codigoproductoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.codigoproductoDataGridViewTextBoxColumn.DataPropertyName = "codigo_producto";
-            this.codigoproductoDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.codigoproductoDataGridViewTextBoxColumn.MinimumWidth = 15;
-            this.codigoproductoDataGridViewTextBoxColumn.Name = "codigoproductoDataGridViewTextBoxColumn";
-            this.codigoproductoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codigoproductoDataGridViewTextBoxColumn.Width = 65;
-            // 
-            // nombreproductoDataGridViewTextBoxColumn
-            // 
-            this.nombreproductoDataGridViewTextBoxColumn.DataPropertyName = "nombre_producto";
-            this.nombreproductoDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreproductoDataGridViewTextBoxColumn.MinimumWidth = 15;
-            this.nombreproductoDataGridViewTextBoxColumn.Name = "nombreproductoDataGridViewTextBoxColumn";
-            // 
-            // descripcionproductoDataGridViewTextBoxColumn
-            // 
-            this.descripcionproductoDataGridViewTextBoxColumn.DataPropertyName = "descripcion_producto";
-            this.descripcionproductoDataGridViewTextBoxColumn.HeaderText = "Descripción";
-            this.descripcionproductoDataGridViewTextBoxColumn.MinimumWidth = 15;
-            this.descripcionproductoDataGridViewTextBoxColumn.Name = "descripcionproductoDataGridViewTextBoxColumn";
-            // 
-            // categoriaproductoDataGridViewTextBoxColumn
-            // 
-            this.categoriaproductoDataGridViewTextBoxColumn.DataPropertyName = "categoria_producto";
-            this.categoriaproductoDataGridViewTextBoxColumn.HeaderText = "Categoría";
-            this.categoriaproductoDataGridViewTextBoxColumn.MinimumWidth = 15;
-            this.categoriaproductoDataGridViewTextBoxColumn.Name = "categoriaproductoDataGridViewTextBoxColumn";
-            // 
-            // proveedorproductoDataGridViewTextBoxColumn
-            // 
-            this.proveedorproductoDataGridViewTextBoxColumn.DataPropertyName = "proveedor_producto";
-            this.proveedorproductoDataGridViewTextBoxColumn.HeaderText = "Proveedor";
-            this.proveedorproductoDataGridViewTextBoxColumn.MinimumWidth = 15;
-            this.proveedorproductoDataGridViewTextBoxColumn.Name = "proveedorproductoDataGridViewTextBoxColumn";
-            // 
-            // existenciaproductoDataGridViewTextBoxColumn
-            // 
-            this.existenciaproductoDataGridViewTextBoxColumn.DataPropertyName = "existencia_producto";
-            this.existenciaproductoDataGridViewTextBoxColumn.HeaderText = "Existencia";
-            this.existenciaproductoDataGridViewTextBoxColumn.MinimumWidth = 15;
-            this.existenciaproductoDataGridViewTextBoxColumn.Name = "existenciaproductoDataGridViewTextBoxColumn";
-            // 
-            // precioproductoDataGridViewTextBoxColumn
-            // 
-            this.precioproductoDataGridViewTextBoxColumn.DataPropertyName = "precio_producto";
-            this.precioproductoDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioproductoDataGridViewTextBoxColumn.MinimumWidth = 15;
-            this.precioproductoDataGridViewTextBoxColumn.Name = "precioproductoDataGridViewTextBoxColumn";
-            // 
             // productoBindingSource1
             // 
             this.productoBindingSource1.DataMember = "Producto";
@@ -337,10 +274,6 @@ namespace Drogueria_proyecto
             // errorP_existpro_ad
             // 
             this.errorP_existpro_ad.ContainerControl = this;
-            // 
-            // productoTableAdapter1
-            // 
-            this.productoTableAdapter1.ClearBeforeFill = true;
             // 
             // btnEliminar
             // 
@@ -456,6 +389,7 @@ namespace Drogueria_proyecto
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.comboProdCat_ad);
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.txt_codinv_ad);
             this.panel5.Controls.Add(this.textBox8);
@@ -464,7 +398,6 @@ namespace Drogueria_proyecto
             this.panel5.Controls.Add(this.txt_desinv_ad);
             this.panel5.Controls.Add(this.txt_provinv_ad);
             this.panel5.Controls.Add(this.txt_Nom_ad);
-            this.panel5.Controls.Add(this.txt_catinv_ad);
             this.panel5.Controls.Add(this.label15);
             this.panel5.Controls.Add(this.label14);
             this.panel5.Controls.Add(this.label3);
@@ -475,6 +408,14 @@ namespace Drogueria_proyecto
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(784, 300);
             this.panel5.TabIndex = 36;
+            // 
+            // comboProdCat_ad
+            // 
+            this.comboProdCat_ad.FormattingEnabled = true;
+            this.comboProdCat_ad.Location = new System.Drawing.Point(86, 118);
+            this.comboProdCat_ad.Name = "comboProdCat_ad";
+            this.comboProdCat_ad.Size = new System.Drawing.Size(261, 21);
+            this.comboProdCat_ad.TabIndex = 34;
             // 
             // guna2Panel1
             // 
@@ -488,6 +429,62 @@ namespace Drogueria_proyecto
             this.guna2Panel1.Size = new System.Drawing.Size(784, 49);
             this.guna2Panel1.TabIndex = 37;
             // 
+            // productoTableAdapter1
+            // 
+            this.productoTableAdapter1.ClearBeforeFill = true;
+            // 
+            // codigoproductoDataGridViewTextBoxColumn
+            // 
+            this.codigoproductoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.codigoproductoDataGridViewTextBoxColumn.DataPropertyName = "codigo_producto";
+            this.codigoproductoDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codigoproductoDataGridViewTextBoxColumn.MinimumWidth = 15;
+            this.codigoproductoDataGridViewTextBoxColumn.Name = "codigoproductoDataGridViewTextBoxColumn";
+            this.codigoproductoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codigoproductoDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // nombreproductoDataGridViewTextBoxColumn
+            // 
+            this.nombreproductoDataGridViewTextBoxColumn.DataPropertyName = "nombre_producto";
+            this.nombreproductoDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreproductoDataGridViewTextBoxColumn.MinimumWidth = 15;
+            this.nombreproductoDataGridViewTextBoxColumn.Name = "nombreproductoDataGridViewTextBoxColumn";
+            // 
+            // descripcionproductoDataGridViewTextBoxColumn
+            // 
+            this.descripcionproductoDataGridViewTextBoxColumn.DataPropertyName = "descripcion_producto";
+            this.descripcionproductoDataGridViewTextBoxColumn.HeaderText = "Descripción";
+            this.descripcionproductoDataGridViewTextBoxColumn.MinimumWidth = 15;
+            this.descripcionproductoDataGridViewTextBoxColumn.Name = "descripcionproductoDataGridViewTextBoxColumn";
+            // 
+            // categoriaproductoDataGridViewTextBoxColumn
+            // 
+            this.categoriaproductoDataGridViewTextBoxColumn.DataPropertyName = "descripcion_categoria";
+            this.categoriaproductoDataGridViewTextBoxColumn.HeaderText = "Categoría";
+            this.categoriaproductoDataGridViewTextBoxColumn.MinimumWidth = 15;
+            this.categoriaproductoDataGridViewTextBoxColumn.Name = "categoriaproductoDataGridViewTextBoxColumn";
+            // 
+            // proveedorproductoDataGridViewTextBoxColumn
+            // 
+            this.proveedorproductoDataGridViewTextBoxColumn.DataPropertyName = "nombre_proveedor";
+            this.proveedorproductoDataGridViewTextBoxColumn.HeaderText = "Proveedor";
+            this.proveedorproductoDataGridViewTextBoxColumn.MinimumWidth = 15;
+            this.proveedorproductoDataGridViewTextBoxColumn.Name = "proveedorproductoDataGridViewTextBoxColumn";
+            // 
+            // existenciaproductoDataGridViewTextBoxColumn
+            // 
+            this.existenciaproductoDataGridViewTextBoxColumn.DataPropertyName = "existencia_producto";
+            this.existenciaproductoDataGridViewTextBoxColumn.HeaderText = "Existencia";
+            this.existenciaproductoDataGridViewTextBoxColumn.MinimumWidth = 15;
+            this.existenciaproductoDataGridViewTextBoxColumn.Name = "existenciaproductoDataGridViewTextBoxColumn";
+            // 
+            // precioproductoDataGridViewTextBoxColumn
+            // 
+            this.precioproductoDataGridViewTextBoxColumn.DataPropertyName = "precio_producto";
+            this.precioproductoDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioproductoDataGridViewTextBoxColumn.MinimumWidth = 15;
+            this.precioproductoDataGridViewTextBoxColumn.Name = "precioproductoDataGridViewTextBoxColumn";
+            // 
             // fr_Producto_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -498,7 +495,7 @@ namespace Drogueria_proyecto
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.dgv_prod_ad);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "fr_Producto_Admin";
             this.Text = "Producto_Ad";
@@ -528,7 +525,6 @@ namespace Drogueria_proyecto
         private System.Windows.Forms.TextBox txt_exisinv_ad;
         private System.Windows.Forms.TextBox txt_desinv_ad;
         private System.Windows.Forms.TextBox txt_Nom_ad;
-        private System.Windows.Forms.TextBox txt_catinv_ad;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -548,13 +544,6 @@ namespace Drogueria_proyecto
         private DROGUERIADataSet20 dROGUERIADataSet20;
         private System.Windows.Forms.BindingSource productoBindingSource1;
         private DROGUERIADataSet20TableAdapters.ProductoTableAdapter productoTableAdapter1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoproductoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreproductoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionproductoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoriaproductoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn proveedorproductoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn existenciaproductoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioproductoDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
@@ -566,5 +555,13 @@ namespace Drogueria_proyecto
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.ComboBox comboProdCat_ad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoproductoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreproductoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionproductoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoriaproductoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proveedorproductoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn existenciaproductoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioproductoDataGridViewTextBoxColumn;
     }
 }

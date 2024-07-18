@@ -18,6 +18,8 @@ namespace Drogueria_proyecto
             InitializeComponent();
         }
 
+        cbxTipoEmpleado tipempl = new cbxTipoEmpleado();
+
         private void Fr_Empleado_Admin_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dROGUERIADataSet2.Empleado' Puede moverla o quitarla según sea necesario.
@@ -33,6 +35,10 @@ namespace Drogueria_proyecto
             //sda.Fill(dt);
             //dtg_administrador_empleado.DataSource = dt;
             //BD.cerrar();
+
+            combotip_empl_ad.DataSource = tipempl.CargarCombotipo();
+            combotip_empl_ad.DisplayMember = "nombre_tipo";
+            combotip_empl_ad.ValueMember = "codigo_tipo";
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -57,14 +63,14 @@ namespace Drogueria_proyecto
             txt_nomempl_gr.Text = dtg_administrador_empleado.CurrentRow.Cells[1].Value.ToString();
             txt_usuaempl_gr.Text = dtg_administrador_empleado.CurrentRow.Cells[2].Value.ToString();
             txt_pas_ad.Text = dtg_administrador_empleado.CurrentRow.Cells[3].Value.ToString();
-            txt_tipoempl_gr.Text = dtg_administrador_empleado.CurrentRow.Cells[4].Value.ToString();
+            combotip_empl_ad.Text = dtg_administrador_empleado.CurrentRow.Cells[4].Value.ToString();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txt_tipoempl_gr.Text == string.Empty || txt_usuaempl_gr.Text == string.Empty  || txt_nomempl_gr.Text == string.Empty || txt_pas_ad.Text == string.Empty)
+                if (combotip_empl_ad.Text == string.Empty || txt_usuaempl_gr.Text == string.Empty  || txt_nomempl_gr.Text == string.Empty || txt_pas_ad.Text == string.Empty)
                 {
                     MessageBox.Show("Error... No puede insertar datos en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -77,14 +83,14 @@ namespace Drogueria_proyecto
                     agregar.Parameters.AddWithValue("@password",txt_pas_ad.Text);
                     agregar.Parameters.AddWithValue("@nombre_empleado", txt_nomempl_gr.Text);
                     agregar.Parameters.AddWithValue("@username", txt_usuaempl_gr.Text);
-                    agregar.Parameters.AddWithValue("@codigo_tipo", txt_tipoempl_gr.Text); 
+                    agregar.Parameters.AddWithValue("@codigo_tipo", combotip_empl_ad.Text); 
                     agregar.Parameters.AddWithValue("@correo", txt_correoempl_gr.Text);
 
 
 
                     agregar.ExecuteNonQuery();
                     BD.cerrar();
-                    txt_tipoempl_gr.Clear();
+                    combotip_empl_ad.Text = string.Empty;
                     txt_usuaempl_gr.Clear();
                     txt_idEmpleado_gr.Clear();
                     txt_nomempl_gr.Clear();
@@ -114,7 +120,7 @@ namespace Drogueria_proyecto
         {
             try
             {
-                if (txt_tipoempl_gr.Text == string.Empty || txt_usuaempl_gr.Text == string.Empty || txt_nomempl_gr.Text == string.Empty || txt_pas_ad.Text == string.Empty)
+                if (combotip_empl_ad.Text == string.Empty || txt_usuaempl_gr.Text == string.Empty || txt_nomempl_gr.Text == string.Empty || txt_pas_ad.Text == string.Empty)
                 {
                     MessageBox.Show("Error... No puede modificar datos en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -129,14 +135,14 @@ namespace Drogueria_proyecto
                     modificar.Parameters.AddWithValue("@nombre_empleado", txt_nomempl_gr.Text);
                     modificar.Parameters.AddWithValue("@username", txt_usuaempl_gr.Text);
                     modificar.Parameters.AddWithValue("@password", txt_pas_ad.Text);
-                    modificar.Parameters.AddWithValue("@codigo_tipo", txt_tipoempl_gr.Text);
+                    modificar.Parameters.AddWithValue("@codigo_tipo", combotip_empl_ad.Text);
 
 
                     modificar.ExecuteNonQuery();
                     BD.cerrar();
                     txt_idEmpleado_gr.Clear();
                     txt_nomempl_gr.Clear();
-                    txt_tipoempl_gr.Clear();
+                    combotip_empl_ad.Text = string.Empty;
                     txt_usuaempl_gr.Clear();
                     txt_pas_ad.Clear();
                     errorP_correoempl_ad.Clear();
@@ -158,7 +164,7 @@ namespace Drogueria_proyecto
         {
             try
             {
-                if (txt_tipoempl_gr.Text == string.Empty || txt_usuaempl_gr.Text == string.Empty || txt_idEmpleado_gr.Text == string.Empty || txt_nomempl_gr.Text == string.Empty)
+                if (combotip_empl_ad.Text == string.Empty || txt_usuaempl_gr.Text == string.Empty || txt_idEmpleado_gr.Text == string.Empty || txt_nomempl_gr.Text == string.Empty)
                 {
                     MessageBox.Show("Error... No puede eliminar datos en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -176,7 +182,7 @@ namespace Drogueria_proyecto
                     BD.cerrar();
                     txt_idEmpleado_gr.Clear();
                     txt_nomempl_gr.Clear();
-                    txt_tipoempl_gr.Clear();
+                    combotip_empl_ad.Text = string.Empty;
                     txt_usuaempl_gr.Clear();
                     txt_pas_ad.Clear();
                     errorP_correoempl_ad.Clear();
@@ -228,14 +234,7 @@ namespace Drogueria_proyecto
             }
         }
 
-        private void txt_tipoempl_gr_TextChanged(object sender, EventArgs e)
-        {
-            if (validaciones.validartipo_u(txt_tipoempl_gr.Text, "El tipo de empleado solo debe contener numeros del 1-3"))
-            {
-                errorP_tipempl_ad.SetError(txt_tipoempl_gr, "El tipo de empleado solo debe contener numeros del 1-3");
-                txt_tipoempl_gr.Text = "";
-            }
-        }
+     
 
         private void dtg_administrador_empleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
