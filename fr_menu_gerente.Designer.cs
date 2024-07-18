@@ -80,7 +80,7 @@ namespace Drogueria_proyecto
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(77)))), ((int)(((byte)(101)))));
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1058, 854);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1058, 749);
             this.guna2CustomGradientPanel1.TabIndex = 0;
             // 
             // panelDesktop
@@ -93,7 +93,7 @@ namespace Drogueria_proyecto
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(300, 60);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(758, 794);
+            this.panelDesktop.Size = new System.Drawing.Size(758, 689);
             this.panelDesktop.TabIndex = 2;
             // 
             // labelfechag
@@ -101,28 +101,30 @@ namespace Drogueria_proyecto
             this.labelfechag.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelfechag.AutoSize = true;
             this.labelfechag.BackColor = System.Drawing.Color.Transparent;
-            this.labelfechag.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelfechag.Font = new System.Drawing.Font("Century", 50.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelfechag.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelfechag.Location = new System.Drawing.Point(99, 390);
+            this.labelfechag.Location = new System.Drawing.Point(56, 177);
             this.labelfechag.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelfechag.Name = "labelfechag";
-            this.labelfechag.Size = new System.Drawing.Size(109, 39);
+            this.labelfechag.Size = new System.Drawing.Size(227, 80);
             this.labelfechag.TabIndex = 2;
             this.labelfechag.Text = "label1";
+            this.labelfechag.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // labelhorag
             // 
             this.labelhorag.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelhorag.AutoSize = true;
             this.labelhorag.BackColor = System.Drawing.Color.Transparent;
-            this.labelhorag.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelhorag.Font = new System.Drawing.Font("Century", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelhorag.ForeColor = System.Drawing.Color.White;
-            this.labelhorag.Location = new System.Drawing.Point(101, 536);
+            this.labelhorag.Location = new System.Drawing.Point(337, 311);
             this.labelhorag.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelhorag.Name = "labelhorag";
-            this.labelhorag.Size = new System.Drawing.Size(210, 73);
+            this.labelhorag.Size = new System.Drawing.Size(322, 116);
             this.labelhorag.TabIndex = 1;
-            this.labelhorag.Text = "label1";
+            this.labelhorag.Text = "label2";
+            this.labelhorag.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PanelTitulo
             // 
@@ -241,7 +243,7 @@ namespace Drogueria_proyecto
             this.PanelLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelLateral.Location = new System.Drawing.Point(0, 0);
             this.PanelLateral.Name = "PanelLateral";
-            this.PanelLateral.Size = new System.Drawing.Size(300, 854);
+            this.PanelLateral.Size = new System.Drawing.Size(300, 749);
             this.PanelLateral.TabIndex = 0;
             // 
             // PReportServices
@@ -250,7 +252,7 @@ namespace Drogueria_proyecto
             this.PReportServices.Controls.Add(this.BtnReportFactu);
             this.PReportServices.Controls.Add(this.BtnReportClient);
             this.PReportServices.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PReportServices.Location = new System.Drawing.Point(0, 557);
+            this.PReportServices.Location = new System.Drawing.Point(0, 487);
             this.PReportServices.Name = "PReportServices";
             this.PReportServices.Size = new System.Drawing.Size(300, 240);
             this.PReportServices.TabIndex = 5;
@@ -271,10 +273,10 @@ namespace Drogueria_proyecto
             this.BtnReportProduct.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnReportProduct.IconSize = 32;
             this.BtnReportProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnReportProduct.Location = new System.Drawing.Point(0, 160);
+            this.BtnReportProduct.Location = new System.Drawing.Point(0, 148);
             this.BtnReportProduct.Name = "BtnReportProduct";
             this.BtnReportProduct.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnReportProduct.Size = new System.Drawing.Size(300, 80);
+            this.BtnReportProduct.Size = new System.Drawing.Size(300, 73);
             this.BtnReportProduct.TabIndex = 7;
             this.BtnReportProduct.Text = "Reporte Producto";
             this.BtnReportProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -297,10 +299,10 @@ namespace Drogueria_proyecto
             this.BtnReportFactu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnReportFactu.IconSize = 32;
             this.BtnReportFactu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnReportFactu.Location = new System.Drawing.Point(0, 80);
+            this.BtnReportFactu.Location = new System.Drawing.Point(0, 74);
             this.BtnReportFactu.Name = "BtnReportFactu";
             this.BtnReportFactu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnReportFactu.Size = new System.Drawing.Size(300, 80);
+            this.BtnReportFactu.Size = new System.Drawing.Size(300, 74);
             this.BtnReportFactu.TabIndex = 6;
             this.BtnReportFactu.Text = "Reporte Factura";
             this.BtnReportFactu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -326,7 +328,7 @@ namespace Drogueria_proyecto
             this.BtnReportClient.Location = new System.Drawing.Point(0, 0);
             this.BtnReportClient.Name = "BtnReportClient";
             this.BtnReportClient.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnReportClient.Size = new System.Drawing.Size(300, 80);
+            this.BtnReportClient.Size = new System.Drawing.Size(300, 74);
             this.BtnReportClient.TabIndex = 5;
             this.BtnReportClient.Text = "Reporte Cliente";
             this.BtnReportClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -350,10 +352,10 @@ namespace Drogueria_proyecto
             this.btnReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReportes.IconSize = 32;
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(0, 477);
+            this.btnReportes.Location = new System.Drawing.Point(0, 423);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnReportes.Size = new System.Drawing.Size(300, 80);
+            this.btnReportes.Size = new System.Drawing.Size(300, 64);
             this.btnReportes.TabIndex = 4;
             this.btnReportes.Text = "Reporte";
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -376,10 +378,10 @@ namespace Drogueria_proyecto
             this.button_menug_prov.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.button_menug_prov.IconSize = 32;
             this.button_menug_prov.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_menug_prov.Location = new System.Drawing.Point(0, 397);
+            this.button_menug_prov.Location = new System.Drawing.Point(0, 360);
             this.button_menug_prov.Name = "button_menug_prov";
             this.button_menug_prov.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_menug_prov.Size = new System.Drawing.Size(300, 80);
+            this.button_menug_prov.Size = new System.Drawing.Size(300, 63);
             this.button_menug_prov.TabIndex = 3;
             this.button_menug_prov.Text = "Proveedores";
             this.button_menug_prov.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -402,10 +404,10 @@ namespace Drogueria_proyecto
             this.button_menug_inv.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.button_menug_inv.IconSize = 32;
             this.button_menug_inv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_menug_inv.Location = new System.Drawing.Point(0, 317);
+            this.button_menug_inv.Location = new System.Drawing.Point(0, 298);
             this.button_menug_inv.Name = "button_menug_inv";
             this.button_menug_inv.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_menug_inv.Size = new System.Drawing.Size(300, 80);
+            this.button_menug_inv.Size = new System.Drawing.Size(300, 62);
             this.button_menug_inv.TabIndex = 2;
             this.button_menug_inv.Text = "Productos";
             this.button_menug_inv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -431,7 +433,7 @@ namespace Drogueria_proyecto
             this.button_menug_cli.Location = new System.Drawing.Point(0, 237);
             this.button_menug_cli.Name = "button_menug_cli";
             this.button_menug_cli.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_menug_cli.Size = new System.Drawing.Size(300, 80);
+            this.button_menug_cli.Size = new System.Drawing.Size(300, 61);
             this.button_menug_cli.TabIndex = 1;
             this.button_menug_cli.Text = "Clientes";
             this.button_menug_cli.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -474,7 +476,7 @@ namespace Drogueria_proyecto
             // 
             // fr_menu_gerente
             // 
-            this.ClientSize = new System.Drawing.Size(1058, 854);
+            this.ClientSize = new System.Drawing.Size(1058, 749);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "fr_menu_gerente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
