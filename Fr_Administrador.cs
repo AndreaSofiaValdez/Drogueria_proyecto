@@ -205,7 +205,9 @@ namespace Drogueria_proyecto
 
         private void BtnSalir_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            Login FrmLogin = new Login();
+            FrmLogin.Show();
+            this.Close();
         }
 
         private void BtnMaximizar_Click(object sender, EventArgs e)

@@ -89,7 +89,10 @@ namespace Drogueria_proyecto
 
         private void BtnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Login FrmLogin = new Login();
+            FrmLogin.Show();
+            this.Close();
+
 
         }
         //Structs
